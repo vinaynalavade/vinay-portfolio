@@ -685,12 +685,22 @@ function openRazorpayModal(order) {
             "true"
           );
 
+          sessionStorage.setItem(
+            "payment_id",
+            response.razorpay_payment_id
+          );
+
+          sessionStorage.setItem(
+            "order_id",
+            response.razorpay_order_id
+          );
+
           updatePaymentStatus(
             "Payment verified successfully. Redirecting..."
           );
 
           window.location.href =
-            "download-success.html";
+            "customer-details.html";
 
         } else {
 

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Get Your Notes | Vinay.QA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#0a0e0f;
+  --text:#e8edf0;
+  --muted:#6b7f86;
+  --accent:#00e5a0;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+
+  background:var(--bg);
+  color:var(--text);
+
+  font-family:'JetBrains Mono', monospace;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+
+  background-image:
+  linear-gradient(rgba(0,229,160,.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0,229,160,.04) 1px, transparent 1px);
+
+  background-size:60px 60px;
+  pointer-events:none;
+}
+
+.glow{
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:
+  radial-gradient(
+    circle,
+    rgba(0,229,160,.15),
+    transparent 70%
+  );
+  filter:blur(30px);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.card{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:700px;
+
+  padding:50px;
+
+  background:rgba(255,255,255,.06);
+
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:28px;
+
+  box-shadow:
+  0 25px 80px rgba(0,0,0,.45),
+  inset 0 1px 1px rgba(255,255,255,.08);
+}
+
+.badge{
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+
+  background:rgba(0,229,160,.12);
+
+  border:1px solid rgba(0,229,160,.25);
+
+  color:var(--accent);
+
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+
+  margin-bottom:25px;
+}
+
+h1{
+  font-family:'Syne', sans-serif;
+  font-size:clamp(2rem,4vw,3.5rem);
+  margin-bottom:15px;
+}
+
+.subtitle{
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+label{
+  display:block;
+  margin-bottom:8px;
+  font-size:13px;
+  color:#cdd6d9;
+}
+
+input,
+select{
+
+  width:100%;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  background:rgba(255,255,255,.05);
+
+  color:white;
+
+  outline:none;
+
+  font-family:'JetBrains Mono', monospace;
+}
+
+input:focus,
+select:focus{
+
+  border-color:rgba(0,229,160,.5);
+
+  box-shadow:
+  0 0 0 3px rgba(0,229,160,.08);
+}
+
+.phone-row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:12px;
+}
+
+.submit-btn{
+
+  width:100%;
+
+  margin-top:10px;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:var(--accent);
+
+  color:#000;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s ease;
+}
+
+.submit-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 30px rgba(0,229,160,.25);
+}
+
+.status{
+  margin-top:20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.footer{
+  margin-top:25px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+@media(max-width:600px){
+
+  .card{
+    padding:30px;
+  }
+
+  .phone-row{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+
+const paymentId =
+  sessionStorage.getItem("payment_id");
+
+if (!paymentId) {
+  window.location.href = "/";
+}
+
+</script>
+
+<div class="glow"></div>
+
+<div class="card">
+
+<div class="badge">
+Payment Confirmed
+</div>
+
+<h1>Get Your Notes 📩</h1>
+
+<p class="subtitle">
+Enter your details below and we'll send your Core Java Notes directly to your email.
+</p>
+
+<form id="customerForm">
+
+<div class="form-group">
+<label>Full Name *</label>
+<input
+type="text"
+id="fullName"
+required
+placeholder="Enter your full name">
+</div>
+
+<div class="form-group">
+<label>Email Address *</label>
+<input
+type="email"
+id="email"
+required
+placeholder="Enter your email">
+</div>
+
+<div class="form-group">
+<label>Phone Number (Optional)</label>
+
+<div class="phone-row">
+
+<select id="countryCode">
+
+<option value="+91">🇮🇳 +91</option>
+<option value="+1">🇺🇸 +1</option>
+<option value="+44">🇬🇧 +44</option>
+<option value="+61">🇦🇺 +61</option>
+<option value="+971">🇦🇪 +971</option>
+<option value="+65">🇸🇬 +65</option>
+<option value="+81">🇯🇵 +81</option>
+
+</select>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone number">
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="submit-btn">
+
+Get Notes On Email
+
+</button>
+
+</form>
+
+<div
+class="status"
+id="status">
+</div>
+
+<div class="footer">
+VINAY.QA • Premium Learning Resources
+</div>
+
+</div>
+
+<script>
+
+document
+.getElementById("customerForm")
+.addEventListener(
+"submit",
+async function(e){
+
+  e.preventDefault();
+
+  const fullName =
+    document
+    .getElementById("fullName")
+    .value
+    .trim();
+
+  const email =
+    document
+    .getElementById("email")
+    .value
+    .trim();
+
+  const countryCode =
+    document
+    .getElementById("countryCode")
+    .value;
+
+  const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
+
+  document
+  .getElementById("status")
+  .textContent =
+  "Preparing your notes...";
+
+  console.log({
+    paymentId,
+    fullName,
+    email,
+    phone:
+      countryCode + phone
+  });
+
+});
+
+</script>
+
+</body>
+</html>
