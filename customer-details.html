@@ -232,7 +232,22 @@ const paymentId =
   sessionStorage.getItem("payment_id");
 
 if (!paymentId) {
-  window.location.href = "/";
+
+  document.body.innerHTML = `
+    <div style="
+      color:white;
+      font-family:sans-serif;
+      text-align:center;
+      padding:60px;
+    ">
+      Payment verification required.
+    </div>
+  `;
+
+  throw new Error(
+    "Payment verification required"
+  );
+
 }
 
 </script>
