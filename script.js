@@ -643,7 +643,7 @@ async function verifyPayment(paymentId, orderId, signature) {
 }
 function openRazorpayModal(order) {
 
-  const publicKey = "rzp_test_SvtqJ8J0aCxLVs";
+  const publicKey = "rzp_test_Svu9aJQFAwzoXF";
   const options = {
     key: publicKey,
     amount: order.amount,
