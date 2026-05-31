@@ -641,72 +641,114 @@ async function verifyPayment(paymentId, orderId, signature) {
 
   return await response.json();
 }
+
 function openRazorpayModal(order) {
 
   const publicKey = "rzp_test_Svu9aJQFAwzoXF";
+
   const options = {
+
     key: publicKey,
     amount: order.amount,
     currency: order.currency,
     order_id: order.order_id,
+
     name: "Vinay Nalavade",
+
     description:
       "Core Java Notes",
+
     handler: async function (response) {
+
+      console.log(
+        "RAZORPAY RESPONSE:",
+        response
+      );
+
       try {
+
         updatePaymentStatus(
           "Verifying payment..."
         );
+
         const verification =
           await verifyPayment(
             response.razorpay_payment_id,
             response.razorpay_order_id,
             response.razorpay_signature
           );
+
         if (verification.success) {
+
           sessionStorage.setItem(
             "payment_verified",
             "true"
           );
+
           updatePaymentStatus(
             "Payment verified successfully. Redirecting..."
           );
+
           window.location.href =
             "download-success.html";
+
         } else {
+
           updatePaymentStatus(
             "Payment verification failed.",
             true
           );
+
         }
+
       } catch (error) {
+
         console.error(
           "Payment verification error:",
           error
         );
+
         updatePaymentStatus(
           error.message ||
           "Payment verification failed.",
           true
         );
+
       }
+
     },
+
     modal: {
+
       ondismiss: function () {
+
         updatePaymentStatus(
           "Payment cancelled.",
           true
         );
+
       }
+
     },
+
     prefill: {
-        name: "",
-        email: ""
-      },
-      theme: {
-        color: "#00e5a0"
-      }
+      name: "",
+      email: "",
+      contact: ""
+    },
+
+    readonly: {
+      name: false,
+      email: false,
+      contact: false
+    },
+
+    theme: {
+      color: "#00e5a0"
+    }
+
   };
+
   const razorpay =
     new Razorpay(options);
 
@@ -722,7 +764,9 @@ function openRazorpayModal(order) {
 
     }
   );
+
   razorpay.open();
+
 }
 
 async function handleCheckoutButton() {
