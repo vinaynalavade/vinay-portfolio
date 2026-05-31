@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preparing Download | Vinay.QA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#0a0e0f;
+  --text:#e8edf0;
+  --muted:#6b7f86;
+  --accent:#00e5a0;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'JetBrains Mono', monospace;
+  padding:20px;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+
+  background-image:
+  linear-gradient(rgba(0,229,160,.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0,229,160,.04) 1px, transparent 1px);
+
+  background-size:60px 60px;
+}
+
+.card{
+
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:650px;
+
+  text-align:center;
+
+  padding:50px;
+
+  background:
+  rgba(255,255,255,.06);
+
+  backdrop-filter:
+  blur(24px);
+
+  border:
+  1px solid rgba(255,255,255,.12);
+
+  border-radius:28px;
+}
+
+.badge{
+
+  display:inline-block;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+  rgba(0,229,160,.12);
+
+  color:var(--accent);
+
+  margin-bottom:20px;
+}
+
+h1{
+  font-family:'Syne', sans-serif;
+  margin-bottom:15px;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="badge">
+VINAY.QA
+</div>
+
+<h1 id="title">
+Preparing Download...
+</h1>
+
+<p id="message">
+Please wait while we validate your secure download link.
+</p>
+
+</div>
+
+<script>
+
+(async () => {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const token =
+    params.get("token");
+
+  if (!token) {
+
+    document
+    .getElementById("title")
+    .innerText =
+    "Invalid Link";
+
+    document
+    .getElementById("message")
+    .innerText =
+    "No token was provided.";
+
+    return;
+
+  }
+
+  try {
+
+    const response =
+      await fetch(
+        `/.netlify/functions/validate-token?token=${token}`
+      );
+
+    const result =
+      await response.json();
+
+    if (
+      result.success &&
+      result.url
+    ) {
+
+      document
+      .getElementById("title")
+      .innerText =
+      "Download Starting...";
+
+      document
+      .getElementById("message")
+      .innerText =
+      "Redirecting to your notes.";
+
+      window.location.href =
+        result.url;
+
+      return;
+
+    }
+
+    document
+    .getElementById("title")
+    .innerText =
+    "Download Failed";
+
+    document
+    .getElementById("message")
+    .innerText =
+    result.message ||
+    "Invalid download link.";
+
+  } catch (error) {
+
+    console.error(error);
+
+    document
+    .getElementById("title")
+    .innerText =
+    "Something Went Wrong";
+
+    document
+    .getElementById("message")
+    .innerText =
+    "Please contact support.";
+
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
