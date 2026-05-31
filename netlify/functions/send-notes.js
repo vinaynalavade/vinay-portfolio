@@ -44,8 +44,14 @@ if (
 
 const token =
   crypto
-  .randomBytes(24)
+  .randomBytes(32)
   .toString("hex");
+
+const expiresAt =
+  new Date(
+    Date.now() +
+    24 * 60 * 60 * 1000
+  );
 
 const { error: insertError } =
   await supabase
@@ -65,7 +71,10 @@ const { error: insertError } =
     token,
 
     used:
-      false
+      false,
+
+    expires_at:
+      expiresAt.toISOString()
 
   }]);
 
@@ -101,8 +110,8 @@ await resend.emails.send({
   </p>
 
   <p>
-  Click the button below
-  to download your notes.
+  Click below to access
+  your notes.
   </p>
 
   <p>
@@ -116,7 +125,7 @@ await resend.emails.send({
   border-radius:8px;
   font-weight:bold;
   ">
-  Download Notes
+  Access Notes
   </a>
   </p>
 
@@ -125,8 +134,8 @@ await resend.emails.send({
   </p>
 
   <ul>
-  <li>Works only once</li>
-  <li>Expires after 24 hours</li>
+    <li>Works only once</li>
+    <li>Expires after 24 hours</li>
   </ul>
 
   <p>
@@ -139,6 +148,7 @@ await resend.emails.send({
   </p>
 
   `
+
 });
 
 return {
