@@ -182,6 +182,22 @@ p{
   color:var(--muted);
 }
 
+.close-btn{
+  margin-top:10px;
+  padding:14px 28px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.close-btn:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,.12);
+}
+
 </style>
 </head>
 
@@ -204,20 +220,48 @@ Your purchase has been completed successfully.
 Click the button below to download your Core Java Notes and continue your QA learning journey.
 </p>
 
-<a
-class="download-btn"
-href="assets/notes/CoreJava-Vinay.pdf"
-download>
+<button id="download-notes" class="btn-primary">
+  Download Notes
+</button>
 
-Download Notes
-
-</a>
+<div style="margin-top:16px;">
+  <button
+    onclick="window.close()"
+    class="close-btn">
+    Close Window
+  </button>
+</div>
 
 <div class="note">
 VINAY.QA • Premium Learning Resources
 </div>
 
 </div>
+<script>
+document
+.getElementById("download-notes")
+.addEventListener("click", () => {
+
+  const paid =
+    sessionStorage.getItem("payment_verified");
+
+  if (paid !== "true") {
+
+    alert(
+      "Payment verification required."
+    );
+
+    window.location.href =
+      "starter-pack.html";
+
+    return;
+  }
+
+  window.location.href =
+    "notes/core-java.pdf";
+
+});
+</script>
 
 </body>
 </html>

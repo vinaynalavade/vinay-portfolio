@@ -664,6 +664,10 @@ function openRazorpayModal(order) {
             response.razorpay_signature
           );
         if (verification.success) {
+          sessionStorage.setItem(
+            "payment_verified",
+            "true"
+          );
           updatePaymentStatus(
             "Payment verified successfully. Redirecting..."
           );
@@ -696,8 +700,12 @@ function openRazorpayModal(order) {
       }
     },
     prefill: {
-      name: "Vinay Nalavade"
-    }
+        name: "",
+        email: ""
+      },
+      theme: {
+        color: "#00e5a0"
+      }
   };
   const razorpay =
     new Razorpay(options);

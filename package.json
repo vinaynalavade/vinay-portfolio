@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "razorpay": "^2.9.4"
+    "razorpay": "^2.9.4",
+    "resend": "^6.12.4"
   }
 }
