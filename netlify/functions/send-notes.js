@@ -1,188 +1,130 @@
 const { Resend } = require("resend");
 const crypto = require("crypto");
+const { createClient } = require("@supabase/supabase-js");
 
-const { createClient } =
-require("@supabase/supabase-js");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-const resend =
-new Resend(process.env.RESEND_API_KEY);
-
-const supabase =
-createClient(
-process.env.SUPABASE_URL,
-process.env.SUPABASE_SERVICE_ROLE_KEY
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 exports.handler = async (event) => {
-
-try {
-
-```
-const {
-  fullName,
-  email,
-  phone,
-  paymentId
-} = JSON.parse(event.body);
-
-if (
-  !fullName ||
-  !email ||
-  !paymentId
-) {
-
-  return {
-    statusCode: 400,
-    body: JSON.stringify({
-      success: false,
-      message:
-        "Missing required fields"
-    })
-  };
-
-}
-
-const token =
-  crypto
-  .randomBytes(32)
-  .toString("hex");
-
-const expiresAt =
-  new Date(
-    Date.now() +
-    24 * 60 * 60 * 1000
-  );
-
-const { error: insertError } =
-  await supabase
-  .from("downloads")
-  .insert([{
-
-    full_name:
+  try {
+    const {
       fullName,
+      email,
+      phone,
+      paymentId
+    } = JSON.parse(event.body);
 
-    email,
+    if (!fullName || !email || !paymentId) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          success: false,
+          message: "Missing required fields"
+        })
+      };
+    }
 
-    phone,
+    const token = crypto
+      .randomBytes(32)
+      .toString("hex");
 
-    payment_id:
-      paymentId,
+    const expiresAt = new Date(
+      Date.now() + 24 * 60 * 60 * 1000
+    );
 
-    token,
+    const { error: insertError } =
+      await supabase
+        .from("downloads")
+        .insert([
+          {
+            full_name: fullName,
+            email: email,
+            phone: phone,
+            payment_id: paymentId,
+            token: token,
+            used: false,
+            expires_at: expiresAt.toISOString()
+          }
+        ]);
 
-    used:
-      false,
+    if (insertError) {
+      throw insertError;
+    }
 
-    expires_at:
-      expiresAt.toISOString()
+    const downloadLink =
+      `https://vinaynalavade.netlify.app/download.html?token=${token}`;
 
-  }]);
+    await resend.emails.send({
+      from: "Vinay QA <noreply@vinaynalavade.in>",
+      to: email,
+      subject: "Your Core Java Notes",
 
-if (insertError) {
+      html: `
+        <h2>Hello ${fullName},</h2>
 
-  throw insertError;
+        <p>
+          Thank you for purchasing Core Java Notes.
+        </p>
 
-}
+        <p>
+          Click the button below to access your notes.
+        </p>
 
-const downloadLink =
-```
+        <p>
+          <a
+            href="${downloadLink}"
+            style="
+              background:#00e5a0;
+              color:#000;
+              padding:12px 20px;
+              text-decoration:none;
+              border-radius:8px;
+              font-weight:bold;
+              display:inline-block;
+            "
+          >
+            Access Notes
+          </a>
+        </p>
 
-`https://vinaynalavade.netlify.app/download.html?token=${token}`;
+        <p>
+          This link:
+        </p>
 
-```
-await resend.emails.send({
+        <ul>
+          <li>Works only once</li>
+          <li>Expires after 24 hours</li>
+        </ul>
 
-  from:
-    "Vinay QA <onboarding@resend.dev>",
+        <p>
+          Payment ID: ${paymentId}
+        </p>
 
-  to: email,
+        <p>
+          Vinay.QA
+        </p>
+      `
+    });
 
-  subject:
-    "Your Core Java Notes",
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true
+      })
+    };
+  } catch (error) {
+    console.error("SEND NOTES ERROR:", error);
 
-  html: `
-
-  <h2>Hello ${fullName},</h2>
-
-  <p>
-  Thank you for purchasing
-  Core Java Notes.
-  </p>
-
-  <p>
-  Click below to access
-  your notes.
-  </p>
-
-  <p>
-  <a
-  href="${downloadLink}"
-  style="
-  background:#00e5a0;
-  color:#000;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  ">
-  Access Notes
-  </a>
-  </p>
-
-  <p>
-  This link:
-  </p>
-
-  <ul>
-    <li>Works only once</li>
-    <li>Expires after 24 hours</li>
-  </ul>
-
-  <p>
-  Payment ID:
-  ${paymentId}
-  </p>
-
-  <p>
-  Vinay.QA
-  </p>
-
-  `
-
-});
-
-return {
-
-  statusCode: 200,
-
-  body: JSON.stringify({
-    success: true
-  })
-
-};
-```
-
-} catch (error) {
-
-```
-console.error(error);
-
-return {
-
-  statusCode: 500,
-
-  body: JSON.stringify({
-
-    success: false,
-
-    error:
-      error.message
-
-  })
-
-};
-```
-
-}
-
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        success: false,
+        error: error.message
+      })
+    };
+  }
 };
