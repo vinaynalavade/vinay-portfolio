@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
     "razorpay": "^2.9.4",
     "resend": "^6.12.4"
   }
