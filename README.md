@@ -150,7 +150,7 @@ GitHub:
 https://github.com/VinayO7
 
 Portfolio:
-[https://vinayo7.github.io/vinay-portfolio/](https://vinaynalavade.github.io/vinay-portfolio/)
+[https://vinaynalavade.github.io/vinay-portfolio/](https://vinaynalavade.github.io/vinay-portfolio/)
 
 Email:
 [vinaynalavade7536@gmail.com](mailto:vinaynalavade7536@gmail.com)
