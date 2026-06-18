@@ -4489,24 +4489,23 @@ line-height: 1.8;
 display: grid;
 grid-template-columns: 42% 58%;
 gap: 30px;
-align-items: start;
+align-items: stretch;
 }
 
 /* ===========================
 LEFT PANEL
 =========================== */
 
-.framework-tree-panel {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 24px;
-  padding: 25px;
-  max-height: 900px;
-  overflow-y: auto;
-  border-radius:24px;
-  overflow:hidden;
-  padding:0;
+.framework-tree-panel{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 /* Scrollbar */
@@ -4790,6 +4789,10 @@ VS CODE STYLE FRAMEWORK TREE
     font-family:"JetBrains Mono", monospace;
     font-size:14px;
     user-select:none;
+    flex:1;
+    overflow-y:auto;
+    overflow-x:auto;
+    padding:24px;
 }
 
 .tree-folder{
@@ -4896,16 +4899,13 @@ VS CODE STYLE FRAMEWORK TREE
 .framework-tree-panel{
     background:rgba(255,255,255,.04);
     backdrop-filter:blur(20px);
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:24px;
-
     padding:24px;
-
     max-height:900px;
-
-    overflow-y:auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .framework-info-panel{
