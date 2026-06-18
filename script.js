@@ -153,9 +153,9 @@ if (openContact && contactModal) {
 }
 
 const closeContact =
-document.getElementById("close-contact");
+  document.getElementById("close-contact");
 
-if(closeContact && contactModal){
+if (closeContact && contactModal) {
 
   closeContact.addEventListener("click", () => {
     contactModal.classList.remove("active");
@@ -201,26 +201,26 @@ window.addEventListener("scroll", () => {
 
 });
 
-const resumeModal=document.getElementById("resume-modal");
-const openResume=document.getElementById("open-resume");
-const closeResume=document.getElementById("close-resume");
+const resumeModal = document.getElementById("resume-modal");
+const openResume = document.getElementById("open-resume");
+const closeResume = document.getElementById("close-resume");
 
-if(resumeModal&&openResume&&closeResume){
+if (resumeModal && openResume && closeResume) {
 
-openResume.addEventListener("click",(e)=>{
-e.preventDefault();
-resumeModal.classList.add("active");
-});
+  openResume.addEventListener("click", (e) => {
+    e.preventDefault();
+    resumeModal.classList.add("active");
+  });
 
-closeResume.addEventListener("click",()=>{
-resumeModal.classList.remove("active");
-});
+  closeResume.addEventListener("click", () => {
+    resumeModal.classList.remove("active");
+  });
 
-resumeModal.addEventListener("click",(e)=>{
-if(e.target===resumeModal){
-resumeModal.classList.remove("active");
-}
-});
+  resumeModal.addEventListener("click", (e) => {
+    if (e.target === resumeModal) {
+      resumeModal.classList.remove("active");
+    }
+  });
 
 }
 const principleData = {
@@ -394,19 +394,19 @@ function openPrinciple(id) {
   );
 }
 
-const closePrinciple=document.getElementById("close-principle");
+const closePrinciple = document.getElementById("close-principle");
 
-if(closePrinciple&&principleModal){
+if (closePrinciple && principleModal) {
 
-closePrinciple.addEventListener("click",()=>{
-principleModal.classList.remove("active");
-});
+  closePrinciple.addEventListener("click", () => {
+    principleModal.classList.remove("active");
+  });
 
-principleModal.addEventListener("click",(e)=>{
-if(e.target===principleModal){
-principleModal.classList.remove("active");
-}
-});
+  principleModal.addEventListener("click", (e) => {
+    if (e.target === principleModal) {
+      principleModal.classList.remove("active");
+    }
+  });
 
 }
 
@@ -569,19 +569,19 @@ function openTool(id) {
   toolModal.classList.add("active");
 }
 
-const closeTool=document.getElementById("close-tool");
+const closeTool = document.getElementById("close-tool");
 
-if(closeTool&&toolModal){
+if (closeTool && toolModal) {
 
-closeTool.addEventListener("click",()=>{
-toolModal.classList.remove("active");
-});
+  closeTool.addEventListener("click", () => {
+    toolModal.classList.remove("active");
+  });
 
-toolModal.addEventListener("click",(e)=>{
-if(e.target===toolModal){
-toolModal.classList.remove("active");
-}
-});
+  toolModal.addEventListener("click", (e) => {
+    if (e.target === toolModal) {
+      toolModal.classList.remove("active");
+    }
+  });
 
 }
 
@@ -790,63 +790,63 @@ async function handleCheckoutButton() {
   }
 }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const checkoutButton = document.getElementById("checkout-button");
-    if (checkoutButton) {
-      checkoutButton.addEventListener("click", handleCheckoutButton);
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const checkoutButton = document.getElementById("checkout-button");
+  if (checkoutButton) {
+    checkoutButton.addEventListener("click", handleCheckoutButton);
+  }
 
-    const modal = document.getElementById("previewModal");
-    const modalImage = document.getElementById("modalImage");
-    const closeBtn = document.querySelector(".close-modal");
-    const previewCards = document.querySelectorAll(".preview-card");
-    console.log("Modal:", modal);
-    console.log("Modal Image:", modalImage);
-    console.log("Cards Found:", previewCards.length);
-    if (!modal || !modalImage || !closeBtn || !previewCards.length) {
-      console.log("Preview modal setup failed");
-      return;
-    }
-    previewCards.forEach(card => {
-      card.addEventListener("click", () => {
-        console.log("Card Clicked");
-        const img = card.querySelector("img");
-        console.log("Image:", img);
-        console.log("Image Src:", img.src);
-        modalImage.src = img.src;
-        modal.classList.add("active");
-        document.body.style.overflow = "hidden";
-      });
-    });
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("active");
-      document.body.style.overflow = "";
-    });
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.remove("active");
-        document.body.style.overflow = "";
-      }
+  const modal = document.getElementById("previewModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeBtn = document.querySelector(".close-modal");
+  const previewCards = document.querySelectorAll(".preview-card");
+  console.log("Modal:", modal);
+  console.log("Modal Image:", modalImage);
+  console.log("Cards Found:", previewCards.length);
+  if (!modal || !modalImage || !closeBtn || !previewCards.length) {
+    console.log("Preview modal setup failed");
+    return;
+  }
+  previewCards.forEach(card => {
+    card.addEventListener("click", () => {
+      console.log("Card Clicked");
+      const img = card.querySelector("img");
+      console.log("Image:", img);
+      console.log("Image Src:", img.src);
+      modalImage.src = img.src;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
     });
   });
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+});
 
-  document.querySelectorAll('a[href$=".html"]').forEach(link => {
-    link.addEventListener('click', function (e) {
+document.querySelectorAll('a[href$=".html"]').forEach(link => {
+  link.addEventListener('click', function (e) {
 
-        if (this.target === '_blank') return;
+    if (this.target === '_blank') return;
 
-        e.preventDefault();
+    e.preventDefault();
 
-        document.body.classList.add('page-exit');
+    document.body.classList.add('page-exit');
 
-        setTimeout(() => {
-            window.location.href = this.href;
-        }, 250);
-    });
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 250);
+  });
 });
 
 const frameworkData = {
-    testng: {
+  testng: {
     title: "🧪 TestNG Test Execution",
 
     content: `
@@ -922,8 +922,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    basetest: {
+  },
+  basetest: {
     title: "🏗 BaseTest",
 
     content: `
@@ -1010,8 +1010,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    driverfactory: {
+  },
+  driverfactory: {
     title: "🚗 DriverFactory",
 
     content: `
@@ -1097,8 +1097,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    pageobjects: {
+  },
+  pageobjects: {
     title: "📄 Page Object Model (POM)",
 
     content: `
@@ -1196,8 +1196,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    webdriver: {
+  },
+  webdriver: {
     title: "🖱 WebDriver Actions",
 
     content: `
@@ -1297,8 +1297,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    assertions: {
+  },
+  assertions: {
     title: "✅ Assertions & Validation Layer",
 
     content: `
@@ -1394,8 +1394,8 @@ const frameworkData = {
             </div>
 
         `
-    },
-    results: {
+  },
+  results: {
     title: "📊 Results & Reporting",
 
     content: `
@@ -1492,53 +1492,1034 @@ const frameworkData = {
             </div>
 
         `
-    }
+  }
 };
 
 function openFramework(type) {
 
-    const frameworkModal =
-        document.getElementById("framework-modal");
+  const frameworkModal =
+    document.getElementById("framework-modal");
 
-    const frameworkTitle =
-        document.getElementById("framework-title");
+  const frameworkTitle =
+    document.getElementById("framework-title");
 
-    const frameworkContent =
-        document.getElementById("framework-content");
+  const frameworkContent =
+    document.getElementById("framework-content");
 
-    if (!frameworkModal ||
-        !frameworkTitle ||
-        !frameworkContent) {
-        return;
-    }
+  if (!frameworkModal ||
+    !frameworkTitle ||
+    !frameworkContent) {
+    return;
+  }
 
-    frameworkTitle.innerHTML =
-        frameworkData[type].title;
+  frameworkTitle.innerHTML =
+    frameworkData[type].title;
 
-    frameworkContent.innerHTML =
-        frameworkData[type].content;
+  frameworkContent.innerHTML =
+    frameworkData[type].content;
 
-    frameworkModal.classList.add("active");
+  frameworkModal.classList.add("active");
 }
 
 function closeFramework() {
 
-    const frameworkModal =
-        document.getElementById("framework-modal");
+  const frameworkModal =
+    document.getElementById("framework-modal");
 
-    if(frameworkModal){
-        frameworkModal.classList.remove("active");
-    }
+  if (frameworkModal) {
+    frameworkModal.classList.remove("active");
+  }
 }
 
-document.addEventListener("click", function(e){
+document.addEventListener("click", function (e) {
 
-    if(e.target.id==="close-framework"){
-        closeFramework();
-    }
+  if (e.target.id === "close-framework") {
+    closeFramework();
+  }
 
-    if(e.target.id==="framework-modal"){
-        closeFramework();
-    }
+  if (e.target.id === "framework-modal") {
+    closeFramework();
+  }
 
 });
+
+
+// Part - 1 Framework Overview Knowledge Base
+const frameworkKnowledgeBase = {
+
+  src: {
+    title: "src",
+    purpose: "Source root directory containing all framework code, test code, resources, and supporting files.",
+    responsibilities: [
+      "Application source code",
+      "Automation framework components",
+      "Resources management",
+      "Test implementation"
+    ]
+  },
+
+  main: {
+    title: "src/main",
+    purpose: "Contains production framework code used during test execution.",
+    responsibilities: [
+      "Framework core logic",
+      "Page Objects",
+      "Utilities",
+      "Driver Management"
+    ]
+  },
+
+  java: {
+    title: "src/main/java",
+    purpose: "Contains all Java source files used by the automation framework.",
+    responsibilities: [
+      "Core Layer",
+      "UI Layer",
+      "Utilities",
+      "Driver Factory"
+    ]
+  },
+
+  core: {
+    title: "src/main/java/core",
+    purpose: "Framework foundation layer containing reusable components.",
+    responsibilities: [
+      "Configuration Management",
+      "Utilities",
+      "Reporting",
+      "Models"
+    ]
+  },
+
+  config: {
+    title: "src/main/java/core/config",
+    purpose: "Centralized configuration management.",
+    responsibilities: [
+      "Read configuration values",
+      "Manage URLs",
+      "Manage browser settings",
+      "Manage timeouts"
+    ]
+  },
+
+  models: {
+    title: "src/main/java/core/models",
+    purpose: "POJO classes used for data-driven testing.",
+    responsibilities: [
+      "JSON Mapping",
+      "Test Data Representation",
+      "Object Serialization"
+    ]
+  },
+
+  reports: {
+    title: "src/main/java/core/reports",
+    purpose: "Extent Report management layer.",
+    responsibilities: [
+      "Report Creation",
+      "Report Management",
+      "Thread Safe Reporting"
+    ]
+  },
+
+  utils: {
+    title: "src/main/java/core/utils",
+    purpose: "Reusable utility classes used across the framework.",
+    responsibilities: [
+      "Wait Management",
+      "Screenshot Capture",
+      "JSON Processing"
+    ]
+  },
+
+  ConfigReaderJava: {
+    title: "ConfigReader.java",
+    purpose: "Loads configuration values from config.properties and makes them available across the framework.",
+    interviewQuestion: "Why did you create ConfigReader?",
+    interviewAnswer: "To avoid hardcoded values and centralize configuration management.",
+    code: `
+public final class ConfigReader {
+
+    private static Properties properties;
+
+    static {
+        properties = new Properties();
+
+        InputStream inputStream =
+            ConfigReader.class
+            .getClassLoader()
+            .getResourceAsStream(
+                "config.properties");
+
+        properties.load(inputStream);
+    }
+
+    public static String getProperty(
+            String key) {
+
+        return properties.getProperty(key);
+    }
+
+    public static int getTimeout() {
+
+        return Integer.parseInt(
+            properties.getProperty(
+                "timeout"));
+    }
+}
+`
+  },
+
+  EmployeeJava: {
+    title: "Employee.java",
+    purpose: "POJO model class representing employee test data.",
+    interviewQuestion: "Why use a POJO model instead of raw JSON?",
+    interviewAnswer: "POJOs provide type safety, readability, and easier maintenance.",
+    code: `
+public class Employee {
+
+    private String licenseNumber;
+
+    private String licenseExpiryDate;
+
+    private String dateOfBirth;
+
+    private String nationality;
+
+    private String maritalStatus;
+
+    // Getters
+
+    // Setters
+}
+`
+  },
+
+  ExtentManagerJava: {
+    title: "ExtentManager.java",
+    purpose: "Creates and manages Extent Report instance.",
+    interviewQuestion: "Why use ExtentManager?",
+    interviewAnswer: "To maintain a single report instance throughout execution.",
+    code: `
+public class ExtentManager {
+
+    public static ExtentReports extent;
+
+    public static ExtentReports getInstance() {
+
+        if(extent == null) {
+
+            ExtentSparkReporter
+                sparkReporter =
+                new ExtentSparkReporter(
+                    "test-output/ExtentReport.html");
+
+            extent =
+                new ExtentReports();
+
+            extent.attachReporter(
+                sparkReporter);
+        }
+
+        return extent;
+    }
+}
+`
+  },
+
+  ExtentTestManagerJava: {
+    title: "ExtentTestManager.java",
+    purpose: "Maintains thread-safe ExtentTest objects.",
+    interviewQuestion: "Why use ThreadLocal in reporting?",
+    interviewAnswer: "To support parallel execution without report conflicts.",
+    code: `
+public class ExtentTestManager {
+
+    private static final
+        ThreadLocal<ExtentTest>
+        test = new ThreadLocal<>();
+
+    public static ExtentTest getTest() {
+        return test.get();
+    }
+
+    public static void setTest(
+            ExtentTest extentTest) {
+
+        test.set(extentTest);
+    }
+
+    public static void unload() {
+        test.remove();
+    }
+}
+`
+  },
+
+  JsonUtilJava: {
+    title: "JsonUtil.java",
+    purpose: "Converts JSON files into Java objects.",
+    interviewQuestion: "Why create JsonUtil instead of reading JSON in tests?",
+    interviewAnswer: "To separate data processing logic from test implementation.",
+    code: `
+public class JsonUtil {
+
+    private static final
+        ObjectMapper objectMapper =
+            new ObjectMapper();
+
+    public static <T> T readJson(
+            String filePath,
+            Class<T> clazz) {
+
+        return objectMapper.readValue(
+            new File(filePath),
+            clazz);
+    }
+}
+`
+  },
+
+  ScreenshotUtilJava: {
+    title: "ScreenshotUtil.java",
+    purpose: "Captures screenshots on test failures.",
+    interviewQuestion: "Why capture screenshots automatically?",
+    interviewAnswer: "Provides visual evidence for faster defect analysis.",
+    code: `
+public class ScreenshotUtil {
+
+    public static String
+        captureScreenshot(
+            WebDriver driver,
+            String testName) {
+
+        TakesScreenshot screenshot =
+            (TakesScreenshot) driver;
+
+        File source =
+            screenshot.getScreenshotAs(
+                OutputType.FILE);
+
+        return filePath;
+    }
+}
+`
+  },
+
+  WaitUtilJava: {
+    title: "WaitUtil.java",
+    purpose: "Centralized explicit wait implementation.",
+    interviewQuestion: "Why create a WaitUtil class?",
+    interviewAnswer: "Avoids duplicate wait code and improves maintainability.",
+    code: `
+public class WaitUtil {
+
+    public static void
+        waitForVisibility(
+            WebDriver driver,
+            By locator) {
+
+        WebDriverWait wait =
+            new WebDriverWait(
+                driver,
+                Duration.ofSeconds(
+                    DEFAULT_TIMEOUT));
+
+        wait.until(
+            ExpectedConditions
+                .visibilityOfElementLocated(
+                    locator));
+    }
+}
+`
+  },
+  
+  ui: {
+    title: "src/main/java/ui",
+    purpose: "UI Automation Layer implementing Selenium Page Object Model architecture.",
+    responsibilities: [
+      "Page Object Management",
+      "Browser Interactions",
+      "UI Navigation",
+      "Element Actions"
+    ]
+  },
+
+  drivers: {
+    title: "src/main/java/ui/drivers",
+    purpose: "Browser initialization and WebDriver management.",
+    responsibilities: [
+      "Driver Creation",
+      "Browser Setup",
+      "Driver Lifecycle",
+      "Browser Configuration"
+    ]
+  },
+
+  pages: {
+    title: "src/main/java/ui/pages",
+    purpose: "Page Object Layer containing reusable page actions.",
+    responsibilities: [
+      "Encapsulate Locators",
+      "Encapsulate Actions",
+      "Improve Reusability",
+      "Reduce Duplication"
+    ]
+  },
+
+  DriverFactoryJava: {
+    title: "DriverFactory.java",
+    purpose: "Centralized browser initialization and WebDriver management.",
+    interviewQuestion: "Why use DriverFactory instead of creating WebDriver inside tests?",
+    interviewAnswer: "DriverFactory centralizes browser creation, improves maintainability, and supports framework scalability.",
+    code: `
+public class DriverFactory {
+
+    private static WebDriver driver;
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    public static void initializeDriver() {
+
+        WebDriverManager
+            .chromedriver()
+            .setup();
+
+        driver = new ChromeDriver();
+
+        driver.manage()
+              .window()
+              .maximize();
+    }
+}
+`
+  },
+
+  BasePageJava: {
+    title: "BasePage.java",
+    purpose: "Parent page containing reusable Selenium actions used by all Page Objects.",
+    interviewQuestion: "Why create a BasePage class?",
+    interviewAnswer: "To eliminate duplicate Selenium actions and centralize common page functionality.",
+    code: `
+public class BasePage {
+
+    protected WebDriver driver;
+
+    protected WebElement find(By locator){
+        return driver.findElement(locator);
+    }
+
+    protected BasePage click(By locator) {
+        find(locator).click();
+        return this;
+    }
+
+    protected BasePage type(
+        By locator,
+        Object text) {
+
+        find(locator)
+            .sendKeys(
+                String.valueOf(text));
+
+        return this;
+    }
+}
+`
+  },
+
+  LoginPageJava: {
+    title: "LoginPage.java",
+    purpose: "Represents OrangeHRM Login Page and handles authentication actions.",
+    interviewQuestion: "How does LoginPage follow POM?",
+    interviewAnswer: "Locators and actions are encapsulated inside LoginPage instead of being written directly in tests.",
+    code: `
+public class LoginPage
+    extends BasePage {
+
+    private By usernameTextBox =
+        By.name("username");
+
+    private By passwordTextBox =
+        By.name("password");
+
+    private By loginButton =
+        By.cssSelector(
+            "button[type='submit']");
+
+    public DashboardPage login(
+            String username,
+            String password) {
+
+        enterUsername(username);
+
+        enterPassword(password);
+
+        clickLogin();
+
+        return new DashboardPage(driver);
+    }
+}
+`
+  },
+
+  DashboardPageJava: {
+    title: "DashboardPage.java",
+    purpose: "Represents Dashboard page after successful login.",
+    interviewQuestion: "Why return page objects from methods?",
+    interviewAnswer: "Returning page objects enables fluent navigation and clear page transitions.",
+    code: `
+public class DashboardPage
+    extends BasePage {
+
+    public PIMPage openPim() {
+
+        click(pimMenu);
+
+        return new PIMPage(driver);
+    }
+
+    public LoginPage clickLogout() {
+
+        clickProfileDropdown();
+
+        click(logoutLink);
+
+        return new LoginPage(driver);
+    }
+}
+`
+  },
+
+  PIMPageJava: {
+    title: "PIMPage.java",
+    purpose: "Handles navigation inside the PIM module.",
+    interviewQuestion: "Why is navigation encapsulated inside page objects?",
+    interviewAnswer: "It keeps test cases clean and isolates UI changes.",
+    code: `
+public class PIMPage
+    extends BasePage {
+
+    private By addButton =
+        By.xpath(
+            "//button[normalize-space()='Add']");
+
+    public AddEmployeePage addEmployee() {
+
+        click(addButton);
+
+        return new AddEmployeePage(driver);
+    }
+}
+`
+  },
+
+  AddEmployeePageJava: {
+    title: "AddEmployeePage.java",
+    purpose: "Handles employee creation workflow.",
+    interviewQuestion: "What design principle is demonstrated here?",
+    interviewAnswer: "Single Responsibility Principle. This page handles only employee creation actions.",
+    code: `
+public class AddEmployeePage
+    extends BasePage {
+
+    public EmployeeDetailsPage
+        addEmployee(
+
+            String fName,
+            String sName,
+            String lName,
+            String employeeId) {
+
+        enterFullName(
+            fName,
+            sName,
+            lName);
+
+        enterEmployeeId(
+            employeeId);
+
+        return clickSave();
+    }
+}
+`
+  },
+
+  EmployeeDetailsPageJava: {
+    title: "EmployeeDetailsPage.java",
+    purpose: "Handles employee personal details updates after employee creation.",
+    interviewQuestion: "Why separate AddEmployeePage and EmployeeDetailsPage?",
+    interviewAnswer: "Because they represent different application screens and responsibilities.",
+    code: `
+public class EmployeeDetailsPage
+    extends BasePage {
+
+    public EmployeeDetailsPage
+        updatePersonalDetails(
+
+        String licenseNumber,
+        String licenseExpDate,
+        String dob,
+        String nationality,
+        String maritalStatus) {
+
+        typeDate(
+            licenseExpiryDate,
+            licenseExpDate);
+
+        click(nationality);
+
+        click(maritalStatus);
+
+        click(saveButton);
+
+        return this;
+    }
+}
+`
+  },
+
+
+
+  // Part 3 - Test Implementation Knowledge Base
+  listeners: {
+    title: "src/test/java/listeners",
+    purpose: "Framework event monitoring layer.",
+    responsibilities: [
+      "Track Test Execution",
+      "Generate Reports",
+      "Capture Failures",
+      "Log Execution Events"
+    ]
+  },
+
+  base: {
+    title: "src/test/java/base",
+    purpose: "Base test classes providing common setup and teardown functionality.",
+    responsibilities: [
+      "Driver Initialization",
+      "Framework Setup",
+      "Authentication Management",
+      "Framework Reusability"
+    ]
+  },
+
+  tests: {
+    title: "src/test/java/tests",
+    purpose: "Contains business test scenarios executed against the application.",
+    responsibilities: [
+      "Functional Testing",
+      "Regression Testing",
+      "Workflow Validation",
+      "Data Driven Validation"
+    ]
+  },
+
+  resources: {
+    title: "src/main/resources",
+    purpose: "Framework configuration and external test resources.",
+    responsibilities: [
+      "Configuration Storage",
+      "Environment Management",
+      "External Test Data"
+    ]
+  },
+
+  testdata: {
+    title: "src/testdata",
+    purpose: "Externalized test data for Data Driven Testing.",
+    responsibilities: [
+      "Test Data Storage",
+      "Data Separation",
+      "Reusable Test Inputs"
+    ]
+  },
+
+  ConfigProperties: {
+    title: "config.properties",
+    purpose: "Stores framework configuration values.",
+    interviewQuestion: "Why store values in config.properties?",
+    interviewAnswer: "To eliminate hardcoded values and support environment-based execution.",
+    code: `
+browser=chrome
+
+base.url=https://opensource-demo.orangehrmlive.com
+
+username=Admin
+
+password=admin123
+
+timeout=20
+`
+  },
+
+  employeeJson: {
+    title: "employee.json",
+    purpose: "External test data source used for Data Driven Testing.",
+    interviewQuestion: "Why use JSON test data?",
+    interviewAnswer: "JSON separates test data from test logic and improves maintainability.",
+    code: `
+{
+  "licenseNumber":"123456789",
+  "licenseExpiryDate":"2032-01-06",
+  "dateOfBirth":"2024-08-24",
+  "nationality":"Indian",
+  "maritalStatus":"Single"
+}
+`
+  },
+
+  TestListenerJava: {
+    title: "TestListener.java",
+    purpose: "Captures framework events and integrates reporting.",
+    interviewQuestion: "What is the purpose of TestNG Listeners?",
+    interviewAnswer: "Listeners monitor test lifecycle events and perform actions such as reporting and screenshot capture.",
+    code: `
+public class TestListener
+        implements ITestListener {
+
+    public void onStart(
+            ITestContext context) {
+
+        ExtentManager
+            .getInstance();
+    }
+
+    public void onTestFailure(
+            ITestResult result) {
+
+        ScreenshotUtil
+            .captureScreenshot(
+                DriverFactory.getDriver(),
+                result.getMethod()
+                      .getMethodName());
+    }
+
+    public void onFinish(
+            ITestContext context) {
+
+        ExtentManager
+            .getInstance()
+            .flush();
+    }
+}
+`
+  },
+
+  BaseTestJava: {
+    title: "BaseTest.java",
+    purpose: "Foundation class responsible for WebDriver setup and cleanup.",
+    interviewQuestion: "Why use BaseTest?",
+    interviewAnswer: "It eliminates duplicate setup and teardown logic across tests.",
+    code: `
+@Listeners(TestListener.class)
+
+public class BaseTest {
+
+    @BeforeMethod
+    public void setup() {
+
+        DriverFactory
+            .initializeDriver();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+
+        DriverFactory
+            .getDriver()
+            .quit();
+    }
+}
+`
+  },
+
+  AuthenticatedBaseTestJava: {
+    title: "AuthenticatedBaseTest.java",
+    purpose: "Reusable authenticated session layer used by secured test cases.",
+    interviewQuestion: "Why create AuthenticatedBaseTest?",
+    interviewAnswer: "To avoid repeating login logic in every test class.",
+    code: `
+public class
+AuthenticatedBaseTest
+extends BaseTest {
+
+    @BeforeMethod
+    public void login() {
+
+        LoginPage loginPage =
+            new LoginPage(
+                DriverFactory.getDriver());
+
+        dashBoard =
+            loginPage.login(
+                username,
+                password);
+    }
+
+    @AfterMethod
+    public void logout() {
+
+        dashBoard
+            .clickLogout();
+    }
+}
+`
+  },
+
+  LaunchTestJava: {
+    title: "LaunchTest.java",
+    purpose: "Smoke test validating application launch and login functionality.",
+    interviewQuestion: "Why create LaunchTest?",
+    interviewAnswer: "To quickly validate environment availability before running larger suites.",
+    code: `
+@Test
+public void
+launchApplication() {
+
+    DriverFactory
+        .getDriver()
+        .get(
+            ConfigReader
+                .getProperty(
+                    "base.url"));
+}
+
+@Test
+public void login() {
+
+    LoginPage loginPage =
+        new LoginPage(
+            DriverFactory.getDriver());
+
+    DashboardPage dashBoard =
+        loginPage.login(
+            username,
+            password);
+}
+`
+  },
+
+  AddEmployeeTestJava: {
+    title: "AddEmployeeTest.java",
+    purpose: "Validates employee creation workflow.",
+    interviewQuestion: "What type of test is this?",
+    interviewAnswer: "Functional end-to-end workflow validation.",
+    code: `
+@Test
+public void addEmp() {
+
+    PIMPage pimPage =
+        dashBoard.openPim();
+
+    AddEmployeePage addEmpPage =
+        pimPage.addEmployee();
+
+    addEmpPage.addEmployee(
+        "Vinay",
+        "Pramod",
+        "Nalavade",
+        "0707");
+
+    Assert.assertTrue(
+        addEmpPage
+            .isSuccessMsgDisplayed());
+}
+`
+  },
+
+  EmployeePersonalDetailsTestJava: {
+    title: "EmployeePersonalDetailsTest.java",
+    purpose: "Data-driven test validating employee personal details update workflow.",
+    interviewQuestion: "How is Data Driven Testing implemented here?",
+    interviewAnswer: "Test data is loaded from employee.json through JsonUtil and mapped into Employee POJO.",
+    code: `
+Employee employee =
+    JsonUtil.readJson(
+        "employee.json",
+        Employee.class);
+
+@Test
+public void addDetails() {
+
+    employeeDetails
+        .updatePersonalDetails(
+
+            employee
+                .getLicenseNumber(),
+
+            employee
+                .getLicenseExpiryDate(),
+
+            employee
+                .getdateOfBirth(),
+
+            employee
+                .getNationality(),
+
+            employee
+                .getMaritalStatus());
+}
+`
+  },
+
+  pomXml: {
+    title: "pom.xml",
+    purpose: "Maven build configuration and dependency management.",
+    interviewQuestion: "Why use Maven?",
+    interviewAnswer: "Maven manages dependencies, builds, and test execution consistently.",
+    responsibilities: [
+      "Selenium Dependency",
+      "TestNG Dependency",
+      "Jackson Dependency",
+      "Extent Reports",
+      "WebDriverManager"
+    ]
+  },
+
+  target: {
+    title: "target",
+    purpose: "Auto-generated Maven build directory.",
+    responsibilities: [
+      "Compiled Classes",
+      "Generated Artifacts",
+      "Build Output",
+      "Packaged Files"
+    ]
+  },
+
+  testOutput: {
+    title: "test-output",
+    purpose: "Stores all execution reports generated during framework execution.",
+    responsibilities: [
+      "Extent Reports",
+      "TestNG Reports",
+      "Execution Logs",
+      "Screenshots"
+    ]
+  },
+
+  test: {
+    title: "src/test",
+    purpose: "Contains all automation test implementation code.",
+    responsibilities: [
+      "Test Execution",
+      "Test Classes",
+      "Framework Validation",
+      "Business Scenarios"
+    ]
+  },
+
+  testJava: {
+    title: "src/test/java",
+    purpose: "Contains Java-based automation test implementation.",
+    responsibilities: [
+      "Base Test Classes",
+      "TestNG Tests",
+      "Listeners",
+      "Test Execution Logic"
+    ]
+  }
+
+};
+
+function showFrameworkInfo(key) {
+
+  const data = frameworkKnowledgeBase[key];
+
+  if (!data) {
+    return;
+  }
+
+  document.getElementById(
+    "frameworkInfoContent").innerHTML = `
+
+<div class="framework-card">
+
+<h3>${data.title}</h3>
+
+<p>${data.purpose}</p>
+
+${data.responsibilities
+      ?
+      `
+<h4>Responsibilities</h4>
+
+<div class="responsibility-grid">
+
+${data.responsibilities.map(item => `
+<div class="responsibility-card">
+${item}
+</div>
+`).join("")}
+
+</div>
+`
+      :
+      ""
+    }
+
+${data.code
+      ?
+      `
+<div class="code-viewer">
+
+<div class="code-header">
+Source Code
+</div>
+
+<div class="code-body">
+
+<pre><code>
+${data.code}
+</code></pre>
+
+</div>
+
+</div>
+`
+      :
+      ""
+    }
+
+${data.interviewQuestion
+      ?
+      `
+<div class="interview-box">
+
+<h4>Interview Discussion</h4>
+
+<div class="interview-question">
+${data.interviewQuestion}
+</div>
+
+<div class="interview-answer">
+${data.interviewAnswer}
+</div>
+
+</div>
+`
+      :
+      ""
+    }
+
+</div>
+`;
+}
+
+function toggleFolder(arrow) {
+
+  const folder =
+    arrow.closest(".tree-folder");
+
+  if (!folder) return;
+
+  folder.classList.toggle("expanded");
+
+  arrow.textContent =
+    folder.classList.contains("expanded")
+      ? "▼"
+      : "▶";
+}

@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Framework Architecture | Vinay Nalavade</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Navbar -->
     <header>
         <nav>
         <a href="index.html" class="nav-logo">
             VINAY<span class="logo-dot">.</span>QA
         </a>
-
         <div class="nav-right">
             <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="starter-pack.html" class="nav-link">Starter Pack</a></li>
-
                 <li class="more-menu">
                     <a href="#">Architecture ▾</a>
 
@@ -37,7 +32,6 @@
                     </div>
                 </li>
             </ul>
-
             <button id="theme-toggle">🌙</button>
         </div>
         </nav>
@@ -46,15 +40,11 @@
     <!-- Hero Section -->
     <section class="starter-hero">
         <div class="starter-orb"></div>
-
         <div class="section-tag">FRAMEWORK DESIGN</div>
-
         <h1>QA Automation Framework Architecture</h1>
-
         <p class="starter-desc">
             Scalable Selenium framework built using Java, TestNG, Page Object Model, reusable utilities and reporting.
         </p>
-
         <div class="architecture-status">
             🚧 CURRENTLY UNDER DEVELOPMENT
         </div>
@@ -69,61 +59,402 @@
     <!-- Framework Overview -->
     <section>
         <div class="section-tag">OVERVIEW</div>
-
         <h2>Framework Overview</h2>
-
         <div class="about-showcase">
-
             <div class="about-glow"></div>
-
             <div class="about-main">
-
                 <p class="about-desc">
                     This automation framework is designed using Page Object Model (POM) and follows a scalable architecture to support maintainable, reusable and robust UI automation testing.
                 </p>
-
                 <div class="about-highlights">
-
                     <div class="about-highlight">
                         <span>POM</span>
                         <small>Design Pattern</small>
                     </div>
-
                     <div class="about-highlight">
                         <span>TestNG</span>
                         <small>Execution Engine</small>
                     </div>
-
                     <div class="about-highlight">
                         <span>Maven</span>
                         <small>Build Management</small>
                     </div>
-
                     <div class="about-highlight">
                         <span>Extent</span>
                         <small>Reporting</small>
                     </div>
-
                 </div>
-
             </div>
-
             <div class="about-side">
-
                 <div class="about-stat">
                     <span>6+</span>
                     <small>Core Modules</small>
                 </div>
-
                 <div class="about-stat">
                     <span>100%</span>
                     <small>Reusable Design</small>
                 </div>
-
             </div>
-
         </div>
     </section>
+
+    <section class="architecture-flow-section">
+        <div class="section-header">
+            <h2>Framework Execution Flow</h2>
+            <p>
+                End-to-end execution lifecycle of the Hybrid Selenium Automation Framework.
+                This diagram demonstrates how TestNG, DriverFactory, Page Objects,
+                Utilities, Listeners and Reporting components interact during execution.
+            </p>
+        </div>
+        <div class="flow-container">
+            <div class="flow-card"
+                onclick="showFrameworkInfo('LaunchTestJava')">
+                <i class="fas fa-play-circle"></i>
+                <h4>LaunchTest</h4>
+                <span>Test Execution Starts</span>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-card"
+                onclick="showFrameworkInfo('BaseTestJava')">
+                <i class="fas fa-layer-group"></i>
+                <h4>BaseTest</h4>
+                <span>Framework Initialization</span>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+
+            <div class="flow-card"
+                onclick="showFrameworkInfo('DriverFactoryJava')">
+                <i class="fas fa-cogs"></i>
+                <h4>DriverFactory</h4>
+                <span>WebDriver Creation</span>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-card">
+                <i class="fab fa-chrome"></i>
+                <h4>ChromeDriver</h4>
+                <span>Browser Launch</span>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-grid">
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('LoginPageJava')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <h4>LoginPage</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('DashboardPageJava')">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>DashboardPage</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('PIMPageJava')">
+                    <i class="fas fa-users"></i>
+                    <h4>PIMPage</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('AddEmployeePageJava')">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>AddEmployeePage</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('EmployeeDetailsPageJava')">
+                    <i class="fas fa-id-card"></i>
+                    <h4>EmployeeDetailsPage</h4>
+                </div>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-grid">
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('WaitUtilJava')">
+                    <i class="fas fa-clock"></i>
+                    <h4>WaitUtil</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('ScreenshotUtilJava')">
+                    <i class="fas fa-camera"></i>
+                    <h4>ScreenshotUtil</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('ConfigReaderJava')">
+                    <i class="fas fa-sliders-h"></i>
+                    <h4>ConfigReader</h4>
+                </div>
+                <div class="flow-card"
+                    onclick="showFrameworkInfo('JsonUtilJava')">
+                    <i class="fas fa-file-code"></i>
+                    <h4>JsonUtil</h4>
+                </div>
+
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-card"
+                onclick="showFrameworkInfo('TestListenerJava')">
+                <i class="fas fa-bell"></i>
+                <h4>TestListener</h4>
+                <span>Execution Monitoring</span>
+            </div>
+            <div class="flow-arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="flow-card"
+                onclick="showFrameworkInfo('ExtentManagerJava')">
+                <i class="fas fa-chart-line"></i>
+                <h4>Extent Report</h4>
+                <span>Final Reporting</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="framework-explorer-section">
+        <div class="section-header">
+            <h2>Interactive Framework Explorer</h2>
+            <p>
+                Explore the complete Hybrid Automation Framework architecture,
+                folder structure, source files, execution flow, utilities,
+                reporting layer, test layer, and generated artifacts.
+            </p>
+        </div>
+        <div class="framework-explorer-container">
+            <div class="framework-tree-panel">
+                <div class="framework-tree-scroll">
+                    <div class="vscode-tree">
+                        <!-- ROOT -->
+                        <div class="tree-folder expanded">
+                            <div class="tree-header">
+                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                <span class="folder-label" onclick="showFrameworkInfo('src')">📁 src</span>
+                            </div>
+                            <div class="tree-content">
+                                <!-- MAIN -->
+                                <div class="tree-folder expanded">
+                                    <div class="tree-header">
+                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                        <span class="folder-label" onclick="showFrameworkInfo('main')">📁 main</span>
+                                    </div>
+                                    <div class="tree-content">
+                                        <!-- JAVA -->
+                                        <div class="tree-folder expanded">
+                                            <div class="tree-header">
+                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                <span class="folder-label" onclick="showFrameworkInfo('java')">📁 java</span>
+                                            </div>
+                                            <div class="tree-content">
+                                                <!-- CORE -->
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('core')">📁 core</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('config')">📁 config</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('ConfigReaderJava')">📄 ConfigReader.java</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('models')">📁 models</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('EmployeeJava')">📄 Employee.java</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('reports')">📁 reports</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('ExtentManagerJava')">📄 ExtentManager.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('ExtentTestManagerJava')">📄 ExtentTestManager.java</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('utils')">📁 utils</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('JsonUtilJava')">📄 JsonUtil.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('ScreenshotUtilJava')">📄 ScreenshotUtil.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('WaitUtilJava')">📄 WaitUtil.java</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- UI -->
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('ui')">📁 ui</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('drivers')">📁 drivers</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('DriverFactoryJava')">📄 DriverFactory.java</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tree-folder expanded">
+                                                            <div class="tree-header">
+                                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                                <span class="folder-label" onclick="showFrameworkInfo('pages')">📁 pages</span>
+                                                            </div>
+                                                            <div class="tree-content">
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('BasePageJava')">📄 BasePage.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('LoginPageJava')">📄 LoginPage.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('DashboardPageJava')">📄 DashboardPage.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('PIMPageJava')">📄 PIMPage.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('AddEmployeePageJava')">📄 AddEmployeePage.java</div>
+                                                                <div class="tree-file java-file" onclick="showFrameworkInfo('EmployeeDetailsPageJava')">📄 EmployeeDetailsPage.java</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- MAIN RESOURCES -->
+                                        <div class="tree-folder expanded">
+                                            <div class="tree-header">
+                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                <span class="folder-label" onclick="showFrameworkInfo('resources')">📁 resources</span>
+                                            </div>
+                                            <div class="tree-content">
+                                                <div class="tree-file config-file" onclick="showFrameworkInfo('ConfigProperties')">📄 config.properties</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TEST -->
+                                <div class="tree-folder expanded">
+                                    <div class="tree-header">
+                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                        <span class="folder-label" onclick="showFrameworkInfo('test')">📁 test</span>
+                                    </div>
+                                    <div class="tree-content">
+                                        <div class="tree-folder expanded">
+                                            <div class="tree-header">
+                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                <span class="folder-label" onclick="showFrameworkInfo('testJava')">📁 java</span>
+                                            </div>
+                                            <div class="tree-content">
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('listeners')">📁 listeners</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('TestListenerJava')">📄 TestListener.java</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('base')">📁 base</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('BaseTestJava')">📄 BaseTest.java</div>
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('AuthenticatedBaseTestJava')">📄 AuthenticatedBaseTest.java</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('tests')">📁 tests</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('LaunchTestJava')">📄 LaunchTest.java</div>
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('AddEmployeeTestJava')">📄 AddEmployeeTest.java</div>
+                                                        <div class="tree-file java-file" onclick="showFrameworkInfo('EmployeePersonalDetailsTestJava')">📄 EmployeePersonalDetailsTest.java</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tree-folder expanded">
+                                            <div class="tree-header">
+                                                <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                <span class="folder-label" onclick="showFrameworkInfo('testResources')">📁 resources</span>
+                                            </div>
+                                            <div class="tree-content">
+                                                <div class="tree-folder expanded">
+                                                    <div class="tree-header">
+                                                        <span class="tree-arrow" onclick="toggleFolder(this)">▼</span>
+                                                        <span class="folder-label" onclick="showFrameworkInfo('testdata')">📁 testdata</span>
+                                                    </div>
+                                                    <div class="tree-content">
+                                                        <div class="tree-file json-file" onclick="showFrameworkInfo('employeeJson')">📄 employee.json</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ROOT FILES -->
+                        <div class="tree-file config-file" onclick="showFrameworkInfo('pomXml')">
+                            📄 pom.xml
+                        </div>
+                        <div class="tree-file folder-file" onclick="showFrameworkInfo('target')">
+                            📁 target
+                        </div>
+                        <div class="tree-file folder-file" onclick="showFrameworkInfo('testOutput')">
+                            📁 test-output
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div class="framework-info-panel">
+                <div id="frameworkInfoContent">
+                    <div class="framework-placeholder">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Framework Knowledge Explorer</h3>
+                        <p>
+                            Select any folder, Java class, configuration file,
+                            report component, test layer, or generated artifact
+                            from the architecture tree.
+                        </p>
+                        <div class="framework-features">
+                            <span>Page Object Model</span>
+                            <span>Driver Factory</span>
+                            <span>Utilities</span>
+                            <span>Reports</span>
+                            <span>Listeners</span>
+                            <span>Data Driven Testing</span>
+                            <span>Config Management</span>
+                            <span>TestNG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Folder Structure -->
     <section>
