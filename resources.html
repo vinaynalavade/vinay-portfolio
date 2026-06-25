@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Learning Resources | Vinay Nalavade</title>
-  <link rel="icon" type="image/svg+xml" href="favicon-light.svg">
-  <link id="favicon" rel="icon" href="favicon-dark.svg">
+  <meta name="description" content="QA learning resources and study materials curated by Vinay Nalavade.">
+  <meta property="og:title" content="Learning Resources | Vinay Nalavade">
+  <meta property="og:description" content="QA learning resources and study materials curated by Vinay Nalavade.">
+  <meta property="og:image" content="https://vinayqa.com/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
     rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,10 +36,26 @@
         <li><a href="starter-pack.html">Starter Pack</a></li>
       </ul>
 
+      <a href="https://drive.google.com/uc?export=download&id=1gmKEXRdXYbBTlMbwmUUtYEa5daQMzyYf" class="nav-resume-btn" aria-label="Download or View Resume" target="_blank">Resume ↓</a>
       <button id="theme-toggle">🌙</button>
+      <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-inner">
+      <a href="index.html" class="drawer-link">Portfolio</a>
+      <a href="resources.html" class="drawer-link">Resources</a>
+      <a href="architecture.html" class="drawer-link">Architecture</a>
+      <a href="starter-pack.html" class="drawer-link">Starter Pack</a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="resource-hero">

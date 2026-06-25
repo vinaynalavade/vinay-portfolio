@@ -5,14 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vinay Nalavade — QA Engineering</title>
-  <link rel="icon" type="image/svg+xml" href="favicon-light.svg">
-  <link id="favicon" rel="icon" href="favicon-dark.svg">
+  <meta name="description" content="Portfolio of Vinay Nalavade, QA Engineer specializing in manual testing, API testing, SQL, and Automation.">
+  <meta property="og:title" content="Vinay Nalavade — QA Engineering">
+  <meta property="og:description" content="Portfolio of Vinay Nalavade, QA Engineer specializing in manual testing, API testing, SQL, and Automation.">
+  <meta property="og:image" content="https://vinayqa.com/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
 </head>
 
@@ -27,7 +32,7 @@
       <div class="qv-item">Role: <span>QA Engineer</span></div>
       <div class="qv-item">Skills: <span>Selenium, Postman, Python, SQL</span></div>
       <span class="badge">● OPEN TO WORK</span>
-      <a href="#" class="qv-btn" id="open-contact">→ Contact</a>
+      <a href="#" class="qv-btn" id="open-contact" role="button">→ Contact</a>
       <a href="https://drive.google.com/uc?export=download&id=1gmKEXRdXYbBTlMbwmUUtYEa5daQMzyYf " class="qv-btn"
         style="background:transparent;color:var(--accent);border:1px solid rgba(0,229,160,0.3);margin-top:6px;">↓
         Resume</a>
@@ -60,9 +65,35 @@
           </div>
         </li>
       </ul>
+      <a href="https://drive.google.com/uc?export=download&id=1gmKEXRdXYbBTlMbwmUUtYEa5daQMzyYf" class="nav-resume-btn" aria-label="Download or View Resume" target="_blank">Resume ↓</a>
       <button id="theme-toggle">🌙</button>
+      <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-inner">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#experience" class="drawer-link">Experience</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="architecture.html" class="drawer-link">Architecture</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+      <div class="drawer-divider"></div>
+      <a href="#education" class="drawer-link">Education</a>
+      <a href="#skills" class="drawer-link">Skills</a>
+      <a href="#process" class="drawer-link">Process</a>
+      <a href="#defects" class="drawer-link">Defects</a>
+      <a href="#api-lab" class="drawer-link">API Lab</a>
+      <a href="#automation" class="drawer-link">Automation</a>
+      <a href="#tools" class="drawer-link">Tools</a>
+    </div>
+  </div>
+
 
   <!-- HERO -->
   <section id="hero">
@@ -80,7 +111,7 @@
         before they reach users.
       </p>
       <div class="hero-cta fade-up">
-        <a href="#" class="btn-primary" id="open-resume">View Resume →</a>
+        <a href="#" class="btn-primary" id="open-resume" role="button">View Resume →</a>
         <a href="#contact" class="btn-ghost">Get In Touch</a>
       </div>
     </div>

@@ -65,25 +65,6 @@ function updateIcon() {
         ? "☀️"
         : "🌙";
   }
-
-  const oldIcon =
-    document.getElementById("favicon");
-
-  if (!oldIcon) return;
-
-  const newIcon =
-    document.createElement("link");
-
-  newIcon.id = "favicon";
-  newIcon.rel = "icon";
-
-  newIcon.href =
-    currentTheme === "light"
-      ? "favicon-light.svg"
-      : "favicon-dark.svg";
-
-  document.head.removeChild(oldIcon);
-  document.head.appendChild(newIcon);
 }
 
 // Counter animation
@@ -119,9 +100,17 @@ function toggleDefect(card) {
 // Bug report tabs
 function switchBug(index, tab) {
   document.querySelectorAll('.bug-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.bug-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.bug-content').forEach(c => {
+    c.classList.remove('active');
+    c.classList.remove('fade-content');
+  });
   tab.classList.add('active');
-  document.querySelectorAll('.bug-content')[index].classList.add('active');
+  const targetContent = document.querySelectorAll('.bug-content')[index];
+  targetContent.classList.add('active');
+  
+  // Force reflow and add animation class
+  void targetContent.offsetWidth;
+  targetContent.classList.add('fade-content');
 }
 
 // Scroll fade-in for sections
@@ -2433,8 +2422,12 @@ function showFrameworkInfo(key) {
     return;
   }
 
-  document.getElementById(
-    "frameworkInfoContent").innerHTML = `
+  const contentEl = document.getElementById("frameworkInfoContent");
+  contentEl.classList.remove("fade-content");
+  void contentEl.offsetWidth;
+  contentEl.classList.add("fade-content");
+
+  contentEl.innerHTML = `
 
 <div class="framework-card">
 
@@ -2523,3 +2516,106 @@ function toggleFolder(arrow) {
       ? "▼"
       : "▶";
 }
+
+// ==========================================
+// MOBILE NAVIGATION LOGIC
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const drawerLinks = document.querySelectorAll('.drawer-link');
+
+  if (menuToggle && mobileDrawer) {
+    menuToggle.addEventListener('click', () => {
+      const isActive = menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileDrawer.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+});
+
+// ==========================================
+// UX POLISH: SCROLL, GLOW & COPY
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Scroll Progress Indicator (Throttled with rAF)
+  const progressBar = document.createElement('div');
+  progressBar.id = 'scroll-progress';
+  document.body.prepend(progressBar);
+
+  let isScrolling = false;
+  window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }, { passive: true });
+
+  // 2. Click-to-copy Toast
+  const copyToast = document.createElement('div');
+  copyToast.id = 'copy-toast';
+  copyToast.innerText = 'Copied to clipboard!';
+  document.body.appendChild(copyToast);
+
+  let toastTimeout; // Prevents race conditions
+
+  const executeCopy = (el, e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    navigator.clipboard.writeText(el.innerText).then(() => {
+      copyToast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => copyToast.classList.remove('show'), 2000);
+    });
+  };
+
+  const copyElements = document.querySelectorAll('.defect-id, .endpoint, .tree-file, .t-cmd');
+  copyElements.forEach(el => {
+    el.classList.add('copyable');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-label', 'Copy to clipboard');
+    
+    el.addEventListener('click', (e) => executeCopy(el, e));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        executeCopy(el, e);
+      }
+    });
+  });
+
+  // 3. Mouse-tracking Glow (Throttled with rAF)
+  const glowCards = document.querySelectorAll('.defect-card, .project-card, .api-card, .pack-card, .vision-card, .roadmap-card');
+  glowCards.forEach(card => {
+    card.classList.add('glow-card');
+    
+    let isMouseMoving = false;
+    card.addEventListener('mousemove', (e) => {
+      if (!isMouseMoving) {
+        window.requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+          isMouseMoving = false;
+        });
+        isMouseMoving = true;
+      }
+    }, { passive: true });
+  });
+});
