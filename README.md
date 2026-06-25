@@ -6,7 +6,7 @@ A modern and responsive personal portfolio website showcasing my experience, ski
 
 🌐 Portfolio Website
 
-https://vinayo7.github.io/vinay-portfolio/
+https://github.com/vinaynalavade/vinay-portfolio
 
 ## About
 
@@ -143,11 +143,8 @@ QA Engineer | Manual Testing | Automation Testing | Selenium | Java | API Testin
 
 ## Connect With Me
 
-LinkedIn:
-https://www.linkedin.com/in/vinaynalavade/
-
 GitHub:
-https://github.com/VinayO7
+https://github.com/vinaynalavade
 
 Portfolio:
 [https://vinaynalavade.github.io/vinay-portfolio/](https://vinaynalavade.github.io/vinay-portfolio/)
