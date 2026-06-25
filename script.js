@@ -2943,7 +2943,12 @@ window.runDiagnostics = function() {
       consoleEl.innerHTML += `<div style="${colorClass}">${step.text}</div>`;
       consoleEl.scrollTop = consoleEl.scrollHeight;
       idx++;
-      currentHealthDiagnosticTimer = setTimeout(printDiagnosticStep, 60);
+      let delay = 300;
+      if (step.type === "test") delay = 700;
+      if (step.type === "sub") delay = 250;
+      if (step.type === "pass") delay = 450;
+      if (step.type === "summary") delay = 1500;
+      currentHealthDiagnosticTimer = setTimeout(printDiagnosticStep, delay);
     }
   }
   printDiagnosticStep();
@@ -3073,4 +3078,4 @@ document.addEventListener("keydown", (e) => {
       }
     }
   }
-});
+});
