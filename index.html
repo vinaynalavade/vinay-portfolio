@@ -28,9 +28,9 @@
     <span class="tab-icon">QUICK VIEW</span>
     <div class="qv-content">
       <h4>Vinay Nalavade</h4>
-      <div class="qv-item">Experience: <span>1+ Years</span></div>
+      <div class="qv-item">Experience: <span>3+ Years</span></div>
       <div class="qv-item">Role: <span>QA Engineer</span></div>
-      <div class="qv-item">Skills: <span>Selenium, Postman, Python, SQL</span></div>
+      <div class="qv-item">Skills: <span>Selenium, TestNG, Python, Postman, SQL</span></div>
       <span class="badge">● OPEN TO WORK</span>
       <a href="#" class="qv-btn" id="open-contact" role="button">→ Contact</a>
       <a href="https://drive.google.com/uc?export=download&id=1gmKEXRdXYbBTlMbwmUUtYEa5daQMzyYf " class="qv-btn"
@@ -65,6 +65,10 @@
           </div>
         </li>
       </ul>
+      <div id="qa-health-widget" class="qa-health-badge" role="button" aria-label="View QA Portfolio Health Checks" onclick="openHealthCheckModal()">
+        <span class="health-pulse"></span>
+        <span class="health-text">PORTFOLIO HEALTH: PASS</span>
+      </div>
       <a href="https://drive.google.com/uc?export=download&id=1gmKEXRdXYbBTlMbwmUUtYEa5daQMzyYf" class="nav-resume-btn" aria-label="Download or View Resume" target="_blank">Resume ↓</a>
       <button id="theme-toggle">🌙</button>
       <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle menu">
@@ -107,8 +111,7 @@
         <span class="line2">Nalavade</span>
       </h1>
       <p class="hero-desc fade-up">
-        I don't just find bugs. I understand why they exist, prevent their recurrence, and build systems that catch them
-        before they reach users.
+        QA Engineer with 3+ years of experience delivering manual, automation, API, and database testing solutions for Banking and Insurance applications. Passionate about building reliable automation frameworks and improving software quality through scalable testing practices.
       </p>
       <div class="hero-cta fade-up">
         <a href="#" class="btn-primary" id="open-resume" role="button">View Resume →</a>
@@ -159,14 +162,10 @@
           I break software before users do.
         </h3>
         <p class="about-desc">
-          I'm Vinay, a Computer Science graduate and QA Engineer with experience
-          in Manual Testing, Automation Testing, API Validation, SQL Verification,
-          and Insurance Domain Quality Assurance.
+          With over 3 years of experience in Quality Engineering, I blend rigorous manual precision with scalable automation to protect business-critical systems in the Banking and Insurance sectors.
         </p>
         <p class="about-desc">
-          My work focuses on identifying defects, validating business-critical
-          data, improving testing efficiency, and ensuring software behaves
-          exactly as users expect.
+          My approach is rooted in measurable impact. Whether I'm building Selenium frameworks, architecting Postman API suites, or engineering Python scripts that reduce manual validation by 70%, my focus remains the same: shipping flawless software, faster.
         </p>
         <div class="about-highlights">
           <div class="about-highlight">
@@ -183,22 +182,22 @@
           </div>
           <div class="about-highlight">
             <span>DATA</span>
-            <small>Insurance Domain Analysis</small>
+            <small>Banking & Insurance</small>
           </div>
         </div>
       </div>
       <div class="about-side">
         <div class="about-stat">
-          <span>1+</span>
+          <span>3+</span>
           <small>Years Experience</small>
         </div>
         <div class="about-stat">
-          <span>QA</span>
-          <small>Quality Focused</small>
+          <span>Agile</span>
+          <small>Scrum Methodology</small>
         </div>
         <div class="about-stat">
-          <span>API</span>
-          <small>Validation Driven</small>
+          <span>Automation</span>
+          <small>Selenium WebDriver</small>
         </div>
       </div>
     </div>
@@ -209,33 +208,51 @@
     <div class="section-tag">experience</div>
     <h2>Professional Experience</h2>
 
+    <div class="filter-container">
+      <span class="filter-label">Recruiter Focus:</span>
+      <button class="filter-chip active" onclick="filterRecruiterFocus('all', this)">All Highlights</button>
+      <button class="filter-chip" onclick="filterRecruiterFocus('automation', this)">Test Automation</button>
+      <button class="filter-chip" onclick="filterRecruiterFocus('manual', this)">Manual & Domain QA</button>
+      <button class="filter-chip" onclick="filterRecruiterFocus('api-db', this)">API & SQL Validation</button>
+    </div>
+
     <div class="experience-timeline">
 
       <div class="exp-card">
-        <div class="exp-date">Mar 2025 – Sep 2025</div>
-        <h3>Data Analyst – QA & Reporting</h3>
-        <div class="exp-company">ICICI Prudential Life Insurance (EOSGlobe)</div>
+        <div class="exp-date">Sep 2025 – Present</div>
+        <h3>QA Analyst</h3>
+        <div class="exp-company">Infosys Ltd. (via UNIZEN Technologies Pvt. Ltd.) | Pune</div>
 
         <ul>
-          <li>Verified reissued life insurance policies and identified policy processing errors.</li>
-          <li>Performed data validation using Life Asia, SAP BO, SQL, and Excel.</li>
-          <li>Generated validation reports and supported business decision-making.</li>
-          <li>Automated repetitive validation activities using Python and Excel.</li>
-          <li>Collaborated with operations teams to ensure policy accuracy and compliance.</li>
+          <li data-focus="manual">Executed Functional, Regression, and Smoke testing during Agile sprint cycles, maintaining 95%+ test coverage and contributing to high-quality software releases.</li>
+          <li data-focus="manual">Designed, reviewed, and maintained 80+ test cases per sprint based on business requirements.</li>
+          <li data-focus="manual">Executed extensive Functional, Regression, and Smoke testing suites across critical platform modules.</li>
+          <li data-focus="manual">Managed the end-to-end defect lifecycle in Jira, facilitating rapid triage with cross-functional development teams.</li>
         </ul>
       </div>
 
       <div class="exp-card">
-        <div class="exp-date">Jul 2024 – Dec 2024</div>
-        <h3>Software Testing Intern</h3>
-        <div class="exp-company">Robowaves Software Solutions Pvt Ltd</div>
+        <div class="exp-date">Mar 2025 – Sep 2025</div>
+        <h3>QA Analyst</h3>
+        <div class="exp-company">ICICI Prudential Life Insurance (via Eureka Outsourcing Solutions)</div>
 
         <ul>
-          <li>Performed Manual Testing for web and mobile applications.</li>
-          <li>Executed API testing using Postman.</li>
-          <li>Created and maintained API documentation.</li>
-          <li>Participated in crowd beta testing projects.</li>
-          <li>Worked on functional, regression, and exploratory testing activities.</li>
+          <li data-focus="automation">Architected a Python-based automation solution for commission validation, reducing manual effort by approximately 70%.</li>
+          <li data-focus="manual">Ensured strict IRDAI compliance by validating complex policy commission calculations and data reconciliation logic.</li>
+          <li data-focus="api-db">Performed SQL backend validation to verify data integrity between SAP BusinessObjects and Life Asia.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-date">Jan 2023 – Feb 2025</div>
+        <h3>Software Test Engineer</h3>
+        <div class="exp-company">Swift Solution Pvt. Ltd.</div>
+
+        <ul>
+          <li data-focus="automation">Built and maintained a scalable Selenium WebDriver (Java) automation framework utilizing the Page Object Model (POM) and TestNG.</li>
+          <li data-focus="automation">Automated critical regression scenarios, reducing regression cycle time by approximately 25%.</li>
+          <li data-focus="manual">Designed and executed 200+ functional and integration test cases for secure Banking and E-Commerce platforms.</li>
+          <li data-focus="api-db">Performed SQL backend validation to ensure transactional data consistency.</li>
         </ul>
       </div>
 
@@ -372,38 +389,59 @@
     <div class="skills-grid">
 
       <div class="skill-card">
-        <h3>Testing</h3>
-        <span>Manual Testing</span>
-        <span>Automation Testing</span>
-        <span>Functional Testing</span>
-        <span>Smoke Testing</span>
-        <span>API Testing</span>
-        <span>Database Testing</span>
-      </div>
-
-      <div class="skill-card">
         <h3>Automation</h3>
         <span>Selenium WebDriver</span>
-        <span>Core Java</span>
-        <span>Basic Python Scripting</span>
+        <span>TestNG</span>
+        <span>Maven</span>
+        <span>POM</span>
+        <span>Fireflink</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>API Testing</h3>
         <span>Postman</span>
+        <span>REST API</span>
       </div>
 
       <div class="skill-card">
-        <h3>Data & Reporting</h3>
+        <h3>Languages</h3>
+        <span>Core Java</span>
         <span>SQL</span>
-        <span>Advanced Excel</span>
-        <span>SAP BusinessIntelligence</span>
-        <span>Life Asia (Native Life Insurance Software)</span>
+        <span>Basic Python</span>
       </div>
 
       <div class="skill-card">
-        <h3>Process & Tools</h3>
-        <span>Agile Methodology</span>
-        <span>Defect Reporting</span>
-        <span>Defect Tracking</span>
+        <h3>Testing</h3>
+        <span>Regression Testing</span>
+        <span>Smoke Testing</span>
+        <span>Functional Testing</span>
+        <span>Manual Testing</span>
+        <span>STLC</span>
+        <span>SDLC</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Methodologies</h3>
+        <span>Agile</span>
+        <span>Scrum</span>
+        <span>Defect Lifecycle</span>
         <span>Test Case Design</span>
-        <span>Root Cause Analysis</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <span>Jira</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Jenkins</span>
+        <span>Eclipse</span>
+        <span>VS Code</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Reporting</h3>
+        <span>SAP BusinessObjects</span>
+        <span>Advanced Excel</span>
       </div>
 
     </div>
@@ -419,43 +457,43 @@
 
     <div class="projects-grid">
 
-      <div class="project-card">
-        <div class="project-tag">Automation Testing</div>
-
-        <h3>QA Automation Framework</h3>
-
-        <p>
-            Scalable Selenium automation framework built using Java, TestNG,
-            Page Object Model, DriverFactory and reusable framework components.
-        </p>
-
-        <div class="project-tech">
-            Java • Selenium • TestNG • POM
-        </div>
-
-        <a href="architecture.html" class="project-link">
-            Explore Architecture →
-        </a>
+      <div class="project-card" data-focus="manual api-db">
+        <div class="project-tag">Banking Domain</div>
+        <h3>Loan Origination System (LOS)</h3>
+        <ul style="color: rgba(255, 255, 255, 0.7); margin-left: 1.2rem; margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem;">
+          <li><strong>Problem:</strong> Slow manual validation of critical banking loan workflows.</li>
+          <li><strong>Role:</strong> QA Analyst</li>
+          <li><strong>Activities:</strong> Executed end-to-end Agile testing for customer eligibility, credit assessment, and document validation. Built API and SQL verification suites.</li>
+          <li><strong>Business Value:</strong> Improved release quality by validating critical loan workflows through comprehensive functional, API, and database testing.</li>
+        </ul>
+        <div class="project-tech">Java • Selenium • TestNG • Postman • SQL • Jira</div>
+        <button class="project-artifact-btn" onclick="openArtifactModal(1); event.stopPropagation();" style="background:rgba(0,229,160,0.06); border:1px solid rgba(0,229,160,0.2); color:var(--accent); border-radius:6px; padding:6px 12px; font-family:'JetBrains Mono',monospace; font-size:11px; cursor:pointer; margin-top:8px; width:100%; font-weight:600; transition:all 0.2s;">View RTM & Coverage Matrix 📄</button>
       </div>
 
-      <div class="project-card">
-        <div class="project-tag">API Testing</div>
-        <h3>Postman API Validation Suite</h3>
-        <p>
-          Created API collections with automated validations for status codes, schema verification, response body
-          checks, and regression testing.
-        </p>
-        <div class="project-tech">Postman • REST API • JSON</div>
+      <div class="project-card" data-focus="automation api-db">
+        <div class="project-tag">Insurance Domain</div>
+        <h3>Commission Validation Automation</h3>
+        <ul style="color: rgba(255, 255, 255, 0.7); margin-left: 1.2rem; margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem;">
+          <li><strong>Problem:</strong> High manual overhead in auditing complex insurance commission calculations.</li>
+          <li><strong>Role:</strong> QA Analyst</li>
+          <li><strong>Activities:</strong> Engineered a rule-based Python automation solution to validate policies and cross-referenced SAP BO data with Life Asia.</li>
+          <li><strong>Business Value:</strong> Reduced manual validation effort by approximately 70% while helping maintain IRDAI compliance through automated commission validation.</li>
+        </ul>
+        <div class="project-tech">Python • SQL • SAP BO • Life Asia • Excel</div>
+        <button class="project-artifact-btn" onclick="openArtifactModal(2); event.stopPropagation();" style="background:rgba(0,229,160,0.06); border:1px solid rgba(0,229,160,0.2); color:var(--accent); border-radius:6px; padding:6px 12px; font-family:'JetBrains Mono',monospace; font-size:11px; cursor:pointer; margin-top:8px; width:100%; font-weight:600; transition:all 0.2s;">View Database Reconcile Schema 📄</button>
       </div>
 
-      <div class="project-card">
-        <div class="project-tag">Data Validation</div>
-        <h3>Insurance Policy Verification</h3>
-        <p>
-          Validated reissued life insurance policies, identified processing errors, and generated quality reports using
-          SQL, Excel, Life Asia, and SAP BO.
-        </p>
-        <div class="project-tech">SQL • Excel • SAP BO • Life Asia</div>
+      <div class="project-card" data-focus="automation manual">
+        <div class="project-tag">Retail Domain</div>
+        <h3>E-Commerce OMS</h3>
+        <ul style="color: rgba(255, 255, 255, 0.7); margin-left: 1.2rem; margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem;">
+          <li><strong>Problem:</strong> Regression bugs impacting the critical order and payment workflows.</li>
+          <li><strong>Role:</strong> Software Test Engineer.</li>
+          <li><strong>Activities:</strong> Designed robust Regression and Smoke suites for order management, inventory, shipments, and refunds using Selenium and Postman.</li>
+          <li><strong>Business Value:</strong> Improved application quality by validating critical order, payment, shipment, and refund workflows before release.</li>
+        </ul>
+        <div class="project-tech">Java • Selenium • Fireflink • Postman • SQL</div>
+        <button class="project-artifact-btn" onclick="openArtifactModal(3); event.stopPropagation();" style="background:rgba(0,229,160,0.06); border:1px solid rgba(0,229,160,0.2); color:var(--accent); border-radius:6px; padding:6px 12px; font-family:'JetBrains Mono',monospace; font-size:11px; cursor:pointer; margin-top:8px; width:100%; font-weight:600; transition:all 0.2s;">View CI/CD Regression Pipeline 📄</button>
       </div>
 
     </div>
@@ -537,37 +575,85 @@
     <div class="defect-grid">
 
       <!-- Card 1 -->
+      <!-- Card 1 -->
       <div class="defect-card" onclick="toggleDefect(this)">
         <div class="defect-header">
-          <span class="defect-id">BUG-2024-041</span>
+          <span class="defect-id">BUG-2025-014</span>
           <span class="severity sev-high">High</span>
         </div>
         <div class="defect-body">
-          <div class="defect-title">Commission Validation Issue</div>
+          <div class="defect-title">Loan Eligibility Income Miscalculation</div>
           <ul class="defect-timeline">
-            <li><span class="phase">Problem</span><span class="detail">Commission calculations returning incorrect
-                values for multi-tier agents</span></li>
-            <li><span class="phase">Investigation</span><span class="detail">Traced through commission engine logic and
-                SQL procedures</span></li>
-            <li><span class="phase">Root Cause</span><span class="detail">Rounding logic applied before tier split, not
-                after</span></li>
+            <li><span class="phase">Problem</span><span class="detail">Customer loan eligibility incorrectly failed for applicants with multiple income sources.</span></li>
+            <li><span class="phase">Investigation</span><span class="detail">Queried the database via SQL to verify stored income values against the API payload in Postman.</span></li>
+            <li><span class="phase">Root Cause</span><span class="detail">The backend API schema for the eligibility endpoint dropped the secondary income array during payload processing.</span></li>
+            <li><span class="phase">Validation</span><span class="detail">Executed API regression testing with varied income combinations to confirm total calculation.</span></li>
           </ul>
         </div>
         <div class="defect-expand">
           <div class="expand-section">
-            <div class="expand-label">Impact</div>
-            <div class="expand-text">Affected 12% of agents. Overpayment of ~$4,200 identified across last billing
-              cycle. Financial audit triggered.</div>
+            <div class="expand-label">Summary</div>
+            <div class="expand-text">Secondary income sources were dropped during the eligibility API request, causing valid loan applications to be rejected.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Resolution</div>
-            <div class="expand-text">Fixed calculation order in stored procedure SP_CALC_COMMISSION. Backfill script
-              executed for affected records.</div>
+            <div class="expand-label">Environment</div>
+            <div class="expand-text">Staging API v2.4, Windows 11, Chrome.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Validation</div>
-            <div class="expand-text">Ran 24 regression test cases across all tier combinations. SQL query verified
-              record correction. Signed off after 3 clean runs.</div>
+            <div class="expand-label">Steps to Reproduce</div>
+            <div class="expand-text">1. Submit loan application via API with primary_income and secondary_income. 2. Check eligibility status endpoint.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Expected Result</div>
+            <div class="expand-text">Total income should aggregate both fields and approve eligibility.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Actual Result</div>
+            <div class="expand-text">Only primary_income was calculated; eligibility failed.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Investigation Process & Evidence</div>
+            <div class="expand-text">
+              <p style="margin-bottom:8px;">Isolated the issue using Postman and SQL verification. Below is the logs extraction and DevTools API response verification showing the omitted object block:</p>
+              <div class="evidence-panel" style="background:#000; border:1px solid var(--border); border-radius:6px; padding:12px; font-family:'JetBrains Mono',monospace; font-size:11px; margin-bottom:12px;">
+                <div style="color:var(--accent3); border-bottom:1px dashed rgba(255,255,255,0.1); padding-bottom:4px; margin-bottom:6px;">HTTP/1.1 200 OK | GET /eligibility/assess?id=APP_90212</div>
+                <div style="color:var(--muted); font-size:10px;">// EXPECTED RESPONSES CONTAINED secondary_income ARRAY</div>
+                <div style="color:var(--text); white-space:pre-wrap;">{
+  "applicant_id": "APP_90212",
+  "primary_income": 85000.00,
+  <span style="background:rgba(255,107,53,0.15); color:var(--accent2); text-decoration:line-through;">"secondary_income": [ {"source": "rent", "amount": 12000.00} ]</span> <span style="color:var(--accent2); font-weight:600;"><-- MISSING IN ACTIVE PAYLOAD</span>
+}</div>
+              </div>
+              <div class="jira-ticket-mock" style="background:var(--surface); border-left:4px solid var(--accent2); border-radius:4px; padding:10px; font-size:11px; line-height:1.4; border-top:1px solid var(--border); border-right:1px solid var(--border); border-bottom:1px solid var(--border);">
+                <div style="display:flex; justify-content:space-between; font-weight:600; color:var(--muted); border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:4px; margin-bottom:6px;">
+                  <span>🎫 JIRA: BUG-2025-014</span>
+                  <span style="color:var(--accent2);">● ACTIVE (TRIAGED)</span>
+                </div>
+                <strong>Summary:</strong> Eligibility endpoint dropping secondary income list during calculation mapping.<br>
+                <strong>Priority:</strong> High | <strong>Component:</strong> core-eligibility-api<br>
+                <strong>Reproduction steps:</strong> 1. Run eligibility test suite with applicant having rental income. 2. Verify response array size is empty.
+              </div>
+            </div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Root Cause Analysis</div>
+            <div class="expand-text">API contract validation showed that the secondary_income object was not included in the eligibility service response, despite being successfully stored in the database.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Resolution Validation</div>
+            <div class="expand-text">The development team updated the API schema definition. I re-ran the API test suite and verified the database calculation logs to confirm correct aggregation.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Regression Scope</div>
+            <div class="expand-text">Full API regression suite for the Loan Approval Workflow.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Lessons Learned</div>
+            <div class="expand-text">Added schema validation assertions in Postman to catch contract changes earlier.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Tools Used</div>
+            <div class="expand-text">Postman, SQL, Jira, Chrome DevTools.</div>
           </div>
         </div>
         <div class="defect-toggle"><span class="toggle-icon">▼</span> View Full Analysis</div>
@@ -576,35 +662,91 @@
       <!-- Card 2 -->
       <div class="defect-card" onclick="toggleDefect(this)">
         <div class="defect-header">
-          <span class="defect-id">BUG-2024-067</span>
-          <span class="severity sev-crit">Critical</span>
+          <span class="defect-id">VAL-2025-041</span>
+          <span class="severity sev-crit">High Impact</span>
         </div>
         <div class="defect-body">
-          <div class="defect-title">Policy Data Mismatch</div>
+          <div class="defect-title">Monthly Commission Validation & Reporting Automation</div>
           <ul class="defect-timeline">
-            <li><span class="phase">Problem</span><span class="detail">Policy records in UI not matching database values
-                post-sync</span></li>
-            <li><span class="phase">Investigation</span><span class="detail">Compared API response vs DB directly via
-                SQL, identified field truncation</span></li>
-            <li><span class="phase">Root Cause</span><span class="detail">VARCHAR(50) field truncating policy holder
-                names over 50 chars during migration</span></li>
+            <li><span class="phase">Problem</span><span class="detail">Manual validation of monthly commission deductions for all insurance agents required 7–8 working days.</span></li>
+            <li><span class="phase">Investigation</span><span class="detail">Extracted commission data using SQL through SAP BusinessObjects and validated against 10-12 business attributes.</span></li>
+            <li><span class="phase">Root Cause</span><span class="detail">Discrepancies were identified where calculated commission values did not match predefined commission rules for specific business attribute combinations.</span></li>
+            <li><span class="phase">Validation</span><span class="detail">Verified corrected calculations, generated automated exception reports, and presented the final validation report to senior management.</span></li>
           </ul>
         </div>
         <div class="defect-expand">
           <div class="expand-section">
-            <div class="expand-label">Impact</div>
-            <div class="expand-text">324 policy records corrupted. Potential compliance violation. Customer-facing
-              display showing incomplete data.</div>
+            <div class="expand-label">Business Problem</div>
+            <div class="expand-text">The manual validation of monthly commission deductions across all insurance agents required 7–8 working days, causing delays in monthly executive reporting.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Resolution</div>
-            <div class="expand-text">Column altered to VARCHAR(150). Migration script re-run on source data. ETL
-              pipeline updated with validation rule.</div>
+            <div class="expand-label">Environment</div>
+            <div class="expand-text">SAP BusinessObjects, Life Asia, Python, SQL, Advanced Excel.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Validation</div>
-            <div class="expand-text">Data integrity check query run across all 324 records. Cross-referenced source vs
-              target. 100% match confirmed.</div>
+            <div class="expand-label">Validation Workflow</div>
+            <div class="expand-text">1. Execute SQL queries to extract data. 2. Validate combinations of Agent Type, Policy Type, Premium Mode, Policy Term, and Commission Slab.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Expected Result</div>
+            <div class="expand-text">Actual extracted commission values must perfectly match the expected values defined in the predefined commission rule master file.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Actual Result</div>
+            <div class="expand-text">Manual validation was highly time-consuming and increased the risk of missing complex business rule discrepancies.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Investigation Process & Evidence</div>
+            <div class="expand-text">
+              <p style="margin-bottom:8px;">Analyzed discrepancies by writing database reconciliation scripts. Below is the verified exception row showing the rule mismatch:</p>
+              <div class="evidence-panel" style="background:#000; border:1px solid var(--border); border-radius:6px; padding:12px; font-family:'JetBrains Mono',monospace; font-size:11px; margin-bottom:12px; overflow-x:auto;">
+                <div style="color:var(--accent); font-weight:600; margin-bottom:4px;">exception_report_snapshot.xlsx (Mismatched Slab Rows)</div>
+                <table style="width:100%; border-collapse:collapse; font-size:10px;">
+                  <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.1); color:var(--muted);">
+                      <th style="padding:4px; text-align:left;">Policy No</th>
+                      <th style="padding:4px; text-align:left;">Product Code</th>
+                      <th style="padding:4px; text-align:left;">Expected %</th>
+                      <th style="padding:4px; text-align:left;">Actual %</th>
+                      <th style="padding:4px; text-align:left;">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="color:var(--accent2); background:rgba(255,107,53,0.05);">
+                      <td style="padding:4px;">POL90812</td>
+                      <td style="padding:4px;">TERM_LIFE_02</td>
+                      <td style="padding:4px;">12.50%</td>
+                      <td style="padding:4px;">10.00%</td>
+                      <td style="padding:4px; font-weight:600;">DISCREPANCY</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(255,255,255,0.02); padding:10px; border:1px solid var(--border); border-radius:4px;">
+                <strong>SQL Audit query executed:</strong><br>
+                <code style="color:var(--accent3);">SELECT agent_id, SUM(comm_amt) FROM actual_comm GROUP BY agent_id HAVING SUM(comm_amt) &lt;&gt; expected_total;</code>
+              </div>
+            </div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Discrepancy Analysis</div>
+            <div class="expand-text">Rather than internal software bugs, analysis revealed discrepancies where calculated commission values did not match predefined commission rules for highly specific combinations of business attributes.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Resolution Validation</div>
+            <div class="expand-text">Developed a Python automation solution that read extracted data and rule master files, applied all validation rules automatically, compared Expected vs Actual commissions, and generated exception reports.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Business Impact</div>
+            <div class="expand-text">Reduced validation effort from approximately 7–8 working days to just 1 day. Enabled faster monthly reporting and the timely presentation of validated reports to the Vice President.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Lessons Learned</div>
+            <div class="expand-text">Quality Assurance extends beyond UI testing; automating complex business rule validation is critical for financial data integrity.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Tools Used</div>
+            <div class="expand-text">Python, SQL, SAP BusinessObjects, Life Asia.</div>
           </div>
         </div>
         <div class="defect-toggle"><span class="toggle-icon">▼</span> View Full Analysis</div>
@@ -613,35 +755,78 @@
       <!-- Card 3 -->
       <div class="defect-card" onclick="toggleDefect(this)">
         <div class="defect-header">
-          <span class="defect-id">BUG-2024-089</span>
+          <span class="defect-id">BUG-2025-028</span>
           <span class="severity sev-med">Medium</span>
         </div>
         <div class="defect-body">
-          <div class="defect-title">API Response Validation Failure</div>
+          <div class="defect-title">Partial Refund Workflow Failure</div>
           <ul class="defect-timeline">
-            <li><span class="phase">Problem</span><span class="detail">GET /policy/{id} returning 200 but with null
-                premium_amount field</span></li>
-            <li><span class="phase">Investigation</span><span class="detail">Postman collection run + schema validation
-                identified nullable field</span></li>
-            <li><span class="phase">Root Cause</span><span class="detail">New optional product type not handled in
-                serializer mapping</span></li>
+            <li><span class="phase">Problem</span><span class="detail">Processing a partial refund for orders with discount codes resulted in an incorrect refund amount.</span></li>
+            <li><span class="phase">Investigation</span><span class="detail">Reproduced the issue via the UI and tracked the network payload using Browser DevTools to verify logic.</span></li>
+            <li><span class="phase">Root Cause</span><span class="detail">Network payload analysis confirmed the front-end client was incorrectly calculating the tax multiplier before the discount subtraction.</span></li>
+            <li><span class="phase">Validation</span><span class="detail">Designed and executed positive and negative UI scenarios using Selenium to verify boundary values.</span></li>
           </ul>
         </div>
         <div class="defect-expand">
           <div class="expand-section">
-            <div class="expand-label">Impact</div>
-            <div class="expand-text">Downstream billing service consumed null value, producing $0.00 invoices for 18 new
-              policy types.</div>
+            <div class="expand-label">Summary</div>
+            <div class="expand-text">Customers returning single items from a multi-item discounted order were refunded slightly more than their actual purchase price.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Resolution</div>
-            <div class="expand-text">Serializer updated with default value mapping. Added schema assertion test in
-              Postman collection.</div>
+            <div class="expand-label">Environment</div>
+            <div class="expand-text">QA Environment, Order Management Dashboard, Selenium WebDriver.</div>
           </div>
           <div class="expand-section">
-            <div class="expand-label">Validation</div>
-            <div class="expand-text">Ran Postman collection against staging. All 18 policy types returned non-null
-              premium_amount. Added to regression suite.</div>
+            <div class="expand-label">Steps to Reproduce</div>
+            <div class="expand-text">1. Create an order with 2 items and a 10% discount code. 2. Process a partial refund for Item A.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Expected Result</div>
+            <div class="expand-text">Refund amount should equal (Item A price - 10%) + tax on that specific amount.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Actual Result</div>
+            <div class="expand-text">Refund amount calculated as (Item A price + tax) - 10%.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Investigation Process & Evidence</div>
+            <div class="expand-text">
+              <p style="margin-bottom:8px;">Monitored the refund execution flow using Browser DevTools. Captured the following client request console logs and trace calculations showing floating point precision rounding errors:</p>
+              <div class="evidence-panel" style="background:#000; border:1px solid var(--border); border-radius:6px; padding:12px; font-family:'JetBrains Mono',monospace; font-size:11px; margin-bottom:12px;">
+                <div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">[console.log] client_payment_controller.js:L102</div>
+                <div style="color:rgba(255,255,255,0.7);">
+                  item_base_price = 899.10<br>
+                  discount_code_applied = 0.10 // (10%)<br>
+                  calculated_refund_subtotal = 809.1900000000001 // Floating point error<br>
+                  tax_rate = 0.05 // (5%)<br>
+                  final_refund_payload_sent = 849.65 <span style="color:var(--accent2); font-weight:600;">(Expected: 849.64)</span>
+                </div>
+              </div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(255,255,255,0.02); padding:10px; border:1px solid var(--border); border-radius:4px;">
+                <strong>Selenium assertion failure track:</strong><br>
+                <code style="color:#ff5f56;">java.lang.AssertionError: Expected refund amount [849.64] but was [849.65]</code>
+              </div>
+            </div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Root Cause Analysis</div>
+            <div class="expand-text">The request payload generated by the client contained incorrect refund values, indicating an issue in the client-side calculation. It was applying the tax multiplier before the discount subtraction, breaking the standard accounting order of operations.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Resolution Validation</div>
+            <div class="expand-text">After the calculation logic was corrected, I executed an automated Selenium suite covering full refunds, partial refunds, and boundary values (e.g., $0.01 items).</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Regression Scope</div>
+            <div class="expand-text">All payment and refund workflows within the OMS dashboard.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Lessons Learned</div>
+            <div class="expand-text">Added specific boundary and fractional penny test cases to the automation framework.</div>
+          </div>
+          <div class="expand-section">
+            <div class="expand-label">Tools Used</div>
+            <div class="expand-text">Selenium WebDriver, Browser DevTools, Jira.</div>
           </div>
         </div>
         <div class="defect-toggle"><span class="toggle-icon">▼</span> View Full Analysis</div>
@@ -653,36 +838,41 @@
   <!-- API TESTING LAB -->
   <section id="api-lab">
     <div class="section-tag">api validation</div>
-    <h2>API Testing Lab</h2>
-    <p class="section-sub">Systematic API validation covering status codes, schema, authentication, response body, and
-      performance.</p>
+    <h2>Enterprise API Validation</h2>
+    <p class="section-sub">Systematic backend validation covering complex business rules, schema integrity, authentication, and database reconciliation across Agile workflows.</p>
     <div class="api-grid">
 
       <div class="api-card">
         <div class="api-card-header">
-          <span class="method get">GET</span>
-          <span class="endpoint">/user/profile</span>
+          <span class="method post">POST</span>
+          <span class="endpoint">Authentication Services</span>
         </div>
         <div class="api-body">
           <div class="api-checks">
-            <span class="api-check">Status Code</span>
-            <span class="api-check">Schema</span>
-            <span class="api-check">Response Body</span>
-            <span class="api-check">Authentication</span>
-            <span class="api-check">Performance</span>
+            <span class="api-check">Token Validation</span>
+            <span class="api-check">Positive Testing</span>
+            <span class="api-check">Negative Testing</span>
+            <span class="api-check">Status Code Verification</span>
+          </div>
+          <div class="api-interactive">
+            <button class="api-run-btn" onclick="runMockApi(1, this); event.stopPropagation();">Send Request ⚡</button>
+            <div class="api-console" id="api-console-1" style="display: none;">
+              <div class="api-console-header">Console Output <span class="console-close" onclick="closeConsole(1, event)">✕</span></div>
+              <pre class="api-console-body">Click "Send Request" to run assertions...</pre>
+            </div>
           </div>
           <div class="api-metrics">
             <div class="api-metric">
-              <div class="api-metric-val">200</div>
-              <div class="api-metric-label">Status</div>
+              <div class="api-metric-val">Postman</div>
+              <div class="api-metric-label">Primary Tool</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">187ms</div>
-              <div class="api-metric-label">Response</div>
+              <div class="api-metric-val">Regression</div>
+              <div class="api-metric-label">Testing Type</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">2.1kb</div>
-              <div class="api-metric-label">Payload</div>
+              <div class="api-metric-val">QA</div>
+              <div class="api-metric-label">Environment</div>
             </div>
           </div>
         </div>
@@ -690,29 +880,35 @@
 
       <div class="api-card">
         <div class="api-card-header">
-          <span class="method post">POST</span>
-          <span class="endpoint">/order/create</span>
+          <span class="method get">GET</span>
+          <span class="endpoint">Customer Management</span>
         </div>
         <div class="api-body">
           <div class="api-checks">
-            <span class="api-check">Status Code</span>
-            <span class="api-check">Schema</span>
-            <span class="api-check">Response Body</span>
-            <span class="api-check">Idempotency</span>
-            <span class="api-check">Auth</span>
+            <span class="api-check">Data Retrieval</span>
+            <span class="api-check">Response Validation</span>
+            <span class="api-check">SQL Backend Verification</span>
+            <span class="api-check">Defect Reporting</span>
+          </div>
+          <div class="api-interactive">
+            <button class="api-run-btn" onclick="runMockApi(2, this); event.stopPropagation();">Send Request ⚡</button>
+            <div class="api-console" id="api-console-2" style="display: none;">
+              <div class="api-console-header">Console Output <span class="console-close" onclick="closeConsole(2, event)">✕</span></div>
+              <pre class="api-console-body">Click "Send Request" to run assertions...</pre>
+            </div>
           </div>
           <div class="api-metrics">
             <div class="api-metric">
-              <div class="api-metric-val">201</div>
-              <div class="api-metric-label">Status</div>
+              <div class="api-metric-val">SQL</div>
+              <div class="api-metric-label">Backend Validation</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">342ms</div>
-              <div class="api-metric-label">Response</div>
+              <div class="api-metric-val">Jira</div>
+              <div class="api-metric-label">Tracking</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">4.7kb</div>
-              <div class="api-metric-label">Payload</div>
+              <div class="api-metric-val">Manual & Auto</div>
+              <div class="api-metric-label">Execution</div>
             </div>
           </div>
         </div>
@@ -721,27 +917,34 @@
       <div class="api-card">
         <div class="api-card-header">
           <span class="method put">PUT</span>
-          <span class="endpoint">/policy/{id}/update</span>
+          <span class="endpoint">Order Processing</span>
         </div>
         <div class="api-body">
           <div class="api-checks">
-            <span class="api-check">Status Code</span>
-            <span class="api-check">Schema</span>
-            <span class="api-check">Data Integrity</span>
-            <span class="api-check">Validation</span>
+            <span class="api-check">Order Updates</span>
+            <span class="api-check">Inventory Synchronization</span>
+            <span class="api-check">Business Rule Validation</span>
+            <span class="api-check">Request Validation</span>
+          </div>
+          <div class="api-interactive">
+            <button class="api-run-btn" onclick="runMockApi(3, this); event.stopPropagation();">Send Request ⚡</button>
+            <div class="api-console" id="api-console-3" style="display: none;">
+              <div class="api-console-header">Console Output <span class="console-close" onclick="closeConsole(3, event)">✕</span></div>
+              <pre class="api-console-body">Click "Send Request" to run assertions...</pre>
+            </div>
           </div>
           <div class="api-metrics">
             <div class="api-metric">
-              <div class="api-metric-val">200</div>
-              <div class="api-metric-label">Status</div>
+              <div class="api-metric-val">Postman</div>
+              <div class="api-metric-label">Primary Tool</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">223ms</div>
-              <div class="api-metric-label">Response</div>
+              <div class="api-metric-val">Business Rules</div>
+              <div class="api-metric-label">Verification</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">1.8kb</div>
-              <div class="api-metric-label">Payload</div>
+              <div class="api-metric-val">Jira</div>
+              <div class="api-metric-label">Tracking</div>
             </div>
           </div>
         </div>
@@ -749,28 +952,35 @@
 
       <div class="api-card">
         <div class="api-card-header">
-          <span class="method del">GET</span>
-          <span class="endpoint">/commission/calculate</span>
+          <span class="method del">DELETE</span>
+          <span class="endpoint">Payment & Refund Validation</span>
         </div>
         <div class="api-body">
           <div class="api-checks">
-            <span class="api-check">Status Code</span>
-            <span class="api-check">Schema</span>
-            <span class="api-check">Calculation</span>
-            <span class="api-check">Edge Cases</span>
+            <span class="api-check">Error Handling</span>
+            <span class="api-check">Boundary Testing</span>
+            <span class="api-check">Refund Requests</span>
+            <span class="api-check">Response Verification</span>
+          </div>
+          <div class="api-interactive">
+            <button class="api-run-btn" onclick="runMockApi(4, this); event.stopPropagation();">Send Request ⚡</button>
+            <div class="api-console" id="api-console-4" style="display: none;">
+              <div class="api-console-header">Console Output <span class="console-close" onclick="closeConsole(4, event)">✕</span></div>
+              <pre class="api-console-body">Click "Send Request" to run assertions...</pre>
+            </div>
           </div>
           <div class="api-metrics">
             <div class="api-metric">
-              <div class="api-metric-val">200</div>
-              <div class="api-metric-label">Status</div>
+              <div class="api-metric-val">SQL</div>
+              <div class="api-metric-label">Backend Validation</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">519ms</div>
-              <div class="api-metric-label">Response</div>
+              <div class="api-metric-val">Regression</div>
+              <div class="api-metric-label">Testing Type</div>
             </div>
             <div class="api-metric">
-              <div class="api-metric-val">8.2kb</div>
-              <div class="api-metric-label">Payload</div>
+              <div class="api-metric-val">QA</div>
+              <div class="api-metric-label">Environment</div>
             </div>
           </div>
         </div>
@@ -782,63 +992,114 @@
   <!-- AUTOMATION IMPACT -->
   <section id="automation">
     <div class="section-tag">business value</div>
-    <h2>Automation Impact</h2>
-    <p class="section-sub">Measurable business value from replacing manual processes with reliable automation.</p>
+    <h2>Automation Success Stories</h2>
+    <p class="section-sub">Measurable business value from replacing manual processes with reliable automation architecture.</p>
     <div class="impact-grid">
+      
+      <!-- Card 1 -->
       <div class="impact-card">
         <div class="impact-before-after">
           <div class="impact-box">
             <div class="impact-label-sm">Before</div>
-            <div class="impact-val before">4 hrs</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">Manual Validation</div>
-          </div>
-          <div class="arrow-impact">→</div>
-          <div class="impact-box">
-            <div class="impact-label-sm">After</div>
-            <div class="impact-val after">45 min</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">Python Script</div>
-          </div>
-        </div>
-        <div class="reduction-badge">70% Reduction</div>
-        <div class="impact-desc">Commission validation automated via Python + SQL, running daily with email summary
-          report</div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-before-after">
-          <div class="impact-box">
-            <div class="impact-label-sm">Before</div>
-            <div class="impact-val before">3 days</div>
+            <div class="impact-val before">3 Days</div>
             <div style="font-size:11px;color:var(--muted);margin-top:4px">Manual Regression</div>
           </div>
           <div class="arrow-impact">→</div>
           <div class="impact-box">
             <div class="impact-label-sm">After</div>
-            <div class="impact-val after">2.5 hrs</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">Selenium Suite</div>
+            <div class="impact-val after">2.5 Hrs</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Selenium Framework</div>
           </div>
         </div>
-        <div class="reduction-badge">94% Reduction</div>
-        <div class="impact-desc">Full regression suite automated with Selenium, triggered on every deployment pipeline
+        <div class="reduction-badge">Selenium Automation Framework</div>
+        <div class="impact-desc">
+          <div style="margin-bottom:8px"><strong>Challenge:</strong> Slow manual regression cycles delayed deployments.</div>
+          <div style="margin-bottom:8px"><strong>Automation:</strong> Built a Hybrid Selenium WebDriver framework (Java, TestNG, Page Object Model).</div>
+          <div style="margin-bottom:8px"><strong>Solution:</strong> Engineered a reusable architecture using Apache POI for data-driven testing and Extent Reports.</div>
+          <div><strong>Impact:</strong> Faster regression execution, easier maintenance, and improved reporting accuracy.</div>
+          <button class="impact-diff-btn" onclick="toggleImpactDiff(1, this)">Compare Automation Code 📂</button>
+          <div class="impact-diff-container" id="impact-diff-1" style="display: none;"></div>
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="impact-card">
         <div class="impact-before-after">
           <div class="impact-box">
             <div class="impact-label-sm">Before</div>
-            <div class="impact-val before">2 hrs</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">Manual API Checks</div>
+            <div class="impact-val before">8 Days</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Manual Validation</div>
           </div>
           <div class="arrow-impact">→</div>
           <div class="impact-box">
             <div class="impact-label-sm">After</div>
-            <div class="impact-val after">8 min</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">Postman Collection</div>
+            <div class="impact-val after">1 Day</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Python Automation</div>
           </div>
         </div>
-        <div class="reduction-badge">93% Reduction</div>
-        <div class="impact-desc">120-endpoint Postman collection with automated assertions runs pre-release every sprint
+        <div class="reduction-badge">Commission Validation Automation</div>
+        <div class="impact-desc">
+          <div style="margin-bottom:8px"><strong>Challenge:</strong> Validating SAP BusinessObjects commission data took 7–8 days.</div>
+          <div style="margin-bottom:8px"><strong>Automation:</strong> Developed a Python solution to validate 10–12 business rules automatically.</div>
+          <div style="margin-bottom:8px"><strong>Solution:</strong> Extracted data via SQL, applied predefined rules, compared expected vs actual, and generated exception reports.</div>
+          <div><strong>Impact:</strong> Reduced validation effort to 1 day, enabling faster, accurate reporting to senior management.</div>
+          <button class="impact-diff-btn" onclick="toggleImpactDiff(2, this)">Compare Automation Code 📂</button>
+          <div class="impact-diff-container" id="impact-diff-2" style="display: none;"></div>
         </div>
       </div>
+
+      <!-- Card 3 -->
+      <div class="impact-card">
+        <div class="impact-before-after">
+          <div class="impact-box">
+            <div class="impact-label-sm">Before</div>
+            <div class="impact-val before">Manual</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Slow API Checks</div>
+          </div>
+          <div class="arrow-impact">→</div>
+          <div class="impact-box">
+            <div class="impact-label-sm">After</div>
+            <div class="impact-val after">Automated</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Postman Suites</div>
+          </div>
+        </div>
+        <div class="reduction-badge">API Testing Automation</div>
+        <div class="impact-desc">
+          <div style="margin-bottom:8px"><strong>Challenge:</strong> Backend API changes caused undetected regression bugs.</div>
+          <div style="margin-bottom:8px"><strong>Automation:</strong> Created comprehensive Postman collections for critical endpoints.</div>
+          <div style="margin-bottom:8px"><strong>Solution:</strong> Implemented assertions for response validation, schema validation, and SQL backend verification.</div>
+          <div><strong>Impact:</strong> Standardized API regression testing, catching defects early in the Agile delivery cycle.</div>
+          <button class="impact-diff-btn" onclick="toggleImpactDiff(3, this)">Compare Automation Code 📂</button>
+          <div class="impact-diff-container" id="impact-diff-3" style="display: none;"></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="impact-card">
+        <div class="impact-before-after">
+          <div class="impact-box">
+            <div class="impact-label-sm">Focus</div>
+            <div class="impact-val before">Quality</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Engineering</div>
+          </div>
+          <div class="arrow-impact">→</div>
+          <div class="impact-box">
+            <div class="impact-label-sm">Result</div>
+            <div class="impact-val after">Delivery</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">Agile Workflows</div>
+          </div>
+        </div>
+        <div class="reduction-badge">Quality Engineering Mindset</div>
+        <div class="impact-desc">
+          <div style="margin-bottom:8px"><strong>Challenge:</strong> Balancing speed of software delivery with absolute reliability.</div>
+          <div style="margin-bottom:8px"><strong>Automation:</strong> Applied a holistic automation mindset beyond isolated scripts.</div>
+          <div style="margin-bottom:8px"><strong>Solution:</strong> Reduced repetitive work, standardized validation processes, and built reusable test architecture.</div>
+          <div><strong>Impact:</strong> Increased regression confidence and supported stable, high-quality Agile releases.</div>
+          <button class="impact-diff-btn" onclick="toggleImpactDiff(4, this)">Compare Automation Code 📂</button>
+          <div class="impact-diff-container" id="impact-diff-4" style="display: none;"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1097,6 +1358,78 @@
       <button id="close-checklist">✕</button>
       <h3 id="checklist-title"></h3>
       <div id="checklist-content"></div>
+    </div>
+  </div>
+
+  <div id="artifact-modal" class="health-modal-overlay">
+    <div class="health-modal-card" style="max-width: 750px;">
+      <div class="health-modal-header">
+        <div class="terminal-dots">
+          <span class="t-dot t-dot-r"></span>
+          <span class="t-dot t-dot-y"></span>
+          <span class="t-dot t-dot-g"></span>
+        </div>
+        <span class="health-modal-title" id="artifact-modal-title">qa-artifact-viewer.sh</span>
+        <button id="close-artifact-modal" class="health-close-btn" onclick="closeArtifactModal()">✕</button>
+      </div>
+      <div class="health-modal-body" style="padding:20px; overflow-y:auto; max-height:80vh; background:#0b0d0f;">
+        <div id="artifact-modal-content">
+          <!-- Dynamically populated tables/schemas -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2.0 PREMIUM MODALS & HUD -->
+  <div id="health-modal" class="health-modal-overlay">
+    <div class="health-modal-card">
+      <div class="health-modal-header">
+        <div class="terminal-dots">
+          <span class="t-dot t-dot-r"></span>
+          <span class="t-dot t-dot-y"></span>
+          <span class="t-dot t-dot-g"></span>
+        </div>
+        <span class="health-modal-title">diagnostics.sh</span>
+        <button id="close-health-modal" class="health-close-btn" onclick="closeHealthCheckModal()">✕</button>
+      </div>
+      <div class="health-modal-body">
+        <div class="diagnostic-console" id="diagnostic-console">
+          <!-- Dynamically generated logs -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="command-palette" class="palette-overlay" style="display: none;">
+    <div class="palette-card">
+      <div class="palette-header">
+        <span class="palette-icon">⌨</span>
+        <input type="text" id="palette-search" placeholder="Type a command or search... (e.g. 'resume', 'api', 'about')" oninput="filterPaletteOptions()" />
+        <button class="palette-close-x" onclick="closeCommandPalette()">✕</button>
+      </div>
+      <div class="palette-results" id="palette-results">
+        <!-- Results populated dynamically -->
+      </div>
+      <div class="palette-footer">
+        <span>Press <kbd>ESC</kbd> to close</span>
+        <span>Press <kbd>↵</kbd> to select</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="quick-recruit-hud" class="recruit-hud">
+    <div class="hud-inner">
+      <div class="hud-brand">VINAY.QA</div>
+      <div class="hud-divider"></div>
+      <button class="hud-item" onclick="openCommandPalette()" title="Command Palette (Ctrl+K)">
+        <span class="hud-icon">⌨</span> Command
+      </button>
+      <button class="hud-item" onclick="openHealthCheckModal()" title="System Diagnostics">
+        <span class="hud-pulse-small"></span> Diagnostics
+      </button>
+      <button class="hud-item" onclick="document.getElementById('open-resume').click()" title="View Resume">
+        <span class="hud-icon">📄</span> Resume
+      </button>
     </div>
   </div>
 

@@ -5440,4 +5440,505 @@ h1, h2 {
 }
 .glow-card:hover::before {
   opacity: 1;
-}
+}
+
+/* ==========================================
+   PORTFOLIO V2.0 PREMIUM STYLES
+   ========================================== */
+
+/* 1. QA Health Badge & Pulse Indicator */
+.qa-health-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 229, 160, 0.08);
+  border: 1px solid rgba(0, 229, 160, 0.20);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 12px;
+}
+.qa-health-badge:hover {
+  background: rgba(0, 229, 160, 0.16);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.health-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 229, 160, 0.7);
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 160, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(0, 229, 160, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 160, 0);
+  }
+}
+@media (max-width: 576px) {
+  .qa-health-badge {
+    padding: 6px 8px;
+    margin-right: 4px;
+  }
+  .qa-health-badge .health-text {
+    display: none;
+  }
+}
+
+/* 2. Diagnostics Terminal Modal */
+.health-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.health-modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+.health-modal-card {
+  background: #0f1315;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+.health-modal-overlay.active .health-modal-card {
+  transform: scale(1);
+}
+.health-modal-header {
+  background: #141a1d;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.t-dot-r { background: #ff5f56; }
+.t-dot-y { background: #ffbd2e; }
+.t-dot-g { background: #27c93f; }
+.health-modal-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.health-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.health-close-btn:hover {
+  color: var(--accent2);
+}
+.health-modal-body {
+  padding: 16px;
+  background: #0b0d0f;
+}
+.diagnostic-console {
+  background: #000;
+  border-radius: 6px;
+  padding: 16px;
+  height: 340px;
+  overflow-y: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text);
+  border: 1px solid #1c2327;
+}
+
+/* 3. Recruiter Experential Filters & Focus States */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.filter-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.filter-chip {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.filter-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 229, 160, 0.03);
+}
+.filter-chip.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.experience-timeline li[data-focus],
+.projects-grid .project-card[data-focus] {
+  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+.focus-dim {
+  opacity: 0.22 !important;
+  filter: blur(1px) grayscale(50%);
+  transform: scale(0.985);
+  pointer-events: none;
+}
+.focus-highlight {
+  opacity: 1 !important;
+  filter: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 15px rgba(0, 229, 160, 0.08);
+  transform: scale(1.005);
+}
+
+/* 4. API Testing Lab Interactive Consoles */
+.api-interactive {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.api-run-btn {
+  background: rgba(0, 229, 160, 0.06);
+  border: 1px solid rgba(0, 229, 160, 0.20);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: center;
+}
+.api-run-btn:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+.api-console {
+  background: #000000;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+.api-console-header {
+  background: #0c0e10;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.console-close {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px;
+}
+.console-close:hover {
+  color: var(--accent2);
+}
+.api-console-body {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  max-height: 160px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* 5. Automation Success Stories Code Diffs */
+.impact-diff-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+}
+.impact-diff-btn:hover {
+  border-color: var(--accent3);
+  background: rgba(79, 195, 247, 0.05);
+  color: var(--accent3);
+}
+.impact-diff-container {
+  margin-top: 10px;
+  width: 100%;
+}
+.diff-wrapper {
+  display: flex;
+  gap: 12px;
+  border-top: 1px dashed var(--border);
+  padding-top: 12px;
+}
+.diff-panel {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+  text-align: left;
+}
+.diff-header {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .diff-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* 6. Command Palette Overlay & Search */
+.palette-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+  z-index: 99999;
+}
+.palette-card {
+  background: #111518;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 580px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+}
+.palette-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.palette-icon {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+#palette-search {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  outline: none;
+}
+#palette-search::placeholder {
+  color: var(--muted);
+}
+.palette-close-x {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 2px;
+}
+.palette-close-x:hover {
+  color: var(--accent2);
+}
+.palette-results {
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+.palette-result-item {
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s;
+  text-align: left;
+}
+.palette-result-item:hover,
+.palette-result-item.active {
+  background: rgba(0, 229, 160, 0.08);
+  color: var(--accent);
+  padding-left: 24px;
+}
+.palette-footer {
+  background: #0d1012;
+  padding: 8px 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.7rem;
+  color: var(--muted);
+  display: flex;
+  gap: 16px;
+}
+.palette-footer kbd {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 4px;
+  margin: 0 2px;
+}
+
+/* 7. Floating Recruiter HUD Panel */
+.recruit-hud {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(17, 21, 24, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 99;
+  padding: 4px;
+}
+.hud-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px 2px 14px;
+}
+.hud-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+.hud-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 8px;
+}
+.hud-item {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hud-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+}
+.hud-pulse-small {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px var(--accent);
+  animation: pulse-small 1.6s infinite;
+}
+@keyframes pulse-small {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 160, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px rgba(0, 229, 160, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 160, 0);
+  }
+}
+
+@media (max-width: 576px) {
+  .recruit-hud {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    border-radius: 16px;
+  }
+  .hud-inner {
+    justify-content: space-around;
+    padding: 4px;
+  }
+  .hud-brand, .hud-divider {
+    display: none;
+  }
+}
+

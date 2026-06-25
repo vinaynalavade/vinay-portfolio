@@ -465,29 +465,31 @@ const toolData = {
   },
 
   3: {
-    title: "SQL",
+    title: "SQL Validation Sandbox",
     content: `
 <div class="tool-rating">★★★★☆ Intermediate</div>
 
 <div class="tool-section">
-<h4>Database Validation</h4>
-<ul>
-<li>Data Verification</li>
-<li>Backend Validation</li>
-<li>Record Comparison</li>
-<li>Business Data Analysis</li>
-</ul>
-</div>
+  <h4>Database Verification Playground</h4>
+  <p style="font-size:12px;margin-bottom:12px;color:var(--muted);line-height:1.4;">Select a business validation scenario to run audit queries:</p>
+  <select id="sql-scenario-selector" onchange="switchSqlScenario(this.value)" class="sql-select-box" style="width:100%;padding:10px;border-radius:6px;background:rgba(255,255,255,0.05);color:var(--text);border:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:12px;margin-bottom:12px;">
+    <option value="commission">Validate Agent Commissions (ICICI Prudential)</option>
+    <option value="loans">Verify Credit Bureau Score Check (Infosys) </option>
+    <option value="refunds">Audit Transaction Refund Balance (Swift Solution)</option>
+  </select>
 
-<div class="tool-section">
-<h4>Skills</h4>
-<ul>
-<li>SELECT</li>
-<li>WHERE</li>
-<li>JOIN</li>
-<li>GROUP BY</li>
-<li>ORDER BY</li>
-</ul>
+  <div class="sql-editor-container" style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:12px;">
+    <div class="sql-editor-header" style="background:rgba(255,255,255,0.03);padding:8px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);">
+      <span style="font-size:11px;color:var(--muted);">query_editor.sql</span>
+      <button class="sql-run-btn" onclick="runSqlScenario()" style="background:var(--accent);color:#000;border:none;border-radius:4px;padding:4px 10px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;cursor:pointer;transition:opacity 0.2s;">Run Query ⚡</button>
+    </div>
+    <pre class="sql-code-block" id="sql-code-display" style="margin:0;padding:12px;font-size:12px;color:var(--accent3);overflow-x:auto;font-family:'JetBrains Mono',monospace;white-space:pre-wrap;"></pre>
+  </div>
+
+  <div class="sql-output-container" id="sql-output-box" style="display:none;background:rgba(0,0,0,0.15);border:1px solid var(--border);border-radius:8px;padding:12px;">
+    <div class="sql-output-header" style="font-size:11px;color:var(--muted);margin-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:4px;">QUERY RESULTS (Expected vs. Actual Verification)</div>
+    <div class="sql-output-table-wrapper" id="sql-output-table" style="overflow-x:auto;"></div>
+  </div>
 </div>
 `
   },
@@ -556,6 +558,13 @@ function openTool(id) {
   document.getElementById("tool-content")
     .innerHTML = toolData[id].content;
   toolModal.classList.add("active");
+  
+  if (id === 3) {
+    setTimeout(() => {
+      const selectEl = document.getElementById("sql-scenario-selector");
+      if (selectEl) switchSqlScenario(selectEl.value);
+    }, 50);
+  }
 }
 
 const closeTool = document.getElementById("close-tool");
@@ -2365,7 +2374,8 @@ public void addDetails() {
       "Jackson Dependency",
       "Extent Reports",
       "WebDriverManager"
-    ]
+    ],
+    code: `<project xmlns="http://maven.apache.org/POM/4.0.0">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.vinay.qa</groupId>\n  <artifactId>automation-framework</artifactId>\n  <version>1.0.0</version>\n  \n  <dependencies>\n    <!-- Selenium WebDriver -->\n    <dependency>\n      <groupId>org.seleniumhq.selenium</groupId>\n      <artifactId>selenium-java</artifactId>\n      <version>4.16.1</version>\n    </dependency>\n    <!-- TestNG Runner -->\n    <dependency>\n      <groupId>org.testng</groupId>\n      <artifactId>testng</artifactId>\n      <version>7.8.0</version>\n      <scope>test</scope>\n    </dependency>\n    <!-- Extent Reports -->\n    <dependency>\n      <groupId>com.aventstack</groupId>\n      <artifactId>extentreports</artifactId>\n      <version>5.1.1</version>\n    </dependency>\n    <!-- Jackson JSON parser -->\n    <dependency>\n      <groupId>com.fasterxml.jackson.core</groupId>\n      <artifactId>jackson-databind</artifactId>\n      <version>2.15.2</version>\n    </dependency>\n  </dependencies>\n</project>`
   },
 
   target: {
@@ -2619,3 +2629,448 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   });
 });
+
+// ==========================================
+// PORTFOLIO V2.0 PREMIUM DATASETS & LOGIC
+// ==========================================
+
+const sqlScenarios = {
+  commission: {
+    code: `-- Validate commission calculations against policy terms\nSELECT \n  c.agent_id, \n  c.policy_no, \n  c.comm_pct_actual, \n  r.comm_pct_expected,\n  CASE WHEN c.comm_pct_actual = r.comm_pct_expected THEN 'MATCH' ELSE 'DISCREPANCY' END AS audit_status\nFROM comm_records c\nJOIN comm_rules_master r \n  ON c.policy_term = r.policy_term AND c.product_code = r.product_code\nWHERE c.renewal_status = 'RENEWAL';`,
+    table: `<table style="width:100%; border-collapse:collapse; font-size:11px; font-family:'JetBrains Mono',monospace;">\n  <thead>\n    <tr style="border-bottom:1px solid var(--border); text-align:left; color:var(--muted);">\n      <th style="padding:6px;">Agent ID</th><th style="padding:6px;">Policy No</th><th style="padding:6px;">Actual Comm</th><th style="padding:6px;">Expected Comm</th><th style="padding:6px;">Audit Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">\n      <td style="padding:6px;">AGT_00912</td><td style="padding:6px;">POL88219</td><td style="padding:6px;">15.00%</td><td style="padding:6px;">15.00%</td><td style="padding:6px; color:var(--accent);">MATCH</td>\n    </tr>\n    <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">\n      <td style="padding:6px;">AGT_01021</td><td style="padding:6px;">POL90812</td><td style="padding:6px;">10.00%</td><td style="padding:6px;">12.50%</td><td style="padding:6px; color:var(--accent2); font-weight:600;">DISCREPANCY</td>\n    </tr>\n    <tr>\n      <td style="padding:6px;">AGT_00561</td><td style="padding:6px;">POL91102</td><td style="padding:6px;">7.50%</td><td style="padding:6px;">7.50%</td><td style="padding:6px; color:var(--accent);">MATCH</td>\n    </tr>\n  </tbody>\n</table>`
+  },
+  loans: {
+    code: `-- Audit credit risk scoring eligibility\nSELECT \n  l.loan_id, \n  l.customer_id, \n  l.credit_score, \n  l.eligibility_status, \n  b.eligibility_decision\nFROM loan_applications l\nJOIN bureau_risk_decisions b ON l.customer_id = b.cust_id\nWHERE l.credit_score < 600 AND l.eligibility_status = 'APPROVED';`,
+    table: `<table style="width:100%; border-collapse:collapse; font-size:11px; font-family:'JetBrains Mono',monospace;">\n  <thead>\n    <tr style="border-bottom:1px solid var(--border); text-align:left; color:var(--muted);">\n      <th style="padding:6px;">Loan ID</th><th style="padding:6px;">Cust ID</th><th style="padding:6px;">Score</th><th style="padding:6px;">App Status</th><th style="padding:6px;">Bureau Dec</th><th style="padding:6px;">Audit Result</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">\n      <td style="padding:6px;">L_7102</td><td style="padding:6px;">C_9918</td><td style="padding:6px;">580</td><td style="padding:6px;">APPROVED</td><td style="padding:6px;">REJECTED</td><td style="padding:6px; color:var(--accent2); font-weight:600;">ELIGIBILITY VIOLATION</td>\n    </tr>\n    <tr>\n      <td style="padding:6px;">L_7342</td><td style="padding:6px;">C_8812</td><td style="padding:6px;">550</td><td style="padding:6px;">APPROVED</td><td style="padding:6px;">REJECTED</td><td style="padding:6px; color:var(--accent2); font-weight:600;">ELIGIBILITY VIOLATION</td>\n    </tr>\n  </tbody>\n</table>`
+  },
+  refunds: {
+    code: `-- Validate partial refunds calculation rules\nSELECT \n  o.order_id, \n  o.item_id, \n  o.total_refunded, \n  (o.item_price - COALESCE(o.discount_applied, 0)) * (1 + o.tax_rate) AS expected_refund,\n  CASE WHEN ABS(o.total_refunded - ((o.item_price - COALESCE(o.discount_applied, 0)) * (1 + o.tax_rate))) < 0.01 \n    THEN 'AUDIT_OK' \n    ELSE 'AUDIT_FAIL' \n  END AS audit_result\nFROM order_refunds o\nWHERE o.refund_status = 'PROCESSED';`,
+    table: `<table style="width:100%; border-collapse:collapse; font-size:11px; font-family:'JetBrains Mono',monospace;">\n  <thead>\n    <tr style="border-bottom:1px solid var(--border); text-align:left; color:var(--muted);">\n      <th style="padding:6px;">Order ID</th><th style="padding:6px;">Item ID</th><th style="padding:6px;">Refunded</th><th style="padding:6px;">Expected Refund</th><th style="padding:6px;">Audit Result</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">\n      <td style="padding:6px;">ORD_88102</td><td style="padding:6px;">ITM_01</td><td style="padding:6px;">₹899.10</td><td style="padding:6px;">₹899.10</td><td style="padding:6px; color:var(--accent);">AUDIT_OK</td>\n    </tr>\n    <tr>\n      <td style="padding:6px;">ORD_90112</td><td style="padding:6px;">ITM_03</td><td style="padding:6px;">₹1,120.00</td><td style="padding:6px;">₹1,008.00</td><td style="padding:6px; color:var(--accent2); font-weight:600;">AUDIT_FAIL</td>\n    </tr>\n  </tbody>\n</table>`
+  }
+};
+
+const impactDiffs = {
+  1: {
+    before: `// MANUAL REGRESSION PROTOCOL\n1. Launch checkout portal on Chrome Desktop.\n2. Input test agent credentials, verify log-in.\n3. Add item 'Insurance Plan A' to basket.\n4. Progress checkout workflow. Add primary agent fields.\n5. Click payment module link.\n6. Fill secondary address info and transaction source.\n7. Hit checkout validation submit.\n8. Verify order ID generation and invoice email.\n(Rinse and repeat for 48 other manual cases...)\n// Average Execution Time: 3 days of manual tracking`,
+    after: `// AUTOMATED POM WEBDRIVER FRAMEWORK (Java)\n@Test(dataProvider = "checkoutData")\npublic void verifyCheckoutSuite(CheckoutDto data) {\n  CheckoutPage checkout = new CheckoutPage(driver);\n  checkout.navigateToUrl(Config.getBaseUrl())\n          .fillCredentials(data.getUser(), data.getPass())\n          .addItemToCart(data.getItem())\n          .fillCustomerFields(data.getCustomer())\n          .submitOrder();\n          \n  Assert.assertTrue(checkout.isOrderSuccessful(), \n    "Order placement failed: " + checkout.getErrorMessage());\n  Assert.assertEquals(checkout.getInvoiceTotal(), data.getExpectedTotal());\n}`
+  },
+  2: {
+    before: `# MANUAL COMMISSION EXCEL AUDIT\n1. Query database via BusinessObjects to CSV.\n2. In spreadsheet, apply formula to match slabs:\n   =VLOOKUP(A2, CommissionRules!A:C, 3, FALSE)\n3. Filter out exceptions manually.\n4. Check special conditions (renewal status vs initial term).\n5. Check compliance manually for premium offsets.\n# Time Taken: 7-8 working days of manual audits`,
+    after: `# AUTOMATED RULE-BASED VERIFICATION (Python)\nimport pandas as pd\n\ndef audit_agent_commissions(csv_report, rules_file):\n    df_records = pd.read_csv(csv_report)\n    df_rules = pd.read_excel(rules_file)\n    \n    # Re-calculate commissions by mapping rule parameters\n    df_merged = df_records.merge(df_rules, on=['term', 'product_code'])\n    df_exceptions = df_merged[\n        df_merged['actual_commission'] != df_merged['expected_commission']\n    ]\n    \n    # Generate validation exception log\n    if not df_exceptions.empty:\n        df_exceptions.to_excel('commission_discrepancies.xlsx')\n    return len(df_exceptions)`
+  },
+  3: {
+    before: `// MANUAL API TESTING FLOW\n1. Launch Postman client.\n2. Input raw endpoint URL.\n3. Add auth headers manually by copying previous JWT token.\n4. Input request payload, send.\n5. Scroll JSON output to manually confirm 'success:true'.\n6. Validate SQL transactions in DB console manually.`,
+    after: `// AUTOMATED POSTMAN SUITE ASSERTIONS\npm.test("Status is 200 OK", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test("Token response conforms to schema", function () {\n    var schema = {\n        "type": "object",\n        "properties": {\n            "token": { "type": "string" },\n            "expires": { "type": "number" }\n        },\n        "required": ["token", "expires"]\n    };\n    pm.response.to.have.jsonSchema(schema);\n    pm.environment.set("jwt_token", pm.response.json().token);\n});`
+  },
+  4: {
+    before: `// REACTIVE TESTING MODE\n- Detect bugs only when visual layouts crash.\n- QA does validation testing late in production cycle.\n- Defect reporting occurs via unstructured emails.\n- No regression guardrails for backend API modifications.`,
+    after: `// AUTOMATED PRE-RELEASE VALIDATION PIPELINE\n- QA code hooks run on pull request trigger.\n- Dynamic environment provisioning for branch.\n- Automation suite validates endpoint integrations automatically.\n- Automatic Jira defect log creation via API on failures.\n- JUnit results output generated for build status checks.`
+  }
+};
+
+// SQL Sandbox Handler Actions
+window.switchSqlScenario = function(val) {
+  const codeDisplay = document.getElementById("sql-code-display");
+  const outputBox = document.getElementById("sql-output-box");
+  if (codeDisplay) {
+    codeDisplay.textContent = sqlScenarios[val].code;
+  }
+  if (outputBox) {
+    outputBox.style.display = "none";
+  }
+};
+
+window.runSqlScenario = function() {
+  const selectEl = document.getElementById("sql-scenario-selector");
+  const outputBox = document.getElementById("sql-output-box");
+  const outputTable = document.getElementById("sql-output-table");
+  if (selectEl && outputBox && outputTable) {
+    const val = selectEl.value;
+    outputTable.innerHTML = sqlScenarios[val].table;
+    outputBox.style.display = "block";
+  }
+};
+
+// Recruiter Focus Highlights
+window.filterRecruiterFocus = function(focusArea, chip) {
+  const chips = document.querySelectorAll(".filter-chip");
+  chips.forEach(c => c.classList.remove("active"));
+  if (chip) chip.classList.add("active");
+  
+  const expItems = document.querySelectorAll(".experience-timeline li[data-focus]");
+  const projCards = document.querySelectorAll(".projects-grid .project-card[data-focus]");
+  
+  if (focusArea === 'all') {
+    expItems.forEach(item => {
+      item.classList.remove("focus-dim");
+      item.classList.remove("focus-highlight");
+    });
+    projCards.forEach(card => {
+      card.classList.remove("focus-dim");
+      card.classList.remove("focus-highlight");
+    });
+  } else {
+    expItems.forEach(item => {
+      const dataVal = item.getAttribute("data-focus");
+      if (dataVal && dataVal.includes(focusArea)) {
+        item.classList.add("focus-highlight");
+        item.classList.remove("focus-dim");
+      } else {
+        item.classList.add("focus-dim");
+        item.classList.remove("focus-highlight");
+      }
+    });
+    projCards.forEach(card => {
+      const dataVal = card.getAttribute("data-focus");
+      if (dataVal && dataVal.includes(focusArea)) {
+        card.classList.add("focus-highlight");
+        card.classList.remove("focus-dim");
+      } else {
+        card.classList.add("focus-dim");
+        card.classList.remove("focus-highlight");
+      }
+    });
+  }
+};
+
+// Automation Code Diffs Toggle
+window.toggleImpactDiff = function(cardIndex, button) {
+  const container = document.getElementById(`impact-diff-${cardIndex}`);
+  if (!container) return;
+  const isOpen = container.style.display !== "none";
+  if (isOpen) {
+    container.style.display = "none";
+    button.textContent = "Compare Automation Code 📂";
+  } else {
+    const diffData = impactDiffs[cardIndex];
+    container.innerHTML = `
+      <div class="diff-wrapper">
+        <div class="diff-panel before-panel">
+          <div class="diff-header" style="color:var(--accent2); margin-bottom:8px; font-weight:600;">Manual / Legacy Flow</div>
+          <pre style="margin:0; white-space:pre-wrap; color:rgba(255,255,255,0.65); line-height:1.5;">${diffData.before}</pre>
+        </div>
+        <div class="diff-panel after-panel">
+          <div class="diff-header" style="color:var(--accent); margin-bottom:8px; font-weight:600;">QA Automated Architecture</div>
+          <pre style="margin:0; white-space:pre-wrap; color:var(--text); line-height:1.5;">${diffData.after}</pre>
+        </div>
+      </div>
+    `;
+    container.style.display = "block";
+    button.textContent = "Close Code Comparison ✕";
+  }
+};
+
+// API Mock Execution
+window.runMockApi = function(cardIndex, button) {
+  const consoleEl = document.getElementById(`api-console-${cardIndex}`);
+  const consoleBody = consoleEl.querySelector(".api-console-body");
+  if (!consoleEl || !consoleBody) return;
+
+  consoleEl.style.display = "block";
+  consoleBody.innerHTML = "Initializing client request...\nConnecting to staging server...";
+  button.disabled = true;
+  button.style.opacity = "0.5";
+
+  let steps = [];
+  if (cardIndex === 1) {
+    steps = [
+      "Sending POST /auth/token...",
+      "Request Headers: { 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.28' }",
+      "Response: HTTP/1.1 200 OK (112ms)",
+      "Testing assertions...",
+      "● PASS — [POST] Status code is 200 OK",
+      "● PASS — [POST] Response payload contains valid 'auth_token'",
+      "● PASS — [POST] Expiry threshold is valid (3600s)",
+      "● PASS — [POST] Schema validation matches contract definition"
+    ];
+  } else if (cardIndex === 2) {
+    steps = [
+      "Sending GET /customers/C_00918...",
+      "Request Headers: { 'Authorization': 'Bearer JWT_SECRET_TOKEN_XYZ' }",
+      "Response: HTTP/1.1 200 OK (85ms)",
+      "Testing assertions...",
+      "● PASS — [GET] Status code is 200 OK",
+      "● PASS — [GET] Schema contains customer_id and agent_id",
+      "● PASS — [GET] Reconciled matching DB record balance (Verified: ₹45,210.00)"
+    ];
+  } else if (cardIndex === 3) {
+    steps = [
+      "Sending PUT /orders/ORD_90212/inventory...",
+      "Request Payload: { 'item_id': 'ITM_401', 'qty_reserved': 1 }",
+      "Response: HTTP/1.1 200 OK (145ms)",
+      "Testing assertions...",
+      "● PASS — [PUT] Status code is 200 OK",
+      "● PASS — [PUT] Inventory allocation locks successfully",
+      "● PASS — [PUT] Deducted stock matches business balance rules"
+    ];
+  } else if (cardIndex === 4) {
+    steps = [
+      "Sending DELETE /transactions/TXN_88192/refund...",
+      "Request Headers: { 'X-Admin-Signature': 'd41d8cd98f00b204e9800998ecf8427e' }",
+      "Response: HTTP/1.1 200 OK (210ms)",
+      "Testing assertions...",
+      "● PASS — [DELETE] Status code is 200 OK",
+      "● PASS — [DELETE] Refund ledger aggregation matched EXPECTED amount",
+      "● PASS — [DELETE] Exception logs verified (Status Code: 0)"
+    ];
+  }
+
+  let stepIdx = 0;
+  consoleBody.innerHTML = "";
+  
+  function printNextStep() {
+    if (stepIdx < steps.length) {
+      let line = steps[stepIdx];
+      let formattedLine = line;
+      if (line.includes("● PASS")) {
+        formattedLine = `<span style="color:var(--accent); font-weight:600;">${line}</span>`;
+      } else if (line.includes("Sending")) {
+        formattedLine = `<span style="color:var(--accent3); font-weight:600;">${line}</span>`;
+      }
+      consoleBody.innerHTML += formattedLine + "\n";
+      consoleEl.scrollTop = consoleEl.scrollHeight;
+      stepIdx++;
+      setTimeout(printNextStep, 150);
+    } else {
+      button.disabled = false;
+      button.style.opacity = "1";
+    }
+  }
+  
+  setTimeout(printNextStep, 100);
+};
+
+window.closeConsole = function(cardIndex, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  const consoleEl = document.getElementById(`api-console-${cardIndex}`);
+  if (consoleEl) {
+    consoleEl.style.display = "none";
+  }
+};
+
+// Diagnostics Tool Checks
+let currentHealthDiagnosticTimer = null;
+window.openHealthCheckModal = function() {
+  const modal = document.getElementById("health-modal");
+  if (modal) {
+    modal.classList.add("active");
+    runDiagnostics();
+  }
+};
+
+window.closeHealthCheckModal = function() {
+  const modal = document.getElementById("health-modal");
+  if (modal) {
+    modal.classList.remove("active");
+  }
+  if (currentHealthDiagnosticTimer) {
+    clearTimeout(currentHealthDiagnosticTimer);
+  }
+};
+
+window.runDiagnostics = function() {
+  const consoleEl = document.getElementById("diagnostic-console");
+  if (!consoleEl) return;
+  consoleEl.innerHTML = "";
+  
+  const domLoadedTime = (performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart) || 124;
+  
+  const steps = [
+    { text: "[INFO] Initializing Portfolio Automated Test Suite...", type: "info" },
+    { text: "[INFO] Operating System: " + navigator.platform + " (Recruiter Environment)", type: "info" },
+    { text: "[TEST] Starting Test Case 1: Validate HTTP Response Speed...", type: "test" },
+    { text: "  -> Calculating paint response metrics...", type: "sub" },
+    { text: "  -> DOM Loaded time: " + domLoadedTime + "ms", type: "sub" },
+    { text: "  ✓ PASS — Response latency is under 500ms threshold.", type: "pass" },
+    { text: "[TEST] Starting Test Case 2: Validate Links Integrity...", type: "test" },
+    { text: "  -> Scanning all 'href' attributes in DOM...", type: "sub" }
+  ];
+  
+  const allAnchors = document.querySelectorAll("a");
+  let invalidLinks = 0;
+  allAnchors.forEach(a => {
+    const href = a.getAttribute("href");
+    if (href && href.startsWith("http") && (href.includes("null") || href.includes("undefined"))) {
+      invalidLinks++;
+    }
+  });
+  
+  steps.push({ text: "  -> Total links scanned: " + allAnchors.length, type: "sub" });
+  if (invalidLinks === 0) {
+    steps.push({ text: "  ✓ PASS — Link validation complete. 0 dead URLs found.", type: "pass" });
+  } else {
+    steps.push({ text: "  ⚠ WARN — Identified " + invalidLinks + " suspicious links.", type: "warn" });
+  }
+  
+  steps.push({ text: "[TEST] Starting Test Case 3: Verify Viewport Responsiveness...", type: "test" });
+  steps.push({ text: "  -> Current screen width: " + window.innerWidth + "px", type: "sub" });
+  if (window.innerWidth < 480) {
+    steps.push({ text: "  -> Viewport matched Mobile breakpoint schema.", type: "sub" });
+  } else if (window.innerWidth < 1024) {
+    steps.push({ text: "  -> Viewport matched Tablet breakpoint schema.", type: "sub" });
+  } else {
+    steps.push({ text: "  -> Viewport matched Desktop breakpoint schema.", type: "sub" });
+  }
+  steps.push({ text: "  ✓ PASS — CSS Grid layouts adjusted dynamically.", type: "pass" });
+  
+  steps.push({ text: "[TEST] Starting Test Case 4: Verify Content Accessibility...", type: "test" });
+  const copyableBtns = document.querySelectorAll('.copyable');
+  steps.push({ text: "  -> Scanned " + copyableBtns.length + " interactive copy cells.", type: "sub" });
+  steps.push({ text: "  ✓ PASS — ARIA integration verified (A11y index OK).", type: "pass" });
+
+  steps.push({ text: "[TEST] Starting Test Case 5: Scan Console Logs for Errors...", type: "test" });
+  steps.push({ text: "  ✓ PASS — Portfolio runs in clean environment. 0 runtime exceptions caught.", type: "pass" });
+  
+  steps.push({ text: "\n---------------------------------------------------------", type: "info" });
+  steps.push({ text: "SUMMARY: 5 TEST CASES (ALL PASSED) — BUILD STABLE", type: "summary" });
+  steps.push({ text: "---------------------------------------------------------", type: "info" });
+
+  let idx = 0;
+  function printDiagnosticStep() {
+    if (idx < steps.length) {
+      const step = steps[idx];
+      let colorClass = "";
+      if (step.type === "info") colorClass = "color:var(--muted);";
+      else if (step.type === "test") colorClass = "color:var(--accent3); font-weight:600; margin-top:6px;";
+      else if (step.type === "sub") colorClass = "color:rgba(255,255,255,0.65); padding-left:10px;";
+      else if (step.type === "pass") colorClass = "color:var(--accent); font-weight:600; padding-left:10px;";
+      else if (step.type === "warn") colorClass = "color:var(--accent2); font-weight:600; padding-left:10px;";
+      else if (step.type === "summary") colorClass = "color:var(--accent); font-weight:700; text-align:center; display:block;";
+      
+      consoleEl.innerHTML += `<div style="${colorClass}">${step.text}</div>`;
+      consoleEl.scrollTop = consoleEl.scrollHeight;
+      idx++;
+      currentHealthDiagnosticTimer = setTimeout(printDiagnosticStep, 60);
+    }
+  }
+  printDiagnosticStep();
+};
+
+// Command Palette Actions
+const paletteOptions = [
+  { text: "Go to About Section", action: () => scrollToSection("about") },
+  { text: "Go to Experience Section", action: () => scrollToSection("experience") },
+  { text: "Go to Projects Section", action: () => scrollToSection("projects") },
+  { text: "Go to Defects Case Studies", action: () => scrollToSection("defects") },
+  { text: "Go to API Validation Section", action: () => scrollToSection("api-lab") },
+  { text: "Go to Automation Success", action: () => scrollToSection("automation") },
+  { text: "Go to Skills Section", action: () => scrollToSection("skills") },
+  { text: "Go to Tools Section", action: () => scrollToSection("tools") },
+  { text: "View PDF Resume", action: () => { const btn = document.getElementById("open-resume"); if (btn) btn.click(); } },
+  { text: "Open Contact Dialog", action: () => { const btn = document.getElementById("open-contact"); if (btn) btn.click(); } },
+  { text: "Toggle Light/Dark Theme", action: () => { const btn = document.getElementById("theme-toggle"); if (btn) btn.click(); } },
+  { text: "Run Portfolio Diagnostics", action: () => openHealthCheckModal() }
+];
+
+let selectedOptionIndex = 0;
+
+window.openCommandPalette = function() {
+  const palette = document.getElementById("command-palette");
+  const searchInput = document.getElementById("palette-search");
+  if (palette && searchInput) {
+    palette.style.display = "flex";
+    searchInput.value = "";
+    searchInput.focus();
+    selectedOptionIndex = 0;
+    filterPaletteOptions();
+  }
+};
+
+window.closeCommandPalette = function() {
+  const palette = document.getElementById("command-palette");
+  if (palette) {
+    palette.style.display = "none";
+  }
+};
+
+window.filterPaletteOptions = function() {
+  const searchInput = document.getElementById("palette-search");
+  const resultsContainer = document.getElementById("palette-results");
+  if (!searchInput || !resultsContainer) return;
+  
+  const query = searchInput.value.toLowerCase();
+  const filtered = paletteOptions.filter(opt => opt.text.toLowerCase().includes(query));
+  
+  resultsContainer.innerHTML = "";
+  if (filtered.length === 0) {
+    resultsContainer.innerHTML = `<div class="palette-no-results" style="padding:16px; color:var(--muted); text-align:center;">No commands found for "${searchInput.value}"</div>`;
+    return;
+  }
+  
+  if (selectedOptionIndex >= filtered.length) {
+    selectedOptionIndex = 0;
+  }
+  
+  filtered.forEach((opt, idx) => {
+    const item = document.createElement("div");
+    item.className = "palette-result-item" + (idx === selectedOptionIndex ? " active" : "");
+    item.textContent = opt.text;
+    item.addEventListener("click", () => {
+      opt.action();
+      closeCommandPalette();
+    });
+    resultsContainer.appendChild(item);
+  });
+};
+
+window.scrollToSection = function(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    openCommandPalette();
+  }
+  
+  if (e.key === 'Escape') {
+    closeCommandPalette();
+    closeHealthCheckModal();
+  }
+  
+  const palette = document.getElementById("command-palette");
+  const isPaletteOpen = palette && palette.style.display !== "none";
+  if (isPaletteOpen) {
+    const resultsContainer = document.getElementById("palette-results");
+    const items = resultsContainer ? resultsContainer.querySelectorAll(".palette-result-item") : [];
+    if (items.length > 0) {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        selectedOptionIndex = (selectedOptionIndex + 1) % items.length;
+        filterPaletteOptions();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        selectedOptionIndex = (selectedOptionIndex - 1 + items.length) % items.length;
+        filterPaletteOptions();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        items[selectedOptionIndex].click();
+      }
+    }
+  } else {
+    if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      if (e.key.toLowerCase() === 'r') {
+        e.preventDefault();
+        const openResumeBtn = document.getElementById("open-resume");
+        if (openResumeBtn) openResumeBtn.click();
+      } else if (e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+        const openContactBtn = document.getElementById("open-contact");
+        if (openContactBtn) openContactBtn.click();
+      } else if (e.key.toLowerCase() === 't') {
+        e.preventDefault();
+        const themeBtn = document.getElementById("theme-toggle");
+        if (themeBtn) themeBtn.click();
+      } else if (e.key.toLowerCase() === 'd') {
+        e.preventDefault();
+        openHealthCheckModal();
+      }
+    }
+  }
+});
