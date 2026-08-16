@@ -1,244 +1,62 @@
-# 🚀 Vinay Nalavade | QA Engineering Portfolio
+# Vinay Nalavade — QA Engineer
 
-<p align="center">
-  <strong>A modern, interactive portfolio crafted to showcase enterprise QA practices, automation engineering, and software quality through immersive experiences—not just static content.</strong>
-</p>
+> **Professional IT portfolio of Vinay Nalavade showcasing enterprise QA automation, API validation, SQL backend testing, and software quality assurance.**
 
-<p align="center">
-  <a href="https://vinaynalavade.github.io/vinay-portfolio/"><strong>🌐 Live Portfolio</strong></a>
-  •
-  <a href="https://github.com/vinaynalavade/vinay-portfolio"><strong>📂 Repository</strong></a>
-  •
-  <a href="VinayNalavade_Resume.pdf"><strong>📄 Resume</strong></a>
-</p>
+🌐 **Live Website:** [vinaynalavade.github.io/vinay-portfolio](https://vinaynalavade.github.io/vinay-portfolio/)  
+📄 **Resume:** [VinayNalavade_Resume.pdf](VinayNalavade_Resume.pdf)  
+📦 **GitHub:** [github.com/vinaynalavade](https://github.com/vinaynalavade)  
+✉ **Email:** [vinaynalavade0704@gmail.com](mailto:vinaynalavade0704@gmail.com)  
+📞 **Phone:** +91 93593 45433
 
 ---
 
-# 📸 Portfolio Preview
+## 🎯 Profile & Overview
 
-<p align="center">
-  <a href="https://vinaynalavade.github.io/vinay-portfolio/">
-    <img src="assets/screenshots/home.png" alt="QA Engineering Portfolio Preview" width="100%">
-  </a>
-</p>
+QA Engineer with **3+ years of experience** specializing in manual and automation testing across Banking, Insurance, and E-Commerce domains:
 
----
-
-# ✨ Why This Portfolio?
-
-Most portfolios list skills.
-
-This portfolio demonstrates them.
-
-Built with the mindset of a QA Engineer, it recreates how quality engineering works inside enterprise software teams through interactive architecture, realistic testing scenarios, automation showcases, and domain-driven case studies.
-
-Whether you're a recruiter, hiring manager, or fellow engineer, the goal is simple:
-
-> **Experience how I think as a Quality Engineer—not just what I know.**
+- **UI Test Automation**: Selenium WebDriver with Java and TestNG using Page Object Model (POM) architecture.
+- **API Testing**: Postman collections for REST API validation (status codes, response headers, payload verification).
+- **Database & Data Verification**: SQL query validation and large-scale data reconciliation across Oracle, MySQL, and SAP BusinessObjects.
+- **Python Automation**: Automated financial commission deductions in Python with ~70% reduction in manual validation effort.
+- **Domain Quality Assurance**: Banking (Loan Origination Systems), Insurance (Life Asia / IRDAI regulatory compliance), and Retail E-Commerce (Order Management Systems).
 
 ---
 
-# 🚀 What You'll Explore
+## 💼 Experience Summary
 
-## 🏠 Professional Portfolio
-
-A modern portfolio presenting professional experience, projects, technical expertise, and career journey.
-
----
-
-## 🏗 Interactive Framework Architecture
-
-Explore an interactive Selenium Automation Framework including:
-
-* DriverFactory
-* BaseTest
-* Page Object Model
-* TestNG Execution Flow
-* Utilities
-* Reporting
-* Framework Lifecycle
-
-Designed to simplify complex automation architecture through visual exploration.
+1. **Infosys Ltd. (via UNIZEN TECHNOLOGIES Pvt Ltd.)** — *QA Analyst* (Sep 2025 — Present)
+   - Execute functional, regression, and smoke test cycles in 2-week Agile sprints; maintained 60%+ test coverage across 3 active modules.
+   - Authored and reviewed 80+ test cases per sprint; logged 30+ defects across UAT and regression using Jira.
+2. **ICICI Prudential Life Insurance (via Eureka Outsourcing Solutions Pvt Ltd.)** — *QA Analyst* (Mar 2025 — Sep 2025)
+   - Engineered Python automation scripts to validate commission deductions across 8–10 policy attributes, reducing validation effort by ~70%.
+   - Extracted and reconciled policy datasets from SAP BusinessObjects and Life Asia; ensured IRDAI regulatory compliance.
+3. **Swift Solution Pvt Ltd.** — *Software Test Engineer* (Jan 2023 — Feb 2025)
+   - Designed and executed 200+ test cases for Banking and E-Commerce web applications.
+   - Built automated smoke and regression suites using Selenium WebDriver with Java and TestNG (POM), reducing regression cycle time by ~25%.
+   - Validated backend data integrity for loan, order, and customer datasets with SQL queries.
 
 ---
 
-## 🐞 Enterprise Defect Investigation
+## 🛠 Technical Skills Matrix
 
-Dive into realistic defect investigations featuring:
-
-* Problem Analysis
-* Investigation Process
-* Root Cause Analysis
-* Resolution Validation
-* Lessons Learned
-
-Inspired by real QA workflows across Banking, Insurance, and Retail domains.
-
----
-
-## 🔌 API Validation Showcase
-
-Discover enterprise API validation concepts including:
-
-* Request & Response Validation
-* Status Code Verification
-* Business Rule Validation
-* SQL Backend Verification
-* Authentication Testing
-* Regression Strategy
+| Competency | Technologies & Tools |
+| :--- | :--- |
+| **Languages** | Core Java, Basic Python (Data Validation & Automation), SQL |
+| **Automation** | Selenium WebDriver, TestNG, Maven, Fireflink (Script-less), Page Object Model (POM) |
+| **API Testing** | Postman, REST API, Status Code Validation, Response Validation |
+| **Testing Skills** | Manual Testing, Regression Testing, Smoke Testing, Functional Testing, STLC, SDLC |
+| **BI & Reporting** | SAP BusinessObjects (SAP BO), Advanced Excel, Pivot Tables |
+| **DevOps & Tools** | Git, GitHub, Jenkins, Jira, Eclipse, VS Code |
+| **Methodologies** | Agile / Scrum, Test Case Design, Defect Lifecycle Management |
 
 ---
 
-## ⚡ Automation Success Stories
+## 🎓 Education & Certifications
 
-Explore automation initiatives demonstrating measurable business impact, including:
-
-* Selenium Automation Framework
-* Python-based Validation Automation
-* API Automation
-* Quality Engineering Practices
+- **B.Tech in Computer Science & Engineering** | DBATU University – Fabtech Technical Campus | CGPA: 7.98 (2024)
+- **Diploma in Computer Technology** | MSBTE – Brahmdevdada Mane Polytechnic | 84.00% (2021)
+- **Certifications**: Java Full Stack Development (Testing), Java Basics
 
 ---
 
-## 📚 QA Learning Resources
-
-Curated resources for aspiring and experienced QA Engineers covering:
-
-* Manual Testing
-* Automation Testing
-* Selenium
-* SQL
-* API Testing
-* Java
-* QA Interview Preparation
-
----
-
-# 🛠 Built With
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript (ES6)
-
-### QA Technologies
-
-* Java
-* Selenium WebDriver
-* TestNG
-* Postman
-* SQL
-* Python
-
-### Deployment
-
-* Git
-* GitHub
-* GitHub Pages
-
----
-
-# 🌟 Portfolio Features
-
-* Responsive Design
-* Glassmorphism UI
-* Dark / Light Theme
-* Interactive Framework Explorer
-* Enterprise QA Case Studies
-* Automation Showcase
-* API Validation Experience
-* Resume Preview
-* Mobile Navigation
-* SEO Optimization
-* Accessibility Improvements
-* Performance Optimizations
-
----
-
-# 📂 Repository Structure
-
-```text
-vinay-portfolio
-│
-├── index.html
-├── architecture.html
-├── resources.html
-├── starter-pack.html
-├── core-java.html
-│
-├── style.css
-├── script.js
-│
-├── assets/
-│   ├── screenshots/
-│   └── images/
-│
-├── VinayNalavade_Resume.pdf
-│
-└── README.md
-```
-
----
-
-# 🚀 Current Release
-
-## Version 2.0.0
-
-### Highlights
-
-* Complete responsive redesign
-* Modern UI/UX enhancements
-* Interactive framework architecture
-* Enterprise defect investigations
-* API validation showcase
-* Automation impact stories
-* Performance optimization
-* Accessibility improvements
-* SEO enhancements
-
----
-
-# 🔮 Upcoming Features
-
-Version **2.1** is currently in progress.
-
-Planned enhancements include:
-
-* Interactive Jira Ticket Simulation
-* Extent Report Viewer
-* SQL Query Explorer
-* Postman Collection Viewer
-* Jenkins Pipeline Visualization
-* Automation Execution Dashboard
-* CI/CD Workflow Demonstrations
-
----
-
-# 🔗 Related Project
-
-## QA Automation Framework
-
-Explore my Hybrid Automation Framework built using Java, Selenium WebDriver, TestNG, Maven, and the Page Object Model.
-
-**Repository**
-
-https://github.com/vinaynalavade/qa-automation-framework
-
----
-
-# 🌐 Experience the Portfolio
-
-The README provides an overview.
-
-The portfolio tells the complete story.
-
-### 👉 Live Portfolio
-
-https://vinaynalavade.github.io/vinay-portfolio/
-
----
-
-<p align="center">
-If you found this project interesting, consider giving it a ⭐.
-</p>
+© 2026 Vinay Nalavade. Built with engineering precision.
