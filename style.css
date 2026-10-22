@@ -97,7 +97,7 @@ body::before {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+  width: 100%;
   max-width: 1400px;
   height: 480px;
   background: radial-gradient(circle at 50% 0%, rgba(var(--accent-rgb), 0.04), transparent 70%);
@@ -161,7 +161,7 @@ code, pre {
 }
 
 section {
-  padding: clamp(3.5rem, 7vw, 5rem) 0;
+  padding: clamp(2.5rem, 4.5vw, 3.5rem) 0;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -281,7 +281,7 @@ section {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 1.25vw, 1.25rem);
   height: 100%;
 }
 
@@ -327,7 +327,7 @@ section {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 1.25vw, 1.25rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -468,7 +468,7 @@ section {
 }
 
 /* Tablet & Mobile Breakpoint Switch */
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .nav-inner {
     display: flex;
     justify-content: space-between;
@@ -497,16 +497,17 @@ section {
    HERO SECTION (Recruiter & Candidate Focus)
    ========================================================================== */
 .hero-section {
-  padding-top: clamp(6.5rem, 12vw, 8.5rem);
-  padding-bottom: clamp(3.5rem, 6vw, 5rem);
+  padding-top: clamp(4.75rem, 5.5vw, 5.25rem);
+  padding-bottom: clamp(1.75rem, 3vw, 2.5rem);
   position: relative;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: center;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  align-items: start;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 960px) {
@@ -522,37 +523,37 @@ section {
 }
 
 .hero-name {
-  font-size: clamp(2.15rem, 5.5vw, 3.75rem);
+  font-size: clamp(2rem, 4.2vw, 3.125rem);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.05;
   color: var(--text-main);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.35rem;
   word-break: break-word;
 }
 
 .hero-role-title {
-  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
   font-weight: 700;
   color: var(--accent);
   font-family: var(--font-mono);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.01em;
 }
 
 .hero-role-sub {
   font-family: var(--font-mono);
-  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+  font-size: clamp(0.75rem, 1.4vw, 0.8125rem);
   color: var(--accent-light);
-  margin-bottom: 1.25rem;
-  line-height: 1.5;
+  margin-bottom: 0.65rem;
+  line-height: 1.45;
 }
 
 .hero-bio {
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(0.9rem, 1.6vw, 1.025rem);
   color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 1.75rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
   max-width: 620px;
 }
 
@@ -560,16 +561,20 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.875rem;
-  margin-bottom: 1.75rem;
+  gap: 0.625rem;
+  margin-bottom: 0;
+}
+
+.hero-cta-group .btn {
+  padding: 0.5625rem 1rem;
 }
 
 .hero-metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.875rem;
-  margin-bottom: 2rem;
-  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.125rem;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -609,8 +614,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 1.5rem;
-  padding-top: 1.25rem;
+  gap: 0.75rem 1.5rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--border-subtle);
   font-size: 0.8125rem;
   color: var(--text-subtle);
@@ -638,7 +643,7 @@ section {
 
 .spec-header {
   background-color: var(--surface-subtle);
-  padding: 0.875rem 1.25rem;
+  padding: 0.75rem 1.125rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -675,10 +680,23 @@ section {
 }
 
 .spec-body {
-  padding: clamp(1.25rem, 3vw, 1.5rem);
+  padding: 0.875rem 1.125rem;
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.7rem;
+}
+
+.spec-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 540px) {
+  .spec-row-split {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
 }
 
 .spec-item {
@@ -705,14 +723,14 @@ section {
 .spec-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.375rem;
-  margin-top: 0.25rem;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
 }
 
 .spec-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
   background-color: var(--surface-subtle);
   color: var(--text-muted);
   border: 1px solid var(--border-subtle);
@@ -1372,7 +1390,7 @@ section {
    ========================================================================== */
 .contact-section {
   text-align: center;
-  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem) 0;
+  padding: clamp(2.75rem, 5vw, 4rem) 0 clamp(2.5rem, 4.5vw, 3.5rem) 0;
 }
 
 .contact-box {
