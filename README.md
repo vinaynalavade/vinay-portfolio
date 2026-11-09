@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://vinaynalavade.github.io/vinay-portfolio/"><img src="https://img.shields.io/badge/Live_Portfolio-v3.0.1-00c2cb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Portfolio v3.0.1" /></a>
+  <a href="https://vinaynalavade.github.io/vinay-portfolio/"><img src="https://img.shields.io/badge/Live_Portfolio-Production-00c2cb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Portfolio Production" /></a>
   <a href="https://www.linkedin.com/in/vinaynalavade/"><img src="https://img.shields.io/badge/LinkedIn-vinaynalavade-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile" /></a>
   <a href="https://github.com/vinaynalavade"><img src="https://img.shields.io/badge/GitHub-vinaynalavade-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" /></a>
   <a href="mailto:vinaynalavade0704@gmail.com"><img src="https://img.shields.io/badge/Email-vinaynalavade0704@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Contact" /></a>
@@ -119,7 +119,7 @@ Beyond enterprise QA automation, Vinay is an **independent software developer** 
 
 ## ⚡ Portfolio V3 Architecture & Design Highlights
 
-The **V3.0.1** portfolio redesign is built on an **Editorial Quality Engineer** design direction:
+The portfolio redesign is built on an **Editorial Quality Engineer** design direction:
 
 - **Zero Runtime Frameworks:** Written in semantic HTML5, modern CSS3 (custom properties, fluid typography `clamp()`, 8px spatial grid), and lightweight vanilla JavaScript. Zero React, Vue, Tailwind, or Bootstrap bloat.
 - **Accessibility First (WCAG 2.1 AA):** High contrast ratios exceeding 5.1:1 up to 17.9:1, universal `:focus-visible` keyboard rings, skip link navigation, full ARIA attributes (`aria-pressed`, `aria-expanded`, `aria-hidden`), and complete `prefers-reduced-motion` support.

@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="navylight" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#f2ece4"/>
     </linearGradient>
   </defs>
 
@@ -11,9 +11,9 @@
     y="2"
     width="60"
     height="60"
-    rx="16"
+    rx="14"
     fill="url(#navylight)"
-    stroke="#2563eb"
+    stroke="#0b6e75"
     stroke-width="2"
   />
 
@@ -22,10 +22,10 @@
     y="58%"
     text-anchor="middle"
     font-size="22"
-    font-weight="800"
-    font-family="Inter, -apple-system, sans-serif"
-    letter-spacing="-1"
-    fill="#0f172a"
+    font-weight="700"
+    font-family="'Plus Jakarta Sans', system-ui, sans-serif"
+    letter-spacing="-0.5"
+    fill="#14171a"
   >
     VN
   </text>
@@ -34,6 +34,6 @@
     cx="48"
     cy="16"
     r="3.5"
-    fill="#2563eb"
+    fill="#0b6e75"
   />
 </svg>
