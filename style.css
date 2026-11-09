@@ -49,7 +49,7 @@
   --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
 
   /* Fluid Responsive Typography Scale (CSS clamp) */
-  --text-display: clamp(2.25rem, 4.5vw, 3.35rem);   /* 36px to 53.6px; Hero H1 */
+  --text-display: clamp(1.85rem, 3.2vw, 2.65rem);   /* Scaled for balanced editorial proportion */
   --text-h1: clamp(1.85rem, 3.5vw, 2.5rem);         /* 29.6px to 40px; Section Titles */
   --text-h2: clamp(1.35rem, 2.2vw, 1.75rem);        /* 21.6px to 28px; Case Studies */
   --text-h3: clamp(1.1rem, 1.6vw, 1.3rem);          /* 17.6px to 20.8px; Subsections */
@@ -362,7 +362,7 @@ img, svg {
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 68px;
   background-color: var(--surface-elevated);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -372,8 +372,8 @@ img, svg {
 }
 
 .nav-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: clamp(1rem, 2vw, 1.75rem);
   height: 100%;
@@ -383,13 +383,14 @@ img, svg {
 .nav-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 0.75rem;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-avatar {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
   border: 1.5px solid var(--border-strong);
@@ -408,40 +409,48 @@ img, svg {
 
 .nav-brand-name {
   font-family: var(--font-serif);
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--text-main);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .nav-brand-title {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.65rem;
   color: var(--text-subtle);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-top: 1px;
 }
 
 /* Zone 2: Navigation Center */
 .nav-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 1.5vw, 1.35rem);
+  justify-content: center;
+  gap: clamp(0.5rem, 1.1vw, 1.15rem);
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  font-size: var(--text-body-sm);
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--text-muted);
   position: relative;
-  padding: 0.35rem 0.15rem;
+  padding: 0.35rem 0.25rem;
+  white-space: nowrap;
   transition: var(--transition-fast);
 }
 
@@ -469,13 +478,24 @@ img, svg {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
   justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.nav-linkedin-btn,
+.nav-resume-btn {
+  font-size: 0.8125rem;
+  padding: 0.375rem 0.75rem;
+  min-height: 36px;
+  white-space: nowrap;
+  gap: 0.35rem;
 }
 
 .theme-toggle-btn {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background-color: var(--surface);
@@ -578,15 +598,15 @@ img, svg {
    4. HERO SECTION (EDITORIAL 60/40 ASYMMETRIC COMPOSITION)
    ========================================================================== */
 .hero-section {
-  padding-top: clamp(6rem, 8vw, 7.5rem);
-  padding-bottom: clamp(3.5rem, 5vw, 4.5rem);
+  padding-top: clamp(5.5rem, 7vw, 6.75rem);
+  padding-bottom: clamp(3rem, 4.5vw, 4rem);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: clamp(2rem, 3.5vw, 3.25rem);
   align-items: start;
 }
 
@@ -594,10 +614,11 @@ img, svg {
   font-family: var(--font-serif);
   font-size: var(--text-display);
   font-weight: 600;
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-tight);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
   color: var(--text-main);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  max-width: 28ch;
 }
 
 .hero-headline em {
@@ -608,16 +629,16 @@ img, svg {
 
 .hero-bio {
   font-size: var(--text-body-lg);
-  line-height: var(--leading-loose);
+  line-height: 1.65;
   color: var(--text-muted);
-  max-width: 65ch;
-  margin-bottom: 2rem;
+  max-width: 58ch;
+  margin-bottom: 1.75rem;
 }
 
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.875rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
@@ -626,7 +647,7 @@ img, svg {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.75rem;
+  padding: 1.5rem 1.65rem;
   box-shadow: var(--shadow-md);
   position: relative;
 }
@@ -636,35 +657,32 @@ img, svg {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 1rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 0.875rem;
+  margin-bottom: 1.15rem;
 }
 
 .specimen-title {
   font-family: var(--font-mono);
   font-size: var(--text-kicker);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--text-subtle);
   text-transform: uppercase;
 }
 
-.specimen-badge {
+.specimen-meta {
   font-family: var(--font-mono);
   font-size: var(--text-micro);
-  font-weight: 600;
-  background-color: var(--accent-subtle);
+  font-weight: 500;
   color: var(--accent);
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-xs);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .specimen-body {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 1rem;
 }
 
 .specimen-row {
@@ -691,11 +709,12 @@ img, svg {
   color: var(--text-main);
 }
 
-.specimen-value small {
+.specimen-subvalue {
   display: block;
   font-size: var(--text-caption);
   color: var(--text-muted);
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
+  line-height: 1.4;
 }
 
 .specimen-tags {
@@ -715,33 +734,39 @@ img, svg {
   color: var(--text-muted);
 }
 
-.specimen-metrics-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.875rem;
-  margin-top: 0.5rem;
-  padding-top: 1.15rem;
+.specimen-achievements {
+  padding-top: 0.85rem;
   border-top: 1px dashed var(--border);
 }
 
-.specimen-metric-tile {
+.specimen-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  padding-left: 0;
 }
 
-.specimen-metric-val {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 700;
+.specimen-list li {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  line-height: 1.45;
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.specimen-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
   color: var(--accent);
-  line-height: 1.1;
+  font-family: var(--font-mono);
+  font-weight: 600;
 }
 
-.specimen-metric-lbl {
-  font-size: var(--text-micro);
-  color: var(--text-subtle);
-  line-height: 1.4;
+.specimen-list strong {
+  color: var(--text-main);
 }
 
 /* Four-Column Metrics Ribbon */
@@ -1557,7 +1582,7 @@ img, svg {
 /* ==========================================================================
    12. RESPONSIVE LAYOUTS & BREAKPOINTS
    ========================================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
   .nav-center {
     display: none;
   }
@@ -1568,6 +1593,9 @@ img, svg {
   .hamburger-btn {
     display: flex;
   }
+}
+
+@media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
