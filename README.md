@@ -123,7 +123,7 @@ The portfolio redesign is built on an **Editorial Quality Engineer** design dire
 
 - **Zero Runtime Frameworks:** Written in semantic HTML5, modern CSS3 (custom properties, fluid typography `clamp()`, 8px spatial grid), and lightweight vanilla JavaScript. Zero React, Vue, Tailwind, or Bootstrap bloat.
 - **Accessibility First (WCAG 2.1 AA):** High contrast ratios exceeding 5.1:1 up to 17.9:1, universal `:focus-visible` keyboard rings, skip link navigation, full ARIA attributes (`aria-pressed`, `aria-expanded`, `aria-hidden`), and complete `prefers-reduced-motion` support.
-- **Asset Optimization:** Downloadable resume PDF compressed to **124.6 KB** (well below the 400 KB ceiling). Responsive portrait photography dual-encoded in **40 KB WebP** with JPEG fallback.
+- **Asset Optimization:** Downloadable resume PDF compressed to **124.6 KB** (well below the 400 KB ceiling). High-resolution responsive portrait photography optimized for ultra-fast load times.
 - **Interactive Recruiter Focus Filter:** Dynamic duty bullet highlighting by technical competency (Selenium/Java, API/Backend, SQL/Data, Compliance).
 - **Anti-Flash Theme Engine:** Dark / Light theme switcher with persistent `localStorage` and system `prefers-color-scheme` synchronization.
 

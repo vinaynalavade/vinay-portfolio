@@ -137,7 +137,7 @@
           }
         });
       },
-      { rootMargin: '-20% 0px -65% 0px' }
+      { rootMargin: '-10% 0px -55% 0px' }
     );
 
     sections.forEach((section) => navObserver.observe(section));
