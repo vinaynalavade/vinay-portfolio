@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vinay Nalavade — QA Automation Engineer | SDET</title>
-  <meta name="description" content="Professional portfolio of Vinay Nalavade, QA Automation Engineer | SDET with 4+ years of experience in Core Java, Selenium WebDriver, TestNG, POM, Postman API testing, SQL validation, and Python automation.">
-  
-  <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="Vinay Nalavade — QA Automation Engineer | SDET">
-  <meta property="og:description" content="QA Automation Engineer | SDET with 4+ years of experience in Core Java, Selenium WebDriver, TestNG, POM, Postman REST API testing, SQL backend validation, and Python automation.">
+  <title>Vinay Nalavade — Senior QA Engineer &amp; SDET | Automation Specialist</title>
+  <meta name="description" content="Professional portfolio of Vinay Nalavade, Senior QA Engineer with nearly 4 years of experience in Core Java, Selenium WebDriver (POM), REST API testing via Postman, SQL backend validation, and Python automation across Banking, Insurance, and E-Commerce domains.">
+  <link rel="canonical" href="https://vinaynalavade.github.io/vinay-portfolio/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Vinay Nalavade — Senior QA Engineer &amp; SDET">
+  <meta property="og:description" content="Senior QA Engineer with nearly 4 years of experience delivering enterprise test automation, API validation, SQL backend data reconciliation, and Python automation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vinaynalavade.github.io/vinay-portfolio/">
-  
-  <!-- Structured Data (Schema.org Person) -->
+  <meta property="og:site_name" content="Vinay Nalavade Portfolio">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vinay Nalavade — Senior QA Engineer &amp; SDET">
+  <meta name="twitter:description" content="Nearly 4 years of experience in enterprise test automation (Selenium WebDriver Java POM), REST API testing, SQL validation, and Python automation.">
+
+  <!-- Schema.org Structured Data (Person) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Vinay Nalavade",
-    "jobTitle": "QA Automation Engineer | SDET",
+    "jobTitle": "Senior QA Engineer",
     "url": "https://vinaynalavade.github.io/vinay-portfolio/",
     "sameAs": [
-      "https://www.linkedin.com/in/vinay0704",
+      "https://www.linkedin.com/in/vinaynalavade/",
       "https://github.com/vinaynalavade"
     ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "UNIZEN TECHNOLOGIES Pvt. Ltd."
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "DBATU University – Fabtech Technical Campus"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "MSBTE – Brahmdevdada Mane Polytechnic"
+      }
+    ],
     "knowsAbout": [
-      "Core Java",
+      "Test Automation",
       "Selenium WebDriver",
+      "Core Java",
       "TestNG",
-      "Page Object Model",
+      "Page Object Model (POM)",
       "Maven",
       "Fireflink",
       "Postman",
       "REST API Testing",
-      "SQL",
+      "SQL Data Validation",
       "Python Automation",
-      "Git",
-      "Jenkins",
-      "Jira",
+      "Manual Testing",
+      "Regression Testing",
+      "Smoke Testing",
+      "Integration Testing",
       "Agile/Scrum",
+      "Jira",
+      "Jenkins",
+      "Git",
       "SAP BusinessObjects",
       "Software Quality Assurance"
     ]
   }
   </script>
-  
-  <!-- Early Theme Ingestion Script to Prevent Theme Flash -->
+
+  <!-- Early Theme Ingestion Script to Prevent Theme Flash (FOUC) -->
   <script>
     (function() {
       try {
@@ -57,59 +84,71 @@
     })();
   </script>
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
-  
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+
+  <!-- Google Fonts: Fraunces (Serif), Plus Jakarta Sans (Sans), JetBrains Mono (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Core Design System -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Design System Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- SITE NAVIGATION (3-Zone Layout) -->
+  <!-- Accessible Skip Link (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE NAVIGATION (3-Zone Editorial Masthead) -->
   <header class="site-nav">
     <div class="container nav-inner">
-      <!-- Zone 1: Brand (Left) -->
-      <a href="#profile" class="nav-brand" aria-label="Vinay Nalavade Home">
-        <img src="assets/vinay-profile.jpg" alt="Vinay Nalavade" class="nav-avatar" width="36" height="36">
-        <span class="nav-brand-name">VINAY NALAVADE</span>
+      <!-- Zone 1: Brand & Portrait -->
+      <a href="#hero" class="nav-brand" aria-label="Vinay Nalavade Home">
+        <picture>
+          <source srcset="assets/vinay-profile.webp" type="image/webp">
+          <img src="assets/vinay-profile.jpg" alt="Vinay Nalavade" class="nav-avatar" width="40" height="40" loading="eager">
+        </picture>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">VINAY NALAVADE</span>
+          <span class="nav-brand-title">SENIOR QA ENGINEER</span>
+        </div>
       </a>
 
-      <!-- Zone 2: Navigation Group (Center) -->
-      <nav class="nav-center" aria-label="Main Navigation">
+      <!-- Zone 2: Navigation Links (Center) -->
+      <nav class="nav-center" aria-label="Primary Navigation">
         <ul class="nav-menu">
-          <li><a href="#profile" class="nav-link">Profile</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Case Studies</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#side-projects" class="nav-link">Side Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Zone 3: Actions (Right) -->
       <div class="nav-actions">
-        <a href="https://www.linkedin.com/in/vinay0704" class="btn btn-secondary btn-sm nav-linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-          <span class="ui-icon">
+        <a href="https://www.linkedin.com/in/vinaynalavade/" class="btn btn-secondary btn-sm nav-linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <span class="ui-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </span>
           <span>LinkedIn</span>
         </a>
-        <a href="VinayNalavade_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" target="_blank" download aria-label="Download Resume">
+        <a href="VinayNalavade_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" target="_blank" download aria-label="Download Resume (PDF)">
           <span>Resume</span>
-          <span class="ui-icon">
+          <span class="ui-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           </span>
         </a>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme"></button>
-        <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle mobile menu">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to light theme" type="button">
+          <!-- Injected via script.js -->
+        </button>
+        <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer" type="button">
           <span></span>
           <span></span>
           <span></span>
@@ -119,205 +158,180 @@
   </header>
 
   <!-- MOBILE NAVIGATION DRAWER -->
-  <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-hidden="true">
-    <a href="#profile" class="mobile-nav-link">Profile</a>
-    <a href="#experience" class="mobile-nav-link">Experience</a>
-    <a href="#skills" class="mobile-nav-link">Skills</a>
-    <a href="#projects" class="mobile-nav-link">Projects</a>
-    <a href="#education" class="mobile-nav-link">Education</a>
-    <a href="#certifications" class="mobile-nav-link">Certifications</a>
-    <a href="#contact" class="mobile-nav-link">Contact</a>
-    <a href="https://www.linkedin.com/in/vinay0704" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">
-      <span>LinkedIn Profile</span>
-      <span class="ui-icon">
-        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-      </span>
-    </a>
-    <a href="VinayNalavade_Resume.pdf" class="btn btn-primary" target="_blank" download style="margin-top: 0.5rem;">
-      <span>Download Resume (PDF)</span>
-      <span class="ui-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-      </span>
-    </a>
-  </div>
+  <nav id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#about" class="mobile-nav-link">About &amp; Overview</a>
+      <a href="#experience" class="mobile-nav-link">Professional Experience</a>
+      <a href="#projects" class="mobile-nav-link">Enterprise Case Studies</a>
+      <a href="#skills" class="mobile-nav-link">Technical Skills Matrix</a>
+      <a href="#education" class="mobile-nav-link">Education Foundation</a>
+      <a href="#certifications" class="mobile-nav-link">Certifications &amp; Learning</a>
+      <a href="#side-projects" class="mobile-nav-link">Side Projects &amp; Experiments</a>
+      <a href="#contact" class="mobile-nav-link">Contact &amp; Inquiries</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="https://www.linkedin.com/in/vinaynalavade/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+        <span class="ui-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </span>
+        <span>LinkedIn Profile</span>
+      </a>
+      <a href="VinayNalavade_Resume.pdf" class="btn btn-primary" target="_blank" download>
+        <span>Download Resume (PDF)</span>
+        <span class="ui-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </span>
+      </a>
+    </div>
+  </nav>
 
-  <main>
-    <!-- HERO SECTION (Recruiter & Candidate Focus) -->
-    <section class="hero-section">
+  <main id="main-content">
+
+    <!-- HERO SECTION (Editorial 60/40 Asymmetric Composition) -->
+    <section id="hero" class="hero-section">
       <div class="container">
         <div class="hero-grid">
+          <!-- Left Column: Editorial Headline & Narrative -->
           <div class="hero-content">
-            <div class="section-kicker">Quality Engineering · Automation · SDET</div>
-            <h1 class="hero-name">
-              VINAY NALAVADE
+            <div class="section-kicker">
+              <span>VOL. III // 2026</span>
+              <span class="kicker-sep">·</span>
+              <span>VERIFIED QA AUTOMATION PORTFOLIO</span>
+            </div>
+            <h1 class="hero-headline">
+              Quality is not merely tested at the boundary; <em>it is engineered into every release cycle.</em>
             </h1>
-            <div class="hero-role-title">
-              QA AUTOMATION ENGINEER | SDET
-            </div>
-            <div class="hero-role-sub">
-              Core Java · Selenium WebDriver · TestNG (POM) · Postman · REST API · SQL · Python Automation
-            </div>
             <p class="hero-bio">
-              QA Automation Engineer with <strong>4+ years of experience</strong> specializing in robust UI automation frameworks, REST API testing, and backend database verification across Banking, Insurance, and E-Commerce domains. Proven track record in building Selenium WebDriver test suites with Java (POM), automating financial commission workflows in Python with approximately 70% reduction in manual validation effort, and maintaining 95%+ sprint test coverage in Agile environments.
+              Senior QA Engineer with <strong>nearly 4 years of experience</strong> architecting resilient Selenium WebDriver automation suites in Core Java (Page Object Model), validating enterprise REST APIs via Postman, executing SQL database integrity verification, and engineering automated Python audit pipelines across Banking, Insurance, and E-Commerce domains.
             </p>
 
             <div class="hero-cta-group">
-              <a href="VinayNalavade_Resume.pdf" class="btn btn-primary" target="_blank" download>
-                <span>Download Resume</span>
-                <span class="ui-icon">
-                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Enterprise Work</span>
+                <span class="ui-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </span>
               </a>
-              <a href="https://www.linkedin.com/in/vinay0704" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                <span class="ui-icon">
+              <a href="VinayNalavade_Resume.pdf" class="btn btn-secondary" target="_blank" download>
+                <span class="ui-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </span>
+                <span>Download Resume</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vinaynalavade/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                <span class="ui-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </span>
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/vinaynalavade" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-                <span>GitHub</span>
-                <span class="ui-icon">
-                  <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </span>
-              </a>
-              <a href="#experience" class="btn btn-ghost">
-                <span>View Experience</span>
-                <span class="ui-icon">
-                  <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-                </span>
-              </a>
             </div>
           </div>
 
-          <!-- Recruiter Quick Snapshot Panel -->
-          <div class="tech-spec-panel">
-            <div class="spec-header">
-              <div class="spec-header-title">
-                <span class="spec-header-dot"></span> RECRUITER SNAPSHOT
-              </div>
-              <div class="spec-dots">
-                <div class="spec-dot"></div>
-                <div class="spec-dot"></div>
-                <div class="spec-dot"></div>
-              </div>
+          <!-- Right Column: Current Engagement & Standing Specimen Card -->
+          <div class="specimen-card" aria-label="Current Engagement Summary">
+            <div class="specimen-header">
+              <span class="specimen-title">CURRENT ENGAGEMENT &amp; STANDING</span>
+              <span class="specimen-badge">Active Sprint</span>
             </div>
-            <div class="spec-body">
-              <div class="spec-row-split">
-                <div class="spec-item">
-                  <span class="spec-label">Target Role</span>
-                  <span class="spec-value">QA Automation Engineer | SDET</span>
-                </div>
-                <div class="spec-item">
-                  <span class="spec-label">Experience</span>
-                  <span class="spec-value">4+ Years · Banking, Insurance & E-Commerce</span>
+
+            <div class="specimen-body">
+              <div class="specimen-row">
+                <span class="specimen-label">Current Role &amp; Client</span>
+                <div class="specimen-value">
+                  <strong>Senior QA Engineer</strong> · UNIZEN TECHNOLOGIES Pvt. Ltd.
+                  <small>Client Engagement: <strong>Infosys Ltd., Pune</strong> (Sep 2025 — Present)</small>
                 </div>
               </div>
-              <div class="spec-item">
-                <span class="spec-label">Core Automation Stack</span>
-                <div class="spec-tags">
-                  <span class="spec-tag">Core Java</span>
-                  <span class="spec-tag">Selenium WebDriver</span>
-                  <span class="spec-tag">TestNG</span>
-                  <span class="spec-tag">Page Object Model (POM)</span>
-                  <span class="spec-tag">Maven</span>
-                  <span class="spec-tag">Fireflink</span>
-                  <span class="spec-tag">Postman (REST API)</span>
-                  <span class="spec-tag">SQL</span>
-                  <span class="spec-tag">Python Automation</span>
+
+              <div class="specimen-row">
+                <span class="specimen-label">Total Experience</span>
+                <div class="specimen-value">
+                  <strong>Nearly 4 Years of Experience</strong>
+                  <small>Jan 2023 — Present · Enterprise Banking &amp; Insurance</small>
                 </div>
               </div>
-              <div class="spec-row-split">
-                <div class="spec-item">
-                  <span class="spec-label">CI/CD & Process</span>
-                  <div class="spec-tags">
-                    <span class="spec-tag">Git / GitHub</span>
-                    <span class="spec-tag">Jenkins</span>
-                    <span class="spec-tag">Jira</span>
-                    <span class="spec-tag">Agile / Scrum</span>
-                  </div>
+
+              <div class="specimen-row">
+                <span class="specimen-label">Core Automation Stack</span>
+                <div class="specimen-tags">
+                  <span class="specimen-tag">Core Java</span>
+                  <span class="specimen-tag">Selenium WebDriver</span>
+                  <span class="specimen-tag">TestNG (POM)</span>
+                  <span class="specimen-tag">Postman (REST API)</span>
+                  <span class="specimen-tag">SQL</span>
+                  <span class="specimen-tag">Python Automation</span>
+                  <span class="specimen-tag">Jira</span>
+                  <span class="specimen-tag">Git</span>
                 </div>
-                <div class="spec-item">
-                  <span class="spec-label">Profile & Contact</span>
-                  <div class="spec-links">
-                    <a href="https://www.linkedin.com/in/vinay0704" target="_blank" rel="noopener noreferrer" class="spec-link">
-                      <span class="ui-icon">
-                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                      </span>
-                      <span>linkedin.com/in/vinay0704</span>
-                    </a>
-                    <span class="spec-value-sub">Pune, India · +91 93593 45433</span>
-                  </div>
+              </div>
+
+              <div class="specimen-metrics-split">
+                <div class="specimen-metric-tile">
+                  <span class="specimen-metric-val">95%+</span>
+                  <span class="specimen-metric-lbl">Sprint Test Coverage Across Active Modules</span>
+                </div>
+                <div class="specimen-metric-tile">
+                  <span class="specimen-metric-val">~70%</span>
+                  <span class="specimen-metric-lbl">Manual Effort Saved via Python Automation</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Key Metrics Ribbon (Full Width) -->
-        <div class="hero-metrics-grid">
+        <!-- Four-Column Verified Metrics Ribbon -->
+        <div class="metrics-ribbon-grid" role="region" aria-label="Key Performance Metrics">
           <div class="metric-card">
-            <div class="metric-value">4+</div>
-            <div class="metric-label">Years Experience</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">95%+</div>
-            <div class="metric-label">Sprint Test Coverage</div>
+            <span class="metric-val">Nearly 4 Years</span>
+            <span class="metric-label">Professional QA &amp; Automation Experience</span>
           </div>
           <div class="metric-card">
-            <div class="metric-value">~70%</div>
-            <div class="metric-label">Effort Saved (Python)</div>
+            <span class="metric-val">95%+</span>
+            <span class="metric-label">Sprint Test Coverage Across Active Modules (Infosys)</span>
           </div>
           <div class="metric-card">
-            <div class="metric-value">~25%</div>
-            <div class="metric-label">Faster Cycles (POM)</div>
+            <span class="metric-val">~70%</span>
+            <span class="metric-label">Manual Effort Saved via Python Automation (ICICI Pru)</span>
           </div>
-        </div>
-
-        <div class="hero-meta-bar">
-          <div class="hero-meta-item">
-            <strong>Location:</strong> Pune, India
-          </div>
-          <div class="hero-meta-item">
-            <strong>Experience:</strong> 4+ Years
-          </div>
-          <div class="hero-meta-item">
-            <strong>Email:</strong> vinaynalavade0704@gmail.com
+          <div class="metric-card">
+            <span class="metric-val">~25%</span>
+            <span class="metric-label">Faster Regression Cycles via Selenium POM (UNIZEN)</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 01: PROFILE -->
-    <section id="profile">
+    <!-- SECTION 01: ABOUT / PROFESSIONAL IDENTITY -->
+    <section id="about" class="editorial-section">
       <div class="container">
-        <div class="section-kicker">Professional Summary</div>
-        <h2 class="section-title">Profile & Core Capabilities</h2>
+        <div class="section-kicker">01 // PROFESSIONAL IDENTITY</div>
+        <h2 class="section-title">Engineering Rigor &amp; Defect Prevention</h2>
         <p class="section-subtitle">
-          A disciplined QA Automation Engineer | SDET with 4+ years of experience delivering robust test coverage across manual testing, UI automation frameworks, REST APIs, SQL database validation, and STLC-aligned Agile sprints.
+          Quality engineering is fundamentally an architectural discipline. I bridge the gap between business specifications and dependable software delivery through deterministic automation suites, rigorous API validation, and deep database reconciliation.
         </p>
 
-        <div class="positioning-grid">
-          <div class="position-block">
-            <span class="position-index">01 // AUTOMATION & FRAMEWORKS</span>
-            <h3 class="position-title">Selenium & Java Automation</h3>
-            <p class="position-desc">
-              Designing maintainable, robust automated test suites using Selenium WebDriver with Java and TestNG (Page Object Model). Driving automated regression and smoke execution to accelerate release cycles and catch defects early.
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <span class="pillar-index">PILLAR 01</span>
+            <h3 class="pillar-title">Automated UI Framework Architecture</h3>
+            <p class="pillar-desc">
+              Designing maintainable, decoupled test automation suites using Selenium WebDriver with Java and TestNG under the Page Object Model (POM) pattern. Accelerating deployment cadences and reducing regression cycle time by approximately 25%.
             </p>
           </div>
 
-          <div class="position-block">
-            <span class="position-index">02 // API & DATABASE VALIDATION</span>
-            <h3 class="position-title">API & Database Verification</h3>
-            <p class="position-desc">
-              Functional and response validation of REST APIs with Postman (status codes, payloads, response headers) paired with SQL queries for backend data validation and data integrity verification across datasets.
+          <div class="pillar-card">
+            <span class="pillar-index">PILLAR 02</span>
+            <h3 class="pillar-title">API &amp; Backend Data Integrity</h3>
+            <p class="pillar-desc">
+              Validating RESTful endpoints via Postman across status codes, response payloads, and edge cases, paired with complex SQL queries to ensure backend data persistence, ledger consistency, and zero database corruption.
             </p>
           </div>
 
-          <div class="position-block">
-            <span class="position-index">03 // DOMAIN RIGOR & EFFICIENCY</span>
-            <h3 class="position-title">Domain Experience & Compliance</h3>
-            <p class="position-desc">
-              Extensive testing across Banking (Loan Origination Systems), Insurance (policy lifecycle, IRDAI compliance, automated commission audits with ~70% effort reduction in Python), and E-Commerce sales channels.
+          <div class="pillar-card">
+            <span class="pillar-index">PILLAR 03</span>
+            <h3 class="pillar-title">Enterprise Domain Compliance</h3>
+            <p class="pillar-desc">
+              Delivering disciplined QA across complex domains: Banking (Loan Origination Systems and approval workflows), Insurance (IRDAI regulatory compliance and automated Python commission audits), and Retail E-Commerce order lifecycles.
             </p>
           </div>
         </div>
@@ -325,334 +339,420 @@
     </section>
 
     <!-- SECTION 02: PROFESSIONAL EXPERIENCE -->
-    <section id="experience">
+    <section id="experience" class="editorial-section">
       <div class="container">
-        <div class="section-kicker">Career History</div>
+        <div class="section-kicker">02 // CAREER CHRONOLOGY</div>
         <h2 class="section-title">Professional Experience</h2>
         <p class="section-subtitle">
-          Verified professional testing experience across enterprise banking, insurance, and web applications.
+          Verified employment history with clear distinction between direct employers and client engagements across Banking, Insurance, and E-Commerce.
         </p>
 
-        <!-- Recruiter Focus Filter -->
-        <div class="filter-bar">
-          <span class="filter-label">Filter Focus:</span>
-          <button class="filter-chip active" onclick="filterRecruiterFocus('all', this)">All Domains</button>
-          <button class="filter-chip" onclick="filterRecruiterFocus('automation', this)">Automation / Java</button>
-          <button class="filter-chip" onclick="filterRecruiterFocus('api', this)">API & Backend</button>
-          <button class="filter-chip" onclick="filterRecruiterFocus('data', this)">Database / SQL</button>
-          <button class="filter-chip" onclick="filterRecruiterFocus('insurance', this)">Insurance / Banking</button>
+        <!-- Recruiter Focus Filter (Accessible Chips) -->
+        <div class="filter-bar" role="toolbar" aria-label="Filter experience duties by competency">
+          <span class="filter-label">Recruiter Focus:</span>
+          <button class="filter-chip active" type="button" data-focus-target="all" aria-pressed="true">All Competencies</button>
+          <button class="filter-chip" type="button" data-focus-target="automation" aria-pressed="false">Selenium / Java</button>
+          <button class="filter-chip" type="button" data-focus-target="api" aria-pressed="false">API &amp; Backend</button>
+          <button class="filter-chip" type="button" data-focus-target="data" aria-pressed="false">Database / SQL</button>
+          <button class="filter-chip" type="button" data-focus-target="compliance" aria-pressed="false">Insurance &amp; Banking</button>
         </div>
 
         <div class="experience-list">
-          <!-- Experience 01: Infosys -->
-          <div class="experience-item">
-            <div class="experience-item-header">
-              <h3 class="experience-role">QA Analyst</h3>
+          <!-- Role 1: Current Infosys Engagement -->
+          <article class="experience-card" aria-label="Senior QA Engineer at UNIZEN TECHNOLOGIES Pvt. Ltd.">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Senior QA Engineer</h3>
+                <div class="experience-entity">
+                  <strong>UNIZEN TECHNOLOGIES Pvt. Ltd.</strong> · Pune, India
+                  <span class="client-badge">Client: <strong>Infosys Ltd.</strong></span>
+                </div>
+              </div>
               <span class="experience-period">Sep 2025 — Present</span>
             </div>
-            <div class="experience-company">Infosys Ltd. (via UNIZEN TECHNOLOGIES Pvt Ltd.) · Pune</div>
-            
+
+            <p class="experience-domain-context">
+              <strong>Domain:</strong> Enterprise Banking Application · Agile Scrum Environment
+            </p>
+
             <ul class="experience-duties">
-              <li class="experience-duty" data-focus="automation insurance">
-                Execute functional, regression, and smoke test cycles across enterprise banking/insurance applications within 2-week Agile sprints; maintained 95%+ test coverage across 3 active modules.
+              <li class="experience-duty" data-focus="automation compliance">
+                Execute functional, regression, and smoke test cycles across enterprise banking applications within two-week Agile sprints; maintained <strong>95%+ test coverage</strong> across three active modules.
               </li>
-              <li class="experience-duty" data-focus="insurance">
-                Authored and reviewed 80+ test cases per sprint in collaboration with Business Analysts and development teams.
+              <li class="experience-duty" data-focus="compliance">
+                Authored and reviewed <strong>80+ test cases</strong> per sprint in close collaboration with business analysts and developers to establish clear acceptance criteria.
               </li>
               <li class="experience-duty" data-focus="api data">
-                Identified and logged 30+ defects across UAT and regression phases using Jira.
+                Identified and logged <strong>30+ defects</strong> across UAT and regression testing phases using Jira, tracking each through root-cause analysis to verified closure.
               </li>
             </ul>
 
             <div class="experience-tags">
-              <span class="experience-tag">Agile / Scrum</span>
-              <span class="experience-tag">Jira</span>
-              <span class="experience-tag">Functional Testing</span>
-              <span class="experience-tag">Regression Testing</span>
-              <span class="experience-tag">Smoke Testing</span>
-              <span class="experience-tag">Banking & Insurance Domains</span>
-              <span class="experience-tag">Test Case Design</span>
+              <span class="exp-tag">Agile / Scrum</span>
+              <span class="exp-tag">Jira</span>
+              <span class="exp-tag">Functional Testing</span>
+              <span class="exp-tag">Regression Testing</span>
+              <span class="exp-tag">Smoke Testing</span>
+              <span class="exp-tag">UAT</span>
+              <span class="exp-tag">Banking Domain</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Experience 02: ICICI Prudential -->
-          <div class="experience-item">
-            <div class="experience-item-header">
-              <h3 class="experience-role">QA Analyst</h3>
+          <!-- Role 2: Eureka / ICICI Prudential -->
+          <article class="experience-card" aria-label="QA Analyst at Eureka Outsourcing Solutions Pvt. Ltd.">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">QA Analyst</h3>
+                <div class="experience-entity">
+                  <strong>Eureka Outsourcing Solutions Pvt. Ltd.</strong> · Mumbai, India
+                  <span class="client-badge">Client: <strong>ICICI Prudential Life Insurance</strong></span>
+                </div>
+              </div>
               <span class="experience-period">Mar 2025 — Sep 2025</span>
             </div>
-            <div class="experience-company">ICICI Prudential Life Insurance (via Eureka Outsourcing Solutions Pvt Ltd.) · Mumbai</div>
-            
+
+            <p class="experience-domain-context">
+              <strong>Domain:</strong> Insurance Domain · Policy Commission Auditing &amp; IRDAI Regulatory Compliance
+            </p>
+
             <ul class="experience-duties">
-              <li class="experience-duty" data-focus="automation insurance data">
-                Engineered Python automation scripts to validate commission deductions across 8–10 policy attributes including premium, rider, fund allocation, etc., replacing manual VBA-based processes and reducing validation effort by approximately 70%.
+              <li class="experience-duty" data-focus="automation data compliance">
+                Developed Python automation scripts to validate commission deductions across 8–10 policy attributes (premium, rider, fund allocation, etc.), replacing manual VBA-based processes and <strong>reducing validation effort by approximately 70%</strong>.
               </li>
-              <li class="experience-duty" data-focus="data insurance">
-                Extracted and reconciled large-scale policy datasets from SAP BusinessObjects and Life Asia, ensuring full IRDAI regulatory compliance through rule-based validation logic.
+              <li class="experience-duty" data-focus="data compliance">
+                Extracted and reconciled large-scale policy datasets using SAP BusinessObjects and Life Asia, ensuring full audit readiness and data integrity.
               </li>
-              <li class="experience-duty" data-focus="insurance">
-                Ensured IRDAI regulatory compliance through rule-based validation logic across audit and reporting workflows.
+              <li class="experience-duty" data-focus="compliance">
+                Applied rule-based validation logic supporting strict IRDAI regulatory compliance and automated executive reporting workflows.
               </li>
             </ul>
 
             <div class="experience-tags">
-              <span class="experience-tag">Python Automation</span>
-              <span class="experience-tag">SQL</span>
-              <span class="experience-tag">SAP BusinessObjects</span>
-              <span class="experience-tag">Life Asia</span>
-              <span class="experience-tag">Advanced Excel</span>
-              <span class="experience-tag">IRDAI Compliance</span>
+              <span class="exp-tag">Python Automation</span>
+              <span class="exp-tag">SQL</span>
+              <span class="exp-tag">SAP BusinessObjects (SAP BO)</span>
+              <span class="exp-tag">Life Asia</span>
+              <span class="exp-tag">Advanced Excel</span>
+              <span class="exp-tag">IRDAI Compliance</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Experience 03: Swift Solution -->
-          <div class="experience-item">
-            <div class="experience-item-header">
-              <h3 class="experience-role">Software Test Engineer</h3>
+          <!-- Role 3: UNIZEN Software Test Engineer -->
+          <article class="experience-card" aria-label="Software Test Engineer at UNIZEN TECHNOLOGIES Pvt. Ltd.">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Software Test Engineer</h3>
+                <div class="experience-entity">
+                  <strong>UNIZEN TECHNOLOGIES Pvt. Ltd.</strong> · Pune, India
+                </div>
+              </div>
               <span class="experience-period">Jan 2023 — Feb 2025</span>
             </div>
-            <div class="experience-company">Swift Solution Pvt Ltd. · Pune</div>
-            
+
+            <p class="experience-domain-context">
+              <strong>Domains:</strong> Banking and E-Commerce Web Applications
+            </p>
+
             <ul class="experience-duties">
-              <li class="experience-duty" data-focus="insurance">
-                Designed and executed 200+ test cases for web applications across Banking and E-Commerce domains, covering functional, regression, and integration test scenarios across multiple sprint releases.
-              </li>
               <li class="experience-duty" data-focus="automation">
-                Built and maintained automated smoke and regression test suites using Selenium WebDriver with Java and TestNG using Page Object Model (POM) architecture, reducing regression cycle time by approximately 25%.
+                Built and maintained automated smoke and regression test suites using Selenium WebDriver, Java, TestNG, and Page Object Model (POM) architecture, <strong>reducing regression cycle time by approximately 25%</strong>.
+              </li>
+              <li class="experience-duty" data-focus="automation compliance">
+                Designed and executed <strong>200+ test cases</strong> covering functional, regression, and integration scenarios across multi-sprint releases.
               </li>
               <li class="experience-duty" data-focus="data api">
-                Wrote SQL queries for backend data validation and data integrity verification for loan, order, and customer datasets across Banking and E-Commerce modules.
+                Executed SQL queries for backend data validation and data integrity verification across customer, order, and loan datasets.
               </li>
             </ul>
 
             <div class="experience-tags">
-              <span class="experience-tag">Core Java</span>
-              <span class="experience-tag">Selenium WebDriver</span>
-              <span class="experience-tag">TestNG</span>
-              <span class="experience-tag">Page Object Model (POM)</span>
-              <span class="experience-tag">SQL</span>
-              <span class="experience-tag">Postman</span>
-              <span class="experience-tag">Jira</span>
+              <span class="exp-tag">Core Java</span>
+              <span class="exp-tag">Selenium WebDriver</span>
+              <span class="exp-tag">TestNG</span>
+              <span class="exp-tag">Page Object Model (POM)</span>
+              <span class="exp-tag">Postman</span>
+              <span class="exp-tag">SQL</span>
+              <span class="exp-tag">Jira</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 03: TECHNICAL SKILLS (Immediately Following Experience) -->
-    <section id="skills">
+    <!-- SECTION 03: FEATURED QA CASE STUDIES (PRIMARY PROJECTS) -->
+    <section id="projects" class="editorial-section">
       <div class="container">
-        <div class="section-kicker">Technical Stack</div>
+        <div class="section-kicker">03 // ENTERPRISE WORK</div>
+        <h2 class="section-title">Featured QA Engineering Case Studies</h2>
+        <p class="section-subtitle">
+          Deep technical dives into enterprise applications tested and automated across banking, insurance, and retail domains.
+        </p>
+
+        <div class="case-studies-stack">
+          <!-- Case Study 1: LOS -->
+          <article class="case-study-card" aria-label="Loan Origination System (LOS) Case Study">
+            <div class="case-content">
+              <div class="case-meta">
+                <span class="case-badge">Featured SDET Showcase</span>
+                <span class="case-domain">Banking Domain</span>
+              </div>
+              <h3 class="case-title">Loan Origination System (LOS)</h3>
+              <p class="case-lead">
+                An enterprise banking platform managing the end-to-end loan application lifecycle—from initial customer onboarding and document verification to credit risk assessment and multi-tier loan approval.
+              </p>
+
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <span class="case-point-label">Automation &amp; Testing Scope</span>
+                  <p class="case-point-text">
+                    Automated critical end-to-end loan processing scenarios using Selenium WebDriver and TestNG under Page Object Model (POM) architecture. Validated loan REST APIs via Postman across endpoints, status codes, and JSON response bodies.
+                  </p>
+                </div>
+
+                <div class="case-point">
+                  <span class="case-point-label">Backend Data &amp; Defect Lifecycle</span>
+                  <p class="case-point-text">
+                    Verified backend data integrity using complex SQL queries across customer eligibility, interest rate tables, and loan disbursement ledgers. Logged, tracked, and retested defects through complete Jira lifecycles.
+                  </p>
+                </div>
+              </div>
+
+              <div class="case-tech-tags">
+                <span class="tech-tag">Core Java</span>
+                <span class="tech-tag">Selenium WebDriver</span>
+                <span class="tech-tag">TestNG (POM)</span>
+                <span class="tech-tag">Postman (REST API)</span>
+                <span class="tech-tag">SQL Validation</span>
+                <span class="tech-tag">Jira</span>
+              </div>
+            </div>
+
+            <!-- Verified Test Evidence Box -->
+            <aside class="case-evidence-panel" aria-label="Loan Origination System Test Evidence">
+              <div class="evidence-header">
+                <span class="evidence-kicker">VERIFIED TEST EVIDENCE</span>
+              </div>
+              <div class="evidence-body">
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">150+</span>
+                  <span class="evidence-metric-lbl">Test cases designed &amp; executed across loan application, eligibility, document validation, credit assessment, and approval workflows.</span>
+                </div>
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">40+</span>
+                  <span class="evidence-metric-lbl">Defects identified, logged, tracked, and verified to resolution in Jira.</span>
+                </div>
+              </div>
+              <div class="evidence-footer">
+                <span>Result:</span> End-to-end automated loan regression harness.
+              </div>
+            </aside>
+          </article>
+
+          <!-- Case Study 2: Commission Validation Automation -->
+          <article class="case-study-card" aria-label="Commission Validation Automation Case Study">
+            <div class="case-content">
+              <div class="case-meta">
+                <span class="case-domain">Insurance Domain</span>
+                <span class="case-tag-sub">Data Automation &amp; Compliance</span>
+              </div>
+              <h3 class="case-title">Commission Validation Automation</h3>
+              <p class="case-lead">
+                An automated financial audit engine built to validate agent commission deductions across complex multi-rider life insurance policies for ICICI Prudential Life Insurance.
+              </p>
+
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <span class="case-point-label">The Engineering Challenge</span>
+                  <p class="case-point-text">
+                    Legacy commission reconciliations relied on manual VBA spreadsheets across disparate policy files, creating severe calculation bottlenecks, high turnaround latency, and audit reconciliation risks.
+                  </p>
+                </div>
+
+                <div class="case-point">
+                  <span class="case-point-label">Automated Python Solution &amp; Regulatory Audit</span>
+                  <p class="case-point-text">
+                    Engineered robust Python audit scripts to automate commission deductions across 8–10 policy attributes (premium, rider, fund allocation). Extracted and reconciled policy datasets from SAP BusinessObjects and Life Asia, applying rule-based validation logic supporting strict IRDAI compliance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="case-tech-tags">
+                <span class="tech-tag">Python Automation</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">SAP BusinessObjects (SAP BO)</span>
+                <span class="tech-tag">Life Asia</span>
+                <span class="tech-tag">Advanced Excel</span>
+                <span class="tech-tag">IRDAI Rules</span>
+              </div>
+            </div>
+
+            <!-- Verified Test Evidence Box -->
+            <aside class="case-evidence-panel" aria-label="Commission Validation Automation Test Evidence">
+              <div class="evidence-header">
+                <span class="evidence-kicker">VERIFIED TEST EVIDENCE</span>
+              </div>
+              <div class="evidence-body">
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">~70%</span>
+                  <span class="evidence-metric-lbl">Reduction in validation effort, replacing manual VBA processes with automated Python pipelines.</span>
+                </div>
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">8–10</span>
+                  <span class="evidence-metric-lbl">Policy attributes systematically audited per deduction cycle with zero manual transcription errors.</span>
+                </div>
+              </div>
+              <div class="evidence-footer">
+                <span>Outcome:</span> Full IRDAI regulatory compliance and audit-ready data.
+              </div>
+            </aside>
+          </article>
+
+          <!-- Case Study 3: E-Commerce OMS -->
+          <article class="case-study-card" aria-label="E-Commerce Order Management System Case Study">
+            <div class="case-content">
+              <div class="case-meta">
+                <span class="case-domain">Retail Domain</span>
+                <span class="case-tag-sub">Integration &amp; API Automation</span>
+              </div>
+              <h3 class="case-title">E-Commerce Order Management System (OMS)</h3>
+              <p class="case-lead">
+                A multi-channel retail order management platform coordinating order processing, real-time inventory synchronization, payment gateways, shipment dispatch, returns, and refunds.
+              </p>
+
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <span class="case-point-label">Automation &amp; REST API Verification</span>
+                  <p class="case-point-text">
+                    Automated critical smoke and regression suites using Selenium WebDriver with Java and TestNG, complemented by Fireflink script-less automation. Validated REST APIs through Postman across checkout, payment status, and dispatch webhooks.
+                  </p>
+                </div>
+
+                <div class="case-point">
+                  <span class="case-point-label">Multi-Channel Synchronization &amp; SQL Audits</span>
+                  <p class="case-point-text">
+                    Verified real-time inventory synchronization across distributed sales channels using targeted SQL queries, preventing overselling defects and reconciling financial refund transactions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="case-tech-tags">
+                <span class="tech-tag">Core Java</span>
+                <span class="tech-tag">Selenium WebDriver</span>
+                <span class="tech-tag">TestNG</span>
+                <span class="tech-tag">Fireflink</span>
+                <span class="tech-tag">Postman (REST API)</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Jira</span>
+              </div>
+            </div>
+
+            <!-- Verified Test Evidence Box -->
+            <aside class="case-evidence-panel" aria-label="E-Commerce OMS Test Evidence">
+              <div class="evidence-header">
+                <span class="evidence-kicker">VERIFIED TEST EVIDENCE</span>
+              </div>
+              <div class="evidence-body">
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">End-to-End</span>
+                  <span class="evidence-metric-lbl">Regression test coverage across order placement, payment capture, fulfillment tracking, and refund cycles.</span>
+                </div>
+                <div class="evidence-metric-item">
+                  <span class="evidence-metric-val">100%</span>
+                  <span class="evidence-metric-lbl">Inventory accuracy verified between storefront endpoints and backend SQL databases.</span>
+                </div>
+              </div>
+              <div class="evidence-footer">
+                <span>Result:</span> Deterministic multi-channel order fulfillment verification.
+              </div>
+            </aside>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="editorial-section">
+      <div class="container">
+        <div class="section-kicker">04 // TECHNICAL STACK</div>
         <h2 class="section-title">Technical Skills Matrix</h2>
         <p class="section-subtitle">
-          Organized by core automation frameworks, programming, API, database, and testing competencies from verified project execution.
+          Organized by core automation frameworks, programming languages, API/database verification, testing disciplines, and enterprise reporting tools.
         </p>
 
-        <div class="skills-matrix">
-          <!-- Automation Frameworks -->
-          <div class="skill-category">
-            <div class="skill-category-title">Automation Frameworks</div>
-            <div class="skill-pills">
-              <span class="skill-pill">Selenium WebDriver</span>
-              <span class="skill-pill">TestNG</span>
-              <span class="skill-pill">Page Object Model (POM)</span>
-              <span class="skill-pill">Maven</span>
-              <span class="skill-pill">Fireflink (Script-less)</span>
+        <div class="skills-matrix-grid">
+          <!-- 1. Test Automation -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">Test Automation</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Selenium WebDriver</span>
+              <span class="skill-tag">Automated Testing</span>
+              <span class="skill-tag">TestNG</span>
+              <span class="skill-tag">Maven</span>
+              <span class="skill-tag">Page Object Model (POM)</span>
+              <span class="skill-tag">Fireflink (Script-less)</span>
             </div>
           </div>
 
-          <!-- Languages & Databases -->
-          <div class="skill-category">
-            <div class="skill-category-title">Languages & Databases</div>
-            <div class="skill-pills">
-              <span class="skill-pill">Core Java</span>
-              <span class="skill-pill">Python (Data Validation & Automation)</span>
-              <span class="skill-pill">SQL</span>
+          <!-- 2. Programming Languages -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">Programming Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Core Java</span>
+              <span class="skill-tag">Python (Data Automation)</span>
+              <span class="skill-tag">SQL</span>
             </div>
           </div>
 
-          <!-- API Testing -->
-          <div class="skill-category">
-            <div class="skill-category-title">API Testing</div>
-            <div class="skill-pills">
-              <span class="skill-pill">Postman</span>
-              <span class="skill-pill">REST API Testing</span>
-              <span class="skill-pill">Status Code Validation</span>
-              <span class="skill-pill">Response Validation</span>
+          <!-- 3. API & Database Testing -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">API &amp; Database Testing</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">REST API Testing</span>
+              <span class="skill-tag">Status Code Validation</span>
+              <span class="skill-tag">Response Validation</span>
+              <span class="skill-tag">SQL Data Validation</span>
             </div>
           </div>
 
-          <!-- Testing Methodologies -->
-          <div class="skill-category">
-            <div class="skill-category-title">Testing Disciplines</div>
-            <div class="skill-pills">
-              <span class="skill-pill">Manual Testing</span>
-              <span class="skill-pill">Regression Testing</span>
-              <span class="skill-pill">Smoke Testing</span>
-              <span class="skill-pill">Functional Testing</span>
-              <span class="skill-pill">Integration Testing</span>
-              <span class="skill-pill">STLC / SDLC</span>
-              <span class="skill-pill">Test Case Design</span>
-              <span class="skill-pill">Defect Lifecycle Management</span>
+          <!-- 4. Testing Disciplines -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">Testing Disciplines</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Manual Testing</span>
+              <span class="skill-tag">Functional Testing</span>
+              <span class="skill-tag">Regression Testing</span>
+              <span class="skill-tag">Smoke Testing</span>
+              <span class="skill-tag">Integration Testing</span>
+              <span class="skill-tag">UAT</span>
+              <span class="skill-tag">Test Case Design</span>
+              <span class="skill-tag">STLC &amp; SDLC</span>
+              <span class="skill-tag">Defect Lifecycle</span>
             </div>
           </div>
 
-          <!-- DevOps & Tools -->
-          <div class="skill-category">
-            <div class="skill-category-title">DevOps & Tools</div>
-            <div class="skill-pills">
-              <span class="skill-pill">Git</span>
-              <span class="skill-pill">GitHub</span>
-              <span class="skill-pill">Jenkins</span>
-              <span class="skill-pill">Jira</span>
-              <span class="skill-pill">Agile / Scrum</span>
-              <span class="skill-pill">Eclipse</span>
-              <span class="skill-pill">VS Code</span>
+          <!-- 5. CI/CD, Tools & Practices -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">CI/CD, Tools &amp; Practices</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Eclipse</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Agile / Scrum</span>
             </div>
           </div>
 
-          <!-- BI & Reporting -->
-          <div class="skill-category">
-            <div class="skill-category-title">BI & Enterprise Tools</div>
-            <div class="skill-pills">
-              <span class="skill-pill">SAP BusinessObjects (SAP BO)</span>
-              <span class="skill-pill">Life Asia</span>
-              <span class="skill-pill">Advanced Excel</span>
-              <span class="skill-pill">Pivot Tables</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 04: SELECTED PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-kicker">Enterprise Work</div>
-        <h2 class="section-title">Selected Projects</h2>
-        <p class="section-subtitle">
-          Key enterprise applications tested and automated across banking, insurance, and retail domains.
-        </p>
-
-        <div class="projects-layout">
-          <!-- Project 1: LOS -->
-          <div class="project-panel featured-project">
-            <div class="project-header">
-              <span class="featured-badge">Featured SDET Showcase</span>
-              <span class="project-domain">Banking Domain</span>
-              <h3 class="project-name">Loan Origination System (LOS)</h3>
-              <p class="project-summary">
-                Designed & executed 150+ test cases covering loan application submission, customer eligibility verification, document validation, credit assessment, and loan approval workflows; executed functional, integration, and regression testing across multiple sprint releases.
-              </p>
-              
-              <div class="project-tech-list">
-                <span class="project-tech-tag">Core Java</span>
-                <span class="project-tech-tag">Selenium WebDriver</span>
-                <span class="project-tech-tag">TestNG (POM)</span>
-                <span class="project-tech-tag">Postman</span>
-                <span class="project-tech-tag">SQL</span>
-                <span class="project-tech-tag">Jira</span>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-detail-item">
-                <span class="project-detail-label">Automation & Testing Scope</span>
-                <p class="project-detail-text">
-                  Automated critical end-to-end loan processing scenarios using Selenium WebDriver and TestNG with Page Object Model (POM) architecture. Executed functional, integration, and regression testing across sprint releases.
-                </p>
-              </div>
-
-              <div class="project-detail-item">
-                <span class="project-detail-label">API, Backend & Defect Management</span>
-                <p class="project-detail-text">
-                  Validated loan-related REST APIs through Postman. Wrote SQL queries for backend data validation and data integrity verification. Logged, tracked, and retested 40+ defects using Jira.
-                </p>
-              </div>
-
-              <div class="project-value-badge">
-                <span>Result:</span> End-to-end loan automation · Logged, tracked, and retested 40+ defects using Jira
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2: Commission Validation Automation -->
-          <div class="project-panel">
-            <div class="project-header">
-              <span class="project-domain">Insurance Domain</span>
-              <h3 class="project-name">Commission Validation Automation</h3>
-              <p class="project-summary">
-                Built Python-based audit scripts to automate commission verification across 8–10 policy attributes (premium, rider, fund allocation, etc.), replacing manual VBA-driven processes and cutting validation time by ~70%.
-              </p>
-              
-              <div class="project-tech-list">
-                <span class="project-tech-tag">Python Automation</span>
-                <span class="project-tech-tag">SQL</span>
-                <span class="project-tech-tag">SAP BO</span>
-                <span class="project-tech-tag">Life Asia</span>
-                <span class="project-tech-tag">Advanced Excel</span>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-detail-item">
-                <span class="project-detail-label">Regulatory & Audit Compliance</span>
-                <p class="project-detail-text">
-                  Ensured IRDAI regulatory compliance through rule-based validation logic. Reconciled large-scale policy datasets extracted from SAP BusinessObjects and Life Asia to support audit and reporting workflows.
-                </p>
-              </div>
-
-              <div class="project-detail-item">
-                <span class="project-detail-label">Key Engineering Result</span>
-                <p class="project-detail-text">
-                  Replaced error-prone manual spreadsheets with automated Python validation scripts, ensuring accurate deduction reconciliations.
-                </p>
-              </div>
-
-              <div class="project-value-badge">
-                <span>Measurable Result:</span> Reduced validation effort by ~70% · Ensured IRDAI regulatory compliance through rule-based validation logic
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: E-Commerce OMS -->
-          <div class="project-panel">
-            <div class="project-header">
-              <span class="project-domain">Retail Domain</span>
-              <h3 class="project-name">E-Commerce Order Management System (OMS)</h3>
-              <p class="project-summary">
-                Designed and executed test scenarios for order creation, inventory synchronization, payment processing, shipment tracking, returns management, and refund workflows across multiple sales channels.
-              </p>
-              
-              <div class="project-tech-list">
-                <span class="project-tech-tag">Core Java</span>
-                <span class="project-tech-tag">Selenium WebDriver</span>
-                <span class="project-tech-tag">TestNG</span>
-                <span class="project-tech-tag">Fireflink</span>
-                <span class="project-tech-tag">Postman</span>
-                <span class="project-tech-tag">SQL</span>
-                <span class="project-tech-tag">Jira</span>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-detail-item">
-                <span class="project-detail-label">Automation & API Validation</span>
-                <p class="project-detail-text">
-                  Automated critical regression and smoke test suites using Selenium WebDriver and TestNG. Validated REST APIs through Postman and verified order and inventory data using SQL queries for backend data validation and data integrity verification.
-                </p>
-              </div>
-
-              <div class="project-detail-item">
-                <span class="project-detail-label">Lifecycle & Defect Tracking</span>
-                <p class="project-detail-text">
-                  Tracked defects throughout the Agile development lifecycle using Jira, ensuring reliable multi-channel order fulfillment.
-                </p>
-              </div>
-
-              <div class="project-value-badge">
-                <span>Impact:</span> Automated regression and smoke verification across core sales order channels
-              </div>
+          <!-- 6. Data & Reporting -->
+          <div class="skill-category-box">
+            <h3 class="skill-category-title">Data &amp; Reporting</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">SAP BusinessObjects (SAP BO)</span>
+              <span class="skill-tag">Life Asia</span>
+              <span class="skill-tag">Advanced Excel</span>
+              <span class="skill-tag">Pivot Tables</span>
             </div>
           </div>
         </div>
@@ -660,174 +760,210 @@
     </section>
 
     <!-- SECTION 05: EDUCATION -->
-    <section id="education">
-      <div class="container">
-        <div class="section-kicker">Academic Foundation</div>
+    <section id="education" class="editorial-section">
+      <div class="container container-narrow">
+        <div class="section-kicker">05 // ACADEMIC FOUNDATION</div>
         <h2 class="section-title">Education</h2>
         <p class="section-subtitle">
-          Academic foundation in Computer Science & Engineering.
+          Academic foundation in Computer Science &amp; Engineering and Computer Technology.
         </p>
 
         <div class="education-grid">
-          <!-- Degree 1 -->
-          <div class="edu-card">
-            <span class="edu-year">2024</span>
-            <h3 class="edu-degree">Bachelor of Technology (B.Tech) – Computer Science & Engineering</h3>
-            <p class="edu-institution">DBATU University – Fabtech Technical Campus</p>
-            <p style="font-size: 0.8125rem; color: var(--text-subtle);">Lateral entry via Diploma; full-time employed from 2023</p>
+          <!-- B.Tech Degree -->
+          <div class="education-card">
+            <div class="edu-year">2024</div>
+            <h3 class="edu-degree">Bachelor of Technology (B.Tech) – Computer Science &amp; Engineering</h3>
+            <p class="edu-institution">Fabtech Technical Campus · Dr. Babasaheb Ambedkar Technological University (DBATU)</p>
+            <div class="edu-meta">Lateral entry following Diploma; employed concurrently from Jan 2023</div>
             <div class="edu-score">CGPA: <strong>7.98</strong></div>
           </div>
 
-          <!-- Degree 2 -->
-          <div class="edu-card">
-            <span class="edu-year">2021</span>
+          <!-- Diploma -->
+          <div class="education-card">
+            <div class="edu-year">2021</div>
             <h3 class="edu-degree">Diploma – Computer Technology</h3>
-            <p class="edu-institution">Maharashtra State Board of Technical Education – Brahmdevdada Mane Polytechnic</p>
+            <p class="edu-institution">Brahmdevdada Mane Polytechnic · Maharashtra State Board of Technical Education (MSBTE)</p>
             <div class="edu-score">Percentage: <strong>84.00%</strong></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 06: CERTIFICATIONS -->
-    <section id="certifications">
-      <div class="container">
-        <div class="section-kicker">Verified Credentials</div>
-        <h2 class="section-title">Certifications</h2>
+    <!-- SECTION 06: CERTIFICATIONS & PROFESSIONAL DEVELOPMENT -->
+    <section id="certifications" class="editorial-section">
+      <div class="container container-narrow">
+        <div class="section-kicker">06 // CREDENTIALS &amp; LEARNING</div>
+        <h2 class="section-title">Certifications &amp; Professional Development</h2>
         <p class="section-subtitle">
-          Completed technical courses and professional certifications.
+          Completed professional QA testing qualifications and ongoing computational learning.
         </p>
 
         <div class="certs-grid">
-          <!-- Certification 1: Python for Data Science -->
+          <!-- Cert 1: Java Full Stack -->
           <div class="cert-card">
-            <div class="cert-header">
-              <span class="cert-status-badge">Completed</span>
-            </div>
-            <h3 class="cert-name">Python for Data Science</h3>
-            <p class="cert-provider">Provider: <strong>Cognitive Class</strong></p>
-            <a href="https://courses.cognitiveclass.ai/certificates/629f5c44a8e1490598905f331a96a739" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm cert-btn">
-              <span>View Certificate</span>
-              <span class="ui-icon">
-                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </span>
-            </a>
-          </div>
-
-          <!-- Certification 2: Java Basics -->
-          <div class="cert-card">
-            <div class="cert-header">
-              <span class="cert-status-badge">Completed</span>
-            </div>
-            <h3 class="cert-name">Java Basics</h3>
-            <p class="cert-provider">Provider: <strong>Offline Course</strong></p>
-          </div>
-
-          <!-- Certification 3: Java Full Stack Development — Testing -->
-          <div class="cert-card">
-            <div class="cert-header">
-              <span class="cert-status-badge">Completed</span>
-            </div>
-            <h3 class="cert-name">Java Full Stack Development — Testing</h3>
-            <p class="cert-provider">Provider: <strong>Offline Course</strong></p>
+            <div class="cert-status-badge">Completed</div>
+            <h3 class="cert-name">Java Full Stack Development (Testing)</h3>
+            <p class="cert-provider">Provider: <strong>QSpiders Institute</strong></p>
             <div class="cert-coverage">
               <span class="cert-coverage-label">Coverage:</span>
-              <div class="spec-tags">
-                <span class="spec-tag">Manual Testing</span>
-                <span class="spec-tag">Java + Selenium</span>
+              <div class="cert-tags">
+                <span class="cert-tag">Manual Testing</span>
+                <span class="cert-tag">Core Java</span>
+                <span class="cert-tag">Selenium WebDriver</span>
               </div>
             </div>
+          </div>
+
+          <!-- Cert 2: Java Basics -->
+          <div class="cert-card">
+            <div class="cert-status-badge">Completed</div>
+            <h3 class="cert-name">Java Basics</h3>
+            <p class="cert-provider">Provider: <strong>QSpiders Institute</strong></p>
+            <p class="cert-desc">Core programming fundamentals, object-oriented concepts, exception handling, and collection framework.</p>
+          </div>
+
+          <!-- Ongoing: Udemy Machine Learning -->
+          <div class="cert-card cert-card-ongoing">
+            <div class="cert-status-badge ongoing-badge">
+              <span class="ongoing-dot" aria-hidden="true"></span>
+              <span>Ongoing / In Progress</span>
+            </div>
+            <h3 class="cert-name">Data Science, Machine Learning, Deep Learning, NLP Bootcamp</h3>
+            <p class="cert-provider">Provider: <strong>Udemy</strong></p>
+            <p class="cert-desc">Continuous professional upskilling in algorithmic theory, computational data modeling, and end-to-end Python machine learning workflows.</p>
+            <div class="ongoing-notice">Status: Currently Enrolled &amp; Learning</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 07: ONGOING PROFESSIONAL DEVELOPMENT -->
-    <section id="ongoing-learning">
+    <!-- SECTION 07: INDEPENDENT PERSONAL PROJECTS (SECONDARY PLACEMENT) -->
+    <section id="side-projects" class="editorial-section">
       <div class="container">
-        <div class="section-kicker">Continuous Learning</div>
-        <h2 class="section-title">Ongoing Professional Development</h2>
+        <div class="section-kicker">07 // PERSONAL EXPERIMENTS &amp; SIDE PROJECTS</div>
+        <h2 class="section-title">Independent Software Craft</h2>
         <p class="section-subtitle">
-          Self-paced technical upskilling and continuous learning in computational and analytical disciplines.
+          Discreet, self-directed systems development and mobile engineering explorations conducted outside client enterprise engagements.
         </p>
 
-        <div class="development-card">
-          <div class="ongoing-badge">
-            <span class="ongoing-badge-dot"></span>
-            <span>Currently Learning / Ongoing</span>
+        <div class="side-projects-grid">
+          <!-- Side Project 1: Leaf -->
+          <div class="side-project-card">
+            <div class="side-project-header">
+              <div class="side-badge">Android · Mobile Engineering</div>
+              <h3 class="side-project-title">Leaf — Modern Offline-First Personal Expense Tracker</h3>
+            </div>
+            <p class="side-project-desc">
+              An offline-first Android personal finance application emphasizing local data privacy. Engineered with Kotlin, Room Database (SQLite), local encryption, and a clean Material Design 3 interface with monthly expense categorization and budgeting trends.
+            </p>
+            <div class="side-project-footer">
+              <span class="side-tech-pill">Kotlin</span>
+              <span class="side-tech-pill">Android Jetpack</span>
+              <span class="side-tech-pill">Room Database</span>
+              <span class="side-tech-pill">Material 3</span>
+              <a href="https://github.com/vinaynalavade/Leaf" class="side-github-link" target="_blank" rel="noopener noreferrer" aria-label="View Leaf Repository on GitHub">
+                <span>View on GitHub</span>
+                <span class="ui-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </span>
+              </a>
+            </div>
           </div>
-          <h3 class="development-course-title">Master the theory, practice, and math behind Data Science, Machine Learning, Deep Learning, NLP with end to end projects</h3>
-          <p class="cert-provider">Provider: <strong>Udemy</strong></p>
-          <div class="ongoing-disclaimer">
-            Status: <strong>Currently Learning / Ongoing</strong> · Continuous Professional Upskilling
+
+          <!-- Side Project 2: NxtMov -->
+          <div class="side-project-card">
+            <div class="side-project-header">
+              <div class="side-badge">Web Application · Systems</div>
+              <h3 class="side-project-title">NxtMov — Student Talent &amp; Recruitment Platform</h3>
+            </div>
+            <p class="side-project-desc">
+              A responsive Single Page Application (SPA) designed to streamline talent discovery and recruitment workflows between university students and hiring teams, featuring profile management and structured application pipelines.
+            </p>
+            <div class="side-project-footer">
+              <span class="side-tech-pill">JavaScript SPA</span>
+              <span class="side-tech-pill">RESTful API</span>
+              <span class="side-tech-pill">Responsive UI</span>
+              <a href="https://github.com/vinaynalavade/NxtMov" class="side-github-link" target="_blank" rel="noopener noreferrer" aria-label="View NxtMov Repository on GitHub">
+                <span>View on GitHub</span>
+                <span class="ui-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 08: CONTACT & RECRUITER INQUIRY -->
-    <section id="contact" class="contact-section">
-      <div class="container">
+    <section id="contact" class="editorial-section contact-section">
+      <div class="container container-narrow">
         <div class="contact-box">
-          <div class="section-kicker">Get in Touch</div>
+          <div class="section-kicker">08 // GET IN TOUCH</div>
           <h2 class="section-title">Let's Discuss QA Automation Opportunities</h2>
           <p class="section-subtitle">
-            Feel free to reach out directly for QA Automation Engineer | SDET opportunities or technical inquiries.
+            Available for Senior QA Engineer, SDET, and Quality Engineering opportunities. Reach out directly for technical inquiries, resume requests, or interview schedules.
           </p>
 
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/vinay0704" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Connect on LinkedIn">
-              <span class="ui-icon">
-                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </span>
-              <span>LinkedIn: vinay0704</span>
-            </a>
-            <a href="mailto:vinaynalavade0704@gmail.com" class="btn btn-secondary" aria-label="Send Email">
-              <span class="ui-icon">
+          <div class="contact-actions-grid">
+            <a href="mailto:vinaynalavade0704@gmail.com" class="btn btn-primary btn-lg" aria-label="Send Email to vinaynalavade0704@gmail.com">
+              <span class="ui-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </span>
               <span>vinaynalavade0704@gmail.com</span>
             </a>
-            <a href="tel:+919359345433" class="btn btn-secondary" aria-label="Call Phone">
-              <span class="ui-icon">
+
+            <a href="https://www.linkedin.com/in/vinaynalavade/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" aria-label="Connect on LinkedIn">
+              <span class="ui-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </span>
+              <span>linkedin.com/in/vinaynalavade</span>
+            </a>
+
+            <a href="tel:+919359345433" class="btn btn-secondary btn-lg" aria-label="Call Phone (+91 93593 45433)">
+              <span class="ui-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </span>
               <span>+91 93593 45433</span>
             </a>
-            <a href="https://github.com/vinaynalavade" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span class="ui-icon">
-                <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+
+            <a href="https://github.com/vinaynalavade" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg" aria-label="View GitHub Profile">
+              <span class="ui-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </span>
-              <span>GitHub Profile</span>
+              <span>github.com/vinaynalavade</span>
             </a>
-            <a href="VinayNalavade_Resume.pdf" class="btn btn-ghost" target="_blank" download>
-              <span class="ui-icon">
+
+            <a href="VinayNalavade_Resume.pdf" class="btn btn-ghost btn-lg" target="_blank" download aria-label="Download Resume (PDF)">
+              <span class="ui-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               </span>
-              <span>Download Resume</span>
+              <span>Download Resume (PDF)</span>
             </a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        VINAY NALAVADE • QA AUTOMATION ENGINEER | SDET
+        <span class="footer-title">VINAY NALAVADE</span>
+        <span class="footer-role">Senior QA Engineer &amp; SDET</span>
       </div>
-      <div>
-        Designed & built with clean HTML5, CSS3 & JavaScript.
+      <div class="footer-tech">
+        Engineered with clean semantic HTML5, CSS3 &amp; Vanilla JavaScript. Zero runtime frameworks.
       </div>
-      <div>
-        © 2026 Vinay Nalavade. All rights reserved.
+      <div class="footer-copy">
+        &copy; 2026 Vinay Nalavade. Built with engineering precision.
       </div>
     </div>
   </footer>
 
-  <!-- Core JavaScript -->
+  <!-- Core Vanilla JavaScript Controller -->
   <script src="script.js"></script>
 </body>
 
