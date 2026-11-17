@@ -18,9 +18,6 @@
   function getEffectiveTheme() {
     const saved = localStorage.getItem('portfolio_theme');
     if (saved) return saved;
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
     return 'light';
   }
 
@@ -45,7 +42,7 @@
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
-      const active = document.documentElement.getAttribute('data-theme') || 'dark';
+      const active = document.documentElement.getAttribute('data-theme') || 'light';
       const nextTheme = active === 'dark' ? 'light' : 'dark';
       applyTheme(nextTheme, true);
     });
