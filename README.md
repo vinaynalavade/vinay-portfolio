@@ -22,7 +22,7 @@
 
 Vinay Nalavade is a **Senior QA Engineer** with **nearly 4 years of experience** specializing in resilient UI test automation frameworks (Selenium WebDriver in Core Java with Page Object Model architecture), REST API testing (Postman), SQL backend database integrity verification, and automated Python data reconciliation pipelines across **Enterprise Banking**, **Life Insurance**, and **Retail E-Commerce** domains.
 
-Beyond enterprise QA automation, Vinay is an **independent software developer** crafting native Android applications (such as [Leaf](https://github.com/vinaynalavade/Leaf)) and modern web applications (such as [NxtMov](https://github.com/vinaynalavade/NxtMov)).
+Beyond enterprise QA automation, Vinay pursues self-directed software development and practical exploration of AI-assisted product engineering, having conceived and directed [Leaf](https://github.com/vinaynalavade/Leaf) — an independently envisioned, AI-assisted Android expense-tracking application.
 
 ---
 
@@ -74,14 +74,15 @@ Beyond enterprise QA automation, Vinay is an **independent software developer** 
 
 ---
 
-## 📱 Independent Software Projects (Side Projects & Experiments)
+## 📱 Independent Software Projects (Product Exploration)
 
-- **[Leaf — Offline Expense Tracker](https://github.com/vinaynalavade/Leaf)**  
-  *Android (Java) · Room DB / SQLite · Material 3*  
-  Privacy-first, completely offline personal finance management application with clean local SQLite queries and category budgeting.
-- **[NxtMov — Modern Web Platform](https://github.com/vinaynalavade/NxtMov)**  
-  *Vanilla JavaScript · Responsive Web Architecture*  
-  Responsive talent and portfolio showcase application demonstrating clean DOM rendering, modular component organization, and lightweight frontend architecture.
+- **[Leaf — AI-Assisted Android Product Development](https://github.com/vinaynalavade/Leaf)**  
+  *Android · Kotlin / Java · Room Database (SQLite) · Material Design 3 · 100% Offline-First*  
+  An independently conceived Android personal finance and expense-tracking application built from scratch with AI-assisted development.
+  - **Product Vision & Direction:** Independently originated the product idea, defined the vision, requirements, feature roadmap, and user experience, guiding all product decisions.
+  - **AI-Assisted Implementation:** Utilized AI tools as a development partner for coding, implementation, debugging, and iterative refinements, exploring how AI can be effectively directed to take an idea from scratch towards a functioning, real-world software product.
+  - **Core Contributions:** Product Ideation & Vision · Requirements & Feature Planning · AI-Assisted Coding & Implementation · Debugging & Iterative Improvements · Product Direction & Development Decisions.
+  - **Technical Capabilities:** 100% offline-first architecture, dual-ledger tracking (cash and bank accounts), subunit integer precision, budget thresholds, on-device vector PDF statements, RFC 4180 CSV export, and native home screen widgets.
 
 ---
 
