@@ -64,6 +64,13 @@
   const mobileDrawer = document.getElementById('mobile-nav-drawer');
   const drawerLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-actions a');
 
+  function getDrawerFocusables() {
+    if (!mobileDrawer) return [];
+    return Array.from(
+      mobileDrawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    );
+  }
+
   function openDrawer() {
     if (!menuToggle || !mobileDrawer) return;
     menuToggle.classList.add('active');
@@ -72,9 +79,11 @@
     mobileDrawer.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    // Focus first link in drawer
-    const firstLink = mobileDrawer.querySelector('a');
-    if (firstLink) firstLink.focus();
+    // Focus first focusable element in drawer
+    const focusables = getDrawerFocusables();
+    if (focusables.length > 0) {
+      focusables[0].focus();
+    }
   }
 
   function closeDrawer() {
@@ -103,10 +112,39 @@
       });
     });
 
-    // Keyboard dismissal via Escape key
+    // Keyboard navigation (Escape dismissal & Focus Trap)
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+      if (!mobileDrawer.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
         closeDrawer();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusables = getDrawerFocusables();
+        if (focusables.length === 0) {
+          e.preventDefault();
+          return;
+        }
+
+        const firstEl = focusables[0];
+        const lastEl = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          // Shift + Tab: if on first element or focus is outside drawer, wrap to last
+          if (document.activeElement === firstEl || !mobileDrawer.contains(document.activeElement)) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          // Tab: if on last element, wrap to first
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
       }
     });
   }

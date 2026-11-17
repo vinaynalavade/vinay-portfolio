@@ -34,21 +34,21 @@ Beyond enterprise QA automation, Vinay is an **independent software developer** 
 **Domain:** Enterprise Banking Application (Agile Scrum Environment)  
 - Execute functional, regression, and smoke test cycles within two-week Agile sprints; maintained **95%+ test coverage** across three active modules.
 - Authored and reviewed **80+ test cases** per sprint in close collaboration with business analysts and developers to establish clear acceptance criteria.
-- Identified, documented, and tracked **30+ defects** across UAT and regression testing phases using Jira, driving root-cause analysis through to verified production closure.
+- Identified, documented, and tracked **30+ defects** across UAT and regression testing phases using Jira.
 
 ### 2. QA Analyst — Eureka Outsourcing Solutions Pvt. Ltd., Mumbai
 **Duration:** March 2025 — September 2025  
 **Client Engagement:** **ICICI Prudential Life Insurance**  
 **Domain:** Insurance Regulatory Compliance & Financial Reconciliation  
-- Engineered automated Python scripts to validate financial commission deductions across 8–10 policy attributes (premium, rider, fund allocation, term structures).
+- Engineered automated Python scripts to validate financial commission deductions across 8–10 policy attributes (premium, rider, premium collection).
 - Replaced legacy manual VBA-based workflows, **reducing validation effort by approximately 70%**.
 - Extracted and reconciled large-scale enterprise policy datasets from **SAP BusinessObjects** and **Life Asia**.
-- Enforced strict rule-based audit logic supporting **IRDAI** (Insurance Regulatory and Development Authority of India) compliance.
+- Applied rule-based validation logic supporting **IRDAI** (Insurance Regulatory and Development Authority of India) compliance.
 
 ### 3. Software Test Engineer — UNIZEN TECHNOLOGIES Pvt. Ltd., Pune
 **Duration:** January 2023 — February 2025  
 **Domains:** Enterprise Banking & Retail E-Commerce  
-- Architected and maintained automated smoke and regression test suites using **Selenium WebDriver**, **Core Java**, **TestNG**, and **Page Object Model (POM)** architecture.
+- Automated smoke and regression test suites using **Selenium WebDriver**, **Core Java**, **TestNG**, and **Page Object Model (POM)** architecture to create maintainable, reusable test scripts.
 - **Reduced regression cycle duration by approximately 25%** through modular test script design and automated test execution.
 - Designed and executed **200+ test cases** covering functional, integration, boundary, and regression scenarios across multiple sprint releases.
 - Wrote complex **SQL queries** for backend database verification, validating data integrity across customer, loan, order, and transaction tables.
@@ -60,17 +60,17 @@ Beyond enterprise QA automation, Vinay is an **independent software developer** 
 ### 1. Loan Origination System (LOS) — Banking Domain
 - **Core Stack:** Core Java, Selenium WebDriver, TestNG (Page Object Model), Postman, SQL, Jira.
 - **Scope & Execution:** Designed and executed 150+ end-to-end test scenarios covering applicant KYC onboarding, credit score evaluation, document verification, multi-tier loan approval matrices, and disbursement verification.
-- **Outcomes:** Automated critical end-to-end loan application workflows, validated REST API endpoints via Postman, and logged/tracked 40+ defects through Jira with root-cause documentation.
+- **Outcomes:** Automated critical end-to-end loan application workflows, validated REST API endpoints via Postman, and logged, tracked, and retested 40+ defects in Jira.
 
 ### 2. Commission Validation Automation — Insurance Domain
 - **Core Stack:** Python Automation, SQL, SAP BusinessObjects, Life Asia, Advanced Excel.
-- **Scope & Execution:** Replaced error-prone manual spreadsheets with automated Python reconciliation scripts validating complex commission rules across 8–10 policy parameters.
-- **Outcomes:** Reduced manual reconciliation cycle time by ~70%, processed tens of thousands of records from SAP BO and Life Asia, and ensured 100% adherence to IRDAI regulatory standards.
+- **Scope & Execution:** Replaced error-prone manual spreadsheets with automated Python reconciliation scripts validating complex commission rules across 8–10 policy attributes (premium, rider, premium collection).
+- **Outcomes:** Reduced manual reconciliation cycle time by ~70%, processed tens of thousands of records from SAP BO and Life Asia, and supported IRDAI regulatory compliance and audit reporting.
 
 ### 3. E-Commerce Order Management System (OMS) — Retail Domain
 - **Core Stack:** Core Java, Selenium WebDriver, TestNG, Fireflink, Postman, SQL, Jira.
-- **Scope & Execution:** Comprehensive test automation covering customer cart checkout, multi-vendor payment gateway responses, real-time inventory synchronization, order fulfillment, shipping dispatch, and return/refund lifecycles.
-- **Outcomes:** Maintained automated regression test suites, validated REST payload structures via Postman, and verified transaction consistency using SQL backend queries.
+- **Scope & Execution:** Tested order creation, inventory synchronization, payment, shipment tracking, returns, and refund workflows across multiple sales channels; tracked defects through the Agile lifecycle in Jira.
+- **Outcomes:** Maintained automated regression test suites using Selenium WebDriver and Fireflink, validated REST API payloads via Postman, and verified backend data integrity using SQL queries.
 
 ---
 
@@ -78,7 +78,7 @@ Beyond enterprise QA automation, Vinay is an **independent software developer** 
 
 - **[Leaf — Offline Expense Tracker](https://github.com/vinaynalavade/Leaf)**  
   *Android (Java) · Room DB / SQLite · Material 3*  
-  Privacy-first, completely offline personal finance management application with zero telemetry, reactive SQLite queries, and clean category budgeting.
+  Privacy-first, completely offline personal finance management application with clean local SQLite queries and category budgeting.
 - **[NxtMov — Modern Web Platform](https://github.com/vinaynalavade/NxtMov)**  
   *Vanilla JavaScript · Responsive Web Architecture*  
   Responsive talent and portfolio showcase application demonstrating clean DOM rendering, modular component organization, and lightweight frontend architecture.
