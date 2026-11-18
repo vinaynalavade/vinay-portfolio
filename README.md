@@ -1,140 +1,127 @@
-# Vinay Nalavade — QA Engineer & Independent Developer
+# Vinay Nalavade — QA Engineer Portfolio
 
-<p align="center">
-  <img src="assets/vinay-profile.jpg" alt="Vinay Nalavade" width="120" style="border-radius: 50%;" />
-</p>
+Personal portfolio website and online resume showcasing my QA engineering background, manual and automation testing experience, featured enterprise case studies, and independent projects.
 
-<p align="center">
-  <strong>QA Engineer | Framework Development · Java-Selenium · API Testing · CI/CD · Test Strategy · Team Leadership</strong><br>
-  <em>Nearly 4 Years of Experience across Enterprise Banking, Insurance, and Retail E-Commerce</em>
-</p>
-
-<p align="center">
-  <a href="https://vinaynalavade.github.io/vinay-portfolio/"><img src="https://img.shields.io/badge/Live_Portfolio-v4.0.0-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Portfolio v4.0.0" /></a>
-  <a href="https://www.linkedin.com/in/vinaynalavade/"><img src="https://img.shields.io/badge/LinkedIn-vinaynalavade-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile" /></a>
-  <a href="https://github.com/vinaynalavade"><img src="https://img.shields.io/badge/GitHub-vinaynalavade-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" /></a>
-  <a href="mailto:vinaynalavade0704@gmail.com"><img src="https://img.shields.io/badge/Email-vinaynalavade0704@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Contact" /></a>
-</p>
+- **Live Website:** [https://vinaynalavade.github.io/vinay-portfolio/](https://vinaynalavade.github.io/vinay-portfolio/)
+- **GitHub Repository:** [https://github.com/vinaynalavade/vinay-portfolio](https://github.com/vinaynalavade/vinay-portfolio)
 
 ---
 
-## 🧭 About & Professional Identity
+## About Me
 
-Vinay Nalavade is a **QA Engineer** with **nearly 4 years of experience** in automation and manual testing across Banking, Insurance, and E-Commerce applications. Experienced in independently designing and developing Selenium WebDriver automation frameworks using Core Java, TestNG, Maven, and Page Object Model (POM). Skilled in developing test strategies, executing functional, regression, smoke, and integration testing, REST API testing using Postman, and database validation using SQL. Experienced in leading QA team activities, mentoring team members, and collaborating with cross-functional stakeholders in Agile environments.
+I am a QA Engineer with nearly 4 years of experience testing web applications across Banking, Insurance, and E-Commerce domains.
 
-Beyond enterprise QA automation, Vinay pursues self-directed software development and practical exploration of AI-assisted product engineering, having conceived and directed [Leaf](https://github.com/vinaynalavade/Leaf) — an independently envisioned, AI-assisted Android expense-tracking application.
-
----
-
-## 💼 Confirmed Professional Experience
-
-### 1. Senior QA Engineer — UNIZEN TECHNOLOGIES Pvt. Ltd., Pune
-**Duration:** September 2025 — Present  
-**Client Engagement:** **Infosys Ltd., Pune**  
-**Domain:** Enterprise Banking Application (Agile Scrum Environment)  
-- Execute functional, regression, and smoke test cycles within two-week Agile sprints; maintained **95%+ test coverage** across three active modules.
-- Authored and reviewed **80+ test cases** per sprint in close collaboration with business analysts and developers; identified and logged **30+ defects** across UAT and regression phases using Jira.
-- Lead QA team activities, mentor team members on test execution, and collaborate with cross-functional stakeholders in Agile environments.
-
-### 2. QA Analyst — Eureka Outsourcing Solutions Pvt. Ltd., Mumbai
-**Duration:** March 2025 — September 2025  
-**Client Engagement:** **ICICI Prudential Life Insurance**  
-**Domain:** Insurance Regulatory Compliance & Financial Reconciliation  
-- Engineered automated Python scripts to validate financial commission deductions across 8–10 policy attributes (premium, rider, premium collection).
-- Replaced legacy manual VBA-based workflows, **reducing validation effort by approximately 70%**.
-- Extracted and reconciled large-scale enterprise policy datasets from **SAP BusinessObjects** and **Life Asia**.
-- Applied rule-based validation logic supporting **IRDAI** (Insurance Regulatory and Development Authority of India) compliance.
-
-### 3. Software Test Engineer — UNIZEN TECHNOLOGIES Pvt. Ltd., Pune
-**Duration:** January 2023 — February 2025  
-**Domains:** Enterprise Banking & Retail E-Commerce  
-- Automated smoke and regression test suites using **Selenium WebDriver**, **Core Java**, **TestNG**, and **Page Object Model (POM)** architecture to create maintainable, reusable test scripts.
-- **Reduced regression cycle duration by approximately 25%** through modular test script design and automated test execution.
-- Designed and executed **200+ test cases** covering functional, integration, boundary, and regression scenarios across multiple sprint releases.
-- Wrote complex **SQL queries** for backend database verification, validating data integrity across customer, loan, order, and transaction tables.
+- **Testing Capabilities:** Manual testing, functional testing, regression testing, smoke testing, integration testing, and UAT.
+- **Automation:** Selenium WebDriver with Java, TestNG, Maven, and Page Object Model (POM).
+- **Backend & Data:** REST API testing using Postman, data validation using SQL, and automation scripting with Python.
+- **Process:** Agile/Scrum sprint cycles, test planning, test case authoring, defect tracking in Jira, and Jenkins build job execution.
 
 ---
 
-## 🔬 Featured Enterprise QA Case Studies
+## Technologies Used to Build This Site
 
-### 1. Loan Origination System (LOS) — Banking Domain
-- **Core Stack:** Core Java, Selenium WebDriver, TestNG (Page Object Model), Postman, SQL, Jira.
-- **Scope & Execution:** Designed and executed 150+ end-to-end test scenarios covering applicant KYC onboarding, credit score evaluation, document verification, multi-tier loan approval matrices, and disbursement verification.
-- **Outcomes:** Automated critical end-to-end loan application workflows, validated REST API endpoints via Postman, and logged, tracked, and retested 40+ defects in Jira.
+This website is built with vanilla web technologies without any external frameworks or runtime dependencies:
 
-### 2. Commission Validation Automation — Insurance Domain
-- **Core Stack:** Python Automation, SQL, SAP BusinessObjects, Life Asia, Advanced Excel.
-- **Scope & Execution:** Replaced error-prone manual spreadsheets with automated Python reconciliation scripts validating complex commission rules across 8–10 policy attributes (premium, rider, premium collection).
-- **Outcomes:** Reduced manual reconciliation cycle time by ~70%, processed tens of thousands of records from SAP BO and Life Asia, and supported IRDAI regulatory compliance and audit reporting.
-
-### 3. E-Commerce Order Management System (OMS) — Retail Domain
-- **Core Stack:** Core Java, Selenium WebDriver, TestNG, Fireflink, Postman, SQL, Jira.
-- **Scope & Execution:** Tested order creation, inventory synchronization, payment, shipment tracking, returns, and refund workflows across multiple sales channels; tracked defects through the Agile lifecycle in Jira.
-- **Outcomes:** Maintained automated regression test suites using Selenium WebDriver and Fireflink, validated REST API payloads via Postman, and verified backend data integrity using SQL queries.
-
-### 4. [Selenium Java Automation Framework](https://github.com/vinaynalavade/qa-automation-framework) — Test Automation Framework
-- **Core Stack:** Java, Selenium WebDriver, TestNG, Maven, Page Object Model (POM), Extent Reports, Git, GitHub.
-- **Scope & Execution:** Independently designed and developed a reusable Selenium Java automation framework from scratch to support maintainable UI test automation and regression testing.
-- **Key Capabilities:** Implemented Page Object Model (POM) to separate page interactions from test logic, developed reusable BasePage and page-specific classes, implemented DriverFactory for WebDriver initialization, configured Maven dependencies and project structure, integrated TestNG for test execution and suite management with reusable explicit wait utilities, added JSON-based test data management, integrated Extent Reports with TestNG listeners and failure screenshot capture, and maintained framework source code using Git and GitHub.
+- **HTML5:** Semantic markup, accessible navigation, and ARIA labels.
+- **CSS3:** Custom properties (CSS variables), responsive grid and flexbox layouts, fluid typography, and dark/light theme styling.
+- **JavaScript (Vanilla):** Light/dark theme toggle with persistent storage, mobile navigation drawer, and an interactive recruiter focus filter.
 
 ---
 
-## 📱 Independent Software Projects (Product Exploration)
+## What the Website Includes
 
-- **[Leaf — AI-Assisted Android Product Development](https://github.com/vinaynalavade/Leaf)**  
-  *Android · Kotlin / Java · Room Database (SQLite) · Material Design 3 · 100% Offline-First*  
-  An independently conceived Android personal finance and expense-tracking application built from scratch with AI-assisted development.
-  - **Product Vision & Direction:** Independently originated the product idea, defined the vision, requirements, feature roadmap, and user experience, guiding all product decisions.
-  - **AI-Assisted Implementation:** Utilized AI tools as a development partner for coding, implementation, debugging, and iterative refinements, exploring how AI can be effectively directed to take an idea from scratch towards a functioning, real-world software product.
-  - **Core Contributions:** Product Ideation & Vision · Requirements & Feature Planning · AI-Assisted Coding & Implementation · Debugging & Iterative Improvements · Product Direction & Development Decisions.
-  - **Technical Capabilities:** 100% offline-first architecture, dual-ledger tracking (cash and bank accounts), subunit integer precision, budget thresholds, on-device vector PDF statements, RFC 4180 CSV export, and native home screen widgets.
-
----
-
-## 🛠 Technical Skills Matrix
-
-| Discipline | Technologies & Frameworks |
-| :--- | :--- |
-| **Automation Framework** | Selenium WebDriver, Java, TestNG, Maven, Page Object Model (POM), Reusable Automation Components |
-| **Testing & Test Strategy** | Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Integration Testing, UAT, Test Planning, Test Strategy, Test Case Design, Test Execution, Defect Management |
-| **Programming Languages** | Core Java, Python (Basic — Data Validation & Automation), SQL |
-| **CI/CD, Tools & Practices** | Jenkins (Job Execution), Git, GitHub, Jira, Eclipse, VS Code, Agile / Scrum |
-| **Data & Reporting** | SAP BusinessObjects (SAP BO), Advanced Excel, Pivot Tables |
+- **Hero & Candidate Summary:** Professional headline, key testing strengths, summary card, and direct contact actions.
+- **About Me:** Core testing principles and approach to software quality assurance.
+- **Work Experience:** Detailed professional experience across Unizen Technologies (client: Infosys) and Eureka Outsourcing Solutions (client: ICICI Prudential Life Insurance), with an interactive focus filter to view duties by technical competency.
+- **Featured Projects & Case Studies:** In-depth breakdown of enterprise QA engagements and the standalone test automation framework.
+- **Technical Skills:** Categorized breakdown of tools, frameworks, programming languages, and methodologies.
+- **Education & Certifications:** Academic background (B.Tech in Computer Science, Diploma in Computer Technology) and testing certifications from QSpiders.
+- **Independent Projects:** Overview of Leaf, an offline-first Android expense tracker conceived and built with AI assistance.
+- **Resume Download:** Direct link to download my latest PDF resume (`VinayNalavade_Resume.pdf`).
+- **Theme Toggle:** Persistent light/dark mode switch.
 
 ---
 
-## 🎓 Education Foundation
+## Projects Featured
 
-- **B.Tech in Computer Science & Engineering**  
-  *Dr. Babasaheb Ambedkar Technological University (DBATU) — Fabtech Technical Campus*  
-  **CGPA:** 7.98 · Graduated: 2024
-- **Diploma in Computer Technology**  
-  *Maharashtra State Board of Technical Education (MSBTE) — Brahmdevdada Mane Polytechnic*  
-  **Percentage:** 84.00% · Completed: 2021
+### Enterprise QA Case Studies
+1. **Loan Origination System (LOS) — Banking Domain**
+   - End-to-end testing across customer KYC, credit checks, document verification, approval hierarchy, and loan disbursement.
+   - Designed 150+ test scenarios, automated core regression workflows with Selenium and TestNG, tested REST APIs with Postman, and logged defects in Jira.
+2. **Commission Validation Automation — Insurance Domain (ICICI Prudential Life Insurance)**
+   - Replaced manual spreadsheet verification with Python scripts to calculate and reconcile commission deductions across 8–10 policy rules.
+   - Reduced verification effort by ~70% and extracted enterprise datasets from SAP BusinessObjects and Life Asia for IRDAI compliance.
+3. **E-Commerce Order Management System (OMS) — Retail Domain**
+   - Functional and regression testing for product ordering, inventory updates, payment status, shipment tracking, and returns.
+   - Automated regression test suites using Selenium WebDriver and Fireflink, tested API endpoints with Postman, and verified database transactions using SQL.
 
----
+### Test Automation Framework
+- **[Selenium Java Automation Framework](https://github.com/vinaynalavade/qa-automation-framework)**
+  - Standalone UI test automation framework built independently from scratch using Java, Selenium WebDriver, TestNG, and Maven.
+  - Implements Page Object Model (POM), DriverFactory for clean browser initialization, explicit waits for web elements, JSON-based test data loading, and Extent Reports with screenshot capture on failure.
 
-## 📜 Professional Certifications & Continuous Upskilling
-
-- **Java Full Stack Development — Testing** · QSpiders Institute (Manual Testing, Core Java, Selenium WebDriver)
-- **Java Basics Certification** · QSpiders Institute (Object-Oriented Programming, Java Fundamentals)
-- **Ongoing Upskilling:** Data Science, Machine Learning, Deep Learning & NLP Bootcamp (Udemy — *In Progress*)
-
----
-
-## ⚡ Portfolio V4 Architecture & Design Highlights
-
-The **V4** redesign transforms the website into a **Recruiter-Friendly, Hiring-Focused Online Resume and Professional Portfolio**:
-
-- **Zero Runtime Frameworks:** Built in semantic HTML5, modern CSS3 (custom properties, fluid typography, clean SaaS grid system), and lightweight vanilla JavaScript. Zero framework bloat.
-- **Accessibility First (WCAG 2.1 AA):** High contrast ratios exceeding WCAG AA standards, universal `:focus-visible` keyboard rings, skip link navigation, full ARIA attributes (`aria-pressed`, `aria-expanded`, `aria-hidden`), and complete `prefers-reduced-motion` support.
-- **Recruiter-Centric Information Architecture:** Clear 30-second candidate scanability with verified metrics (95%+ sprint coverage, ~70% effort saved via Python, ~25% faster regression via POM), candidate summary card, and prominent resume downloads.
-- **Interactive Recruiter Focus Filter:** Dynamic duty bullet highlighting by technical competency (Selenium/Java, API/Backend, SQL/Data, Compliance).
-- **Anti-Flash Theme Engine:** Clean light corporate SaaS theme by default with persistent dark mode toggle (`localStorage` synchronized).
+### Independent Software Projects
+- **[Leaf — Personal Expense Tracker](https://github.com/vinaynalavade/Leaf)**
+  - An offline-first Android personal expense tracker built to keep financial data private on the device without requiring account sign-up.
+  - Conceived the product idea, planned requirements and features, and used AI tools as a coding and troubleshooting partner to build and refine the application.
 
 ---
 
-## 📄 License & Attribution
+## Repository Structure
 
-Designed and developed by **Vinay Nalavade**.  
-© 2026 Vinay Nalavade. All rights reserved.
+```text
+vinay-portfolio/
+├── assets/
+│   └── vinay-profile.jpg         # Profile photograph
+├── favicon-dark.svg              # Dark theme favicon
+├── favicon-light.svg             # Light theme favicon
+├── index.html                    # Main portfolio page
+├── README.md                     # Project documentation
+├── script.js                     # Theme toggle, mobile menu, and filter interactions
+├── style.css                     # Responsive styling and theme variables
+└── VinayNalavade_Resume.pdf      # Downloadable PDF resume
+```
+
+---
+
+## Running Locally
+
+Because this project uses vanilla HTML, CSS, and JavaScript, no build steps, compilers, or package managers (such as npm) are needed.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vinaynalavade/vinay-portfolio.git
+   cd vinay-portfolio
+   ```
+
+2. Open the site in your browser:
+   - Double-click `index.html` to open it directly in any browser, or
+   - Start a local development server using Python:
+     ```bash
+     python -m http.server 8000
+     ```
+     Then open `http://localhost:8000` in your browser.
+
+---
+
+## Deployment
+
+This website is automatically deployed via **GitHub Pages** from the `main` branch. Any updates pushed to `main` go live at:
+
+[https://vinaynalavade.github.io/vinay-portfolio/](https://vinaynalavade.github.io/vinay-portfolio/)
+
+---
+
+## Contact Information
+
+- **Name:** Vinay Nalavade
+- **Role:** QA Engineer
+- **Location:** Pune, Maharashtra, India
+- **Email:** [vinaynalavade0704@gmail.com](mailto:vinaynalavade0704@gmail.com)
+- **LinkedIn:** [linkedin.com/in/vinaynalavade](https://www.linkedin.com/in/vinaynalavade/)
+- **GitHub:** [github.com/vinaynalavade](https://github.com/vinaynalavade)
+- **Phone:** +91 93593 45433
+
+---
+
+&copy; 2026 Vinay Nalavade. All rights reserved.
