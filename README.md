@@ -1,11 +1,11 @@
-# Vinay Nalavade — Senior QA Engineer & Independent Developer
+# Vinay Nalavade — QA Engineer & Independent Developer
 
 <p align="center">
   <img src="assets/vinay-profile.jpg" alt="Vinay Nalavade" width="120" style="border-radius: 50%;" />
 </p>
 
 <p align="center">
-  <strong>Senior QA Engineer · Automation Specialist · Independent Systems Builder</strong><br>
+  <strong>QA Engineer | Framework Development · Java-Selenium · API Testing · CI/CD · Test Strategy · Team Leadership</strong><br>
   <em>Nearly 4 Years of Experience across Enterprise Banking, Insurance, and Retail E-Commerce</em>
 </p>
 
@@ -20,7 +20,7 @@
 
 ## 🧭 About & Professional Identity
 
-Vinay Nalavade is a **Senior QA Engineer** with **nearly 4 years of experience** specializing in resilient UI test automation frameworks (Selenium WebDriver in Core Java with Page Object Model architecture), REST API testing (Postman), SQL backend database integrity verification, and automated Python data reconciliation pipelines across **Enterprise Banking**, **Life Insurance**, and **Retail E-Commerce** domains.
+Vinay Nalavade is a **QA Engineer** with **nearly 4 years of experience** in automation and manual testing across Banking, Insurance, and E-Commerce applications. Experienced in independently designing and developing Selenium WebDriver automation frameworks using Core Java, TestNG, Maven, and Page Object Model (POM). Skilled in developing test strategies, executing functional, regression, smoke, and integration testing, REST API testing using Postman, and database validation using SQL. Experienced in leading QA team activities, mentoring team members, and collaborating with cross-functional stakeholders in Agile environments.
 
 Beyond enterprise QA automation, Vinay pursues self-directed software development and practical exploration of AI-assisted product engineering, having conceived and directed [Leaf](https://github.com/vinaynalavade/Leaf) — an independently envisioned, AI-assisted Android expense-tracking application.
 
@@ -33,8 +33,8 @@ Beyond enterprise QA automation, Vinay pursues self-directed software developmen
 **Client Engagement:** **Infosys Ltd., Pune**  
 **Domain:** Enterprise Banking Application (Agile Scrum Environment)  
 - Execute functional, regression, and smoke test cycles within two-week Agile sprints; maintained **95%+ test coverage** across three active modules.
-- Authored and reviewed **80+ test cases** per sprint in close collaboration with business analysts and developers to establish clear acceptance criteria.
-- Identified, documented, and tracked **30+ defects** across UAT and regression testing phases using Jira.
+- Authored and reviewed **80+ test cases** per sprint in close collaboration with business analysts and developers; identified and logged **30+ defects** across UAT and regression phases using Jira.
+- Lead QA team activities, mentor team members on test execution, and collaborate with cross-functional stakeholders in Agile environments.
 
 ### 2. QA Analyst — Eureka Outsourcing Solutions Pvt. Ltd., Mumbai
 **Duration:** March 2025 — September 2025  
@@ -72,6 +72,11 @@ Beyond enterprise QA automation, Vinay pursues self-directed software developmen
 - **Scope & Execution:** Tested order creation, inventory synchronization, payment, shipment tracking, returns, and refund workflows across multiple sales channels; tracked defects through the Agile lifecycle in Jira.
 - **Outcomes:** Maintained automated regression test suites using Selenium WebDriver and Fireflink, validated REST API payloads via Postman, and verified backend data integrity using SQL queries.
 
+### 4. [Selenium Java Automation Framework](https://github.com/vinaynalavade/qa-automation-framework) — Test Automation Framework
+- **Core Stack:** Java, Selenium WebDriver, TestNG, Maven, Page Object Model (POM), Extent Reports, Git, GitHub.
+- **Scope & Execution:** Independently designed and developed a reusable Selenium Java automation framework from scratch to support maintainable UI test automation and regression testing.
+- **Key Capabilities:** Implemented Page Object Model (POM) to separate page interactions from test logic, developed reusable BasePage and page-specific classes, implemented DriverFactory for WebDriver initialization, configured Maven dependencies and project structure, integrated TestNG for test execution and suite management with reusable explicit wait utilities, added JSON-based test data management, integrated Extent Reports with TestNG listeners and failure screenshot capture, and maintained framework source code using Git and GitHub.
+
 ---
 
 ## 📱 Independent Software Projects (Product Exploration)
@@ -90,12 +95,11 @@ Beyond enterprise QA automation, Vinay pursues self-directed software developmen
 
 | Discipline | Technologies & Frameworks |
 | :--- | :--- |
-| **Automation Frameworks** | Selenium WebDriver, TestNG, Page Object Model (POM), Maven, Fireflink |
-| **Programming Languages** | Core Java (OOP, Collections, Exception Handling), Python (Automation & Scripting) |
-| **API & Backend Testing** | Postman (REST API validation, status codes, payload assertions), SQL (Joins, Aggregations, DDL/DML) |
-| **Testing Disciplines** | Functional Testing, Regression Testing, Smoke Testing, Integration Testing, UAT Support, STLC/SDLC |
-| **Enterprise & BI Tools** | SAP BusinessObjects (SAP BO), Life Asia, Jira (Defect Tracking), Advanced Excel |
-| **Version Control & CI/CD** | Git, GitHub, Jenkins (Build Triggering & Smoke Suite Execution) |
+| **Automation Framework** | Selenium WebDriver, Java, TestNG, Maven, Page Object Model (POM), Reusable Automation Components |
+| **Testing & Test Strategy** | Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Integration Testing, UAT, Test Planning, Test Strategy, Test Case Design, Test Execution, Defect Management |
+| **Programming Languages** | Core Java, Python (Basic — Data Validation & Automation), SQL |
+| **CI/CD, Tools & Practices** | Jenkins (Job Execution), Git, GitHub, Jira, Eclipse, VS Code, Agile / Scrum |
+| **Data & Reporting** | SAP BusinessObjects (SAP BO), Advanced Excel, Pivot Tables |
 
 ---
 
